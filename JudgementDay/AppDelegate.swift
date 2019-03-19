@@ -8,15 +8,24 @@
 
 import UIKit
 import CoreData
+import AWSCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+            regionType: AWSRegionType.USEast1,
+            identityPoolId: "us-east-1:5a92ae25-1a43-48cf-97ae-35802c1b9080")
+        let configuration = AWSServiceConfiguration(
+            region: AWSRegionType.USEast1,
+            credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
         return true
     }
 
@@ -32,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        self.saveContext()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

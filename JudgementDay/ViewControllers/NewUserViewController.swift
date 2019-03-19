@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AWSLambda
 
-class NewUserViewController: UIViewController {
+class NewUserViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBOutlet weak var txtFirstName: UITextField!
@@ -30,7 +31,39 @@ class NewUserViewController: UIViewController {
     }
     
     @IBAction func didSelectCreate(_ sender: Any) {
+//        let user = User()
+        //user.firstName = txtFirstName.text
+        
+        let userDictionary : [String:String] = ["firstname" : txtFirstName.text ?? "iChino",
+                                                "lastname" : txtLastName.text ?? "3750Class",
+                                                "preferredname" : "Ben",
+                                                "phone" : txtPhone.text ?? "No Phone",
+                                                "email" : txtEmail.text ?? "No Email",
+                                                "pass" : txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"]
+        
+//        do {
+            let lambda = AWSLambdaInvoker.default()
+            
+            lambda.invokeFunction("createUser", jsonObject: userDictionary).continueWith(block: { (task) in
+                
+                if (task.result != nil){
+                    print("\(task.result ?? "Received a null response" as AnyObject)")
+                }
+                return nil
+            })
+//            try user.managedObjectContext?.save()
+//        } catch {
+//            fatalError("Failure to save context: \(error)")
+//        }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        self.scrollView.endEditing(true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+    }
     
 }

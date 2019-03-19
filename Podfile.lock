@@ -1,0 +1,38 @@
+PODS:
+  - AWSCognito (2.8.2):
+    - AWSCore (= 2.8.2)
+  - AWSCognitoIdentityProvider (2.8.2):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.8.2)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.8.2)
+  - AWSLambda (2.8.2):
+    - AWSCore (= 2.8.2)
+  - SwiftyPickerPopover (6.6.5)
+
+DEPENDENCIES:
+  - AWSCognito
+  - AWSCognitoIdentityProvider
+  - AWSLambda
+  - SwiftyPickerPopover
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSLambda
+    - SwiftyPickerPopover
+
+SPEC CHECKSUMS:
+  AWSCognito: 8f9d82b91dc757669471d7174b7517a455f5d493
+  AWSCognitoIdentityProvider: 0d51cf765c70dd180bad7683dabb7942c6ada768
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: b6448752e992345082d7bad29d86e4839b72b4ba
+  AWSLambda: d775f1e9a1c33e2ce25f63d2a120afba053278c1
+  SwiftyPickerPopover: f2975fd0233d04c0a8f8d52d09b6f24b882de6fb
+
+PODFILE CHECKSUM: 763923c3141efea681dd26b07c5c9de791cca486
+
+COCOAPODS: 1.6.1

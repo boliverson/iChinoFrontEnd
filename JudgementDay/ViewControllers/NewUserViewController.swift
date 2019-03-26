@@ -31,17 +31,22 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func didSelectCreate(_ sender: Any) {
-//        let user = User()
-        //user.firstName = txtFirstName.text
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
+        user.firstName = txtFirstName.text
+        user.lastName = txtLastName.text
+        user.phone = txtPhone.text
+        user.email = txtEmail.text
+        user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
         
-        let userDictionary : [String:String] = ["firstname" : txtFirstName.text ?? "iChino",
-                                                "lastname" : txtLastName.text ?? "3750Class",
-                                                "preferredname" : "Ben",
-                                                "phone" : txtPhone.text ?? "No Phone",
-                                                "email" : txtEmail.text ?? "No Email",
-                                                "pass" : txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"]
+        let userDictionary : [String:String] = ["firstName" : user.firstName ?? "iChino",
+                                                "lastName" : user.lastName ?? "3750Class",
+                                                "preferredName" : "Ben",
+                                                "phone" : user.phone ?? "No Phone",
+                                                "email" : user.email ?? "No Email",
+                                                "pass" : user.password ?? "No Password"]
         
-//        do {
+        do {
             let lambda = AWSLambdaInvoker.default()
             
             lambda.invokeFunction("createUser", jsonObject: userDictionary).continueWith(block: { (task) in
@@ -51,10 +56,10 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
                 }
                 return nil
             })
-//            try user.managedObjectContext?.save()
-//        } catch {
-//            fatalError("Failure to save context: \(error)")
-//        }
+            try user.managedObjectContext?.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -19,6 +19,7 @@ extension User {
 
     @NSManaged public var firstName: String?
     @NSManaged public var lastName: String?
+    @NSManaged public var email: String?
     @NSManaged public var serverKey: Int64
     @NSManaged public var preferredName: String?
     @NSManaged public var phone: String?

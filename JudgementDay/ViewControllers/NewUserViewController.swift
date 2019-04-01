@@ -57,9 +57,11 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
                 return nil
             })
             try user.managedObjectContext?.save()
+            
         } catch {
             fatalError("Failure to save context: \(error)")
         }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

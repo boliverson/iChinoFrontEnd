@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JudgementDay/ViewControllers/NewUserViewController.swift"
-            timestampString = "575248396.860967"
+            timestampString = "575425924.858461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "didSelectCreate(_:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JudgementDay/ViewControllers/NewUserViewController.swift"
-            timestampString = "575248396.862511"
+            timestampString = "575425924.858538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "didSelectCreate(_:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JudgementDay/ViewControllers/NewUserViewController.swift"
-            timestampString = "575248457.996419"
+            timestampString = "575425924.858596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "didSelectCreate(_:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,8 +57,8 @@
                   symbolName = "JudgementDay.NewUserViewController.didSelectCreate(Any) -&gt; ()"
                   moduleName = "JudgementDay"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benoliverson/Documents/school/3750/iChino/JudgementDay/JudgementDay/ViewControllers/NewUserViewController.swift"
-                  timestampString = "575248458.0030839"
+                  urlString = "file:///Users/benoliverson/Documents/school/3750/iChino/iChinoFrontEnd/JudgementDay/ViewControllers/NewUserViewController.swift"
+                  timestampString = "575425925.182097"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
@@ -72,8 +72,8 @@
                   symbolName = "closure #1 (__C.AWSTask&lt;Swift.AnyObject&gt;) -&gt; Swift.Optional&lt;Any&gt; in JudgementDay.NewUserViewController.didSelectCreate(Any) -&gt; ()"
                   moduleName = "JudgementDay"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benoliverson/Documents/school/3750/iChino/JudgementDay/JudgementDay/ViewControllers/NewUserViewController.swift"
-                  timestampString = "575248458.005617"
+                  urlString = "file:///Users/benoliverson/Documents/school/3750/iChino/iChinoFrontEnd/JudgementDay/ViewControllers/NewUserViewController.swift"
+                  timestampString = "575425925.1856689"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"

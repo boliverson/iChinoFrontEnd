@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NTJ-am-Teg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NTJ-am-Teg">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -159,12 +159,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-<<<<<<< HEAD
                                     <action selector="didSelectCreate:" destination="GmL-D5-3Og" eventType="touchUpInside" id="hz6-CS-Pr4"/>
-=======
-                                    <action selector="didSelectCreate:" destination="GmL-D5-3Og" eventType="touchUpInside" id="J39-fZ-6Wq"/>
-                                    <segue destination="nAJ-9h-ayp" kind="modal" id="Bjh-0d-AOH"/>
->>>>>>> 9eb202e32ada1e1033d1e000f5bd648a91e51afb
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuN-Nh-7fw">
@@ -241,7 +236,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-8t-YSK">
                                 <rect key="frame" x="121" y="237" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -250,105 +244,17 @@
                                     <segue destination="m40-iy-UxU" kind="show" id="ZlR-ho-wT8"/>
                                 </connections>
                             </button>
-=======
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Rg-bu-Py9">
-                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ugf-y7-ggr"/>
-                                    <barButtonItem title="Search" image="icons8-search-filled-24.png" id="I0w-LY-uUo"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="waN-Cr-xoC"/>
-                                    <barButtonItem title="profile" image="icons8-user-24.png" id="iWP-hh-QYM"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ylz-EU-l0D"/>
-                                    <barButtonItem title="watch-list" image="icons8-bookmark-24.png" id="SK9-ig-bIk"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="D6C-nh-VFF"/>
-                                </items>
-                            </toolbar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Judges" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-hI-bKc">
-                                <rect key="frame" x="0.0" y="63" width="414" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="49H-ss-jgz" id="HpB-2P-xGW"/>
-                                </connections>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-ha-MTs">
-                                <rect key="frame" x="20" y="728" width="374" height="59"/>
-                                <color key="backgroundColor" red="0.73725490199999999" green="0.79607843140000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="kkl-mS-yKR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
-                                <state key="normal">
-                                    <string key="title" base64-UTF8="YES">
-QQhkZCBTZWxlY3RlZCBKdWRnZXM
-</string>
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="3" height="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yxb-qJ-2Jh">
-                                <rect key="frame" x="0.0" y="119" width="414" height="601"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="G1W-Jq-B5m"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="kG8-cy-xti" rowHeight="41" style="IBUITableViewCellStyleDefault" id="A1r-fk-XFH">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="41"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1r-fk-XFH" id="Vc3-Lu-gqr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kG8-cy-xti">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="40.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="delegate" destination="49H-ss-jgz" id="Puv-Ne-YJr"/>
-                                </connections>
-                            </tableView>
->>>>>>> 9eb202e32ada1e1033d1e000f5bd648a91e51afb
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wIl-Rh-0jJ" firstAttribute="top" secondItem="yxb-qJ-2Jh" secondAttribute="bottom" constant="93" id="050-pG-tS2"/>
-                            <constraint firstItem="yxb-qJ-2Jh" firstAttribute="top" secondItem="WUw-1E-h8o" secondAttribute="bottom" constant="75" id="4gb-5O-AdW"/>
-                            <constraint firstAttribute="trailing" secondItem="yxb-qJ-2Jh" secondAttribute="trailing" id="EUV-ep-NTL"/>
-                            <constraint firstItem="Ga3-ha-MTs" firstAttribute="top" secondItem="yxb-qJ-2Jh" secondAttribute="bottom" constant="8" id="Sa9-HQ-Lk5"/>
-                            <constraint firstItem="yxb-qJ-2Jh" firstAttribute="leading" secondItem="zpT-0S-GkA" secondAttribute="leading" id="XVC-dL-9RO"/>
-                            <constraint firstItem="Ga3-ha-MTs" firstAttribute="leading" secondItem="zpT-0S-GkA" secondAttribute="leading" constant="20" id="mcc-GT-MeN"/>
-                            <constraint firstAttribute="trailing" secondItem="Ga3-ha-MTs" secondAttribute="trailing" constant="20" id="xvl-IJ-UeG"/>
+                            <constraint firstAttribute="top" secondItem="WUw-1E-h8o" secondAttribute="bottom" constant="75" id="4gb-5O-AdW"/>
+                            <constraint firstAttribute="leading" secondItem="zpT-0S-GkA" secondAttribute="leading" id="XVC-dL-9RO"/>
+                            <constraint firstAttribute="leading" secondItem="zpT-0S-GkA" secondAttribute="leading" constant="20" id="mcc-GT-MeN"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofN-D5-Ow4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-319" y="1152"/>
         </scene>
         <!--View Controller-->
@@ -356,7 +262,7 @@ QQhkZCBTZWxlY3RlZCBKdWRnZXM
             <objects>
                 <viewController id="m40-iy-UxU" sceneMemberID="viewController">
                     <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wpw-Mc-SBR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                     </button>
@@ -370,7 +276,7 @@ QQhkZCBTZWxlY3RlZCBKdWRnZXM
             <objects>
                 <navigationController id="rfL-za-ts3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2JC-Ba-pe0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -380,9 +286,6 @@ QQhkZCBTZWxlY3RlZCBKdWRnZXM
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeO-np-9uY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="543"/>
-=======
-            <point key="canvasLocation" x="-1455.072463768116" y="881.91964285714278"/>
->>>>>>> 9eb202e32ada1e1033d1e000f5bd648a91e51afb
         </scene>
         <!--View Controller-->
         <scene sceneID="Idz-hD-nXR">
@@ -750,7 +653,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="En8-WE-3vM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="En8-WE-3vM">
                                         <rect key="frame" x="63.5" y="-27" width="199" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="199" id="IsV-aU-CIG"/>
@@ -1115,10 +1018,9 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
         <image name="icons8-bookmark-24.png" width="24" height="24"/>
         <image name="icons8-search-filled-24.png" width="24" height="24"/>
         <image name="icons8-user-24.png" width="24" height="24"/>
-        <image name="profile_img.jpg" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BVt-C7-c6J"/>
+        <segue reference="0Zq-AZ-nRh"/>
         <segue reference="sPp-ea-ukc"/>
         <segue reference="cIt-nc-auh"/>
     </inferredMetricsTieBreakers>

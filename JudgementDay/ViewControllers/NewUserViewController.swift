@@ -39,28 +39,9 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         user.email = txtEmail.text
         user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
         
-        let userDictionary : [String:String] = ["firstName" : user.firstName ?? "iChino",
-                                                "lastName" : user.lastName ?? "3750Class",
-                                                "preferredName" : "Ben",
-                                                "phone" : user.phone ?? "No Phone",
-                                                "email" : user.email ?? "No Email",
-                                                "pass" : user.password ?? "No Password"]
+        user.syncWithServer()
         
-        do {
-            let lambda = AWSLambdaInvoker.default()
-            
-            lambda.invokeFunction("createUser", jsonObject: userDictionary).continueWith(block: { (task) in
-                
-                if (task.result != nil){
-                    print("\(task.result ?? "Received a null response" as AnyObject)")
-                }
-                return nil
-            })
-            try user.managedObjectContext?.save()
-            
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        
         
     }
     

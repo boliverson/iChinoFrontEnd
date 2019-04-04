@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NTJ-am-Teg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NTJ-am-Teg">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9D-EO-zBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="1237"/>
+            <point key="canvasLocation" x="599" y="1629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kda-zV-Kqj">
@@ -287,93 +287,135 @@
             </objects>
             <point key="canvasLocation" x="657" y="543"/>
         </scene>
-        <!--View Controller-->
+        <!--Score Card View Controller-->
         <scene sceneID="Idz-hD-nXR">
             <objects>
-                <viewController id="vwS-t0-UXu" sceneMemberID="viewController">
+                <viewController id="vwS-t0-UXu" customClass="ScoreCardViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oPI-7l-zGJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="laR-fc-4Iw"/>
+                        <viewControllerLayoutGuide type="top" id="c6R-gj-KiH"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ht-AM-k78"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nme-Ww-L51">
+                    <view key="view" contentMode="scaleToFill" id="7I0-gf-YS7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Scorecard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-AV-Xy3">
-                                <rect key="frame" x="109" y="76" width="197" height="58"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arc-mx-zc7" userLabel="details Background">
+                                <rect key="frame" x="0.0" y="-4" width="414" height="88"/>
+                                <color key="backgroundColor" red="0.30784228444099426" green="0.17598047852516174" blue="0.39762860536575317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="xfo-0O-o5M"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P6P-9L-W6l">
+                                <rect key="frame" x="0.0" y="145" width="414" height="751"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="VNS-sb-sDH">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VNS-sb-sDH" id="Sac-ou-Iul">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vwS-t0-UXu" id="Omm-Tz-RkZ"/>
+                                    <outlet property="delegate" destination="vwS-t0-UXu" id="OK3-XC-GU3"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3T-Jd-BTY">
+                                <rect key="frame" x="-406" y="1692" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
-                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VGM-Cu-wX1">
+                                        <rect key="frame" x="0.0" y="162" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCt-oC-neD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.26462140680000001" green="0.1090453342" blue="0.36649531130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="19"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Score Card" id="VhC-61-ukV">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="ZIJ-2q-UnF">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didSelectCancel:" destination="vwS-t0-UXu" id="0dp-0c-vQf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Create" style="done" id="hEQ-Or-C4W">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didSelectCreateScoreCard:" destination="vwS-t0-UXu" id="oiY-XD-n6j"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Score Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y8-7A-Bcg">
+                                <rect key="frame" x="72" y="106" width="270" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="aGc-fv-2NP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <color key="textColor" red="0.26462140679359436" green="0.10904533416032791" blue="0.36649531126022339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqr-8Z-ayP">
-                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BuC-gU-Jz0"/>
-                                    <barButtonItem title="Search" image="icons8-search-filled-24.png" id="vA8-bl-QVC">
-                                        <connections>
-                                            <segue destination="49H-ss-jgz" kind="show" id="oSj-AV-ujt"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BRK-5Y-lzf"/>
-                                    <barButtonItem title="profile" image="icons8-user-24.png" id="a1a-4O-z6G">
-                                        <connections>
-                                            <segue destination="nAJ-9h-ayp" kind="show" id="6Kk-e3-IbG"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eVi-db-ePs"/>
-                                    <barButtonItem title="watch-list" image="icons8-bookmark-24.png" id="KF7-F9-eeM">
-                                        <connections>
-                                            <segue destination="A1i-ux-RH7" kind="show" id="5OG-Tv-ky7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="36V-k1-bEJ"/>
-                                </items>
-                            </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE3-Sd-gD8">
-                                <rect key="frame" x="20" y="772" width="374" height="62"/>
-                                <color key="backgroundColor" red="0.73725490199999999" green="0.79607843140000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcB-v9-Tjd">
+                                <rect key="frame" x="353" y="104" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.26462140680000001" green="0.1090453342" blue="0.36649531130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="dhn-hn-CcH"/>
+                                    <constraint firstAttribute="width" constant="30" id="6RG-aK-sSR"/>
+                                    <constraint firstAttribute="height" constant="30" id="TKW-Nu-tkx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
-                                <state key="normal" title="Select Judges">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="3" height="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4QS-Pw-TXU" kind="show" id="zxC-yh-50o"/>
+                                    <action selector="didSelectAddCell:" destination="vwS-t0-UXu" eventType="touchUpInside" id="VJf-jB-V0O"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OE3-Sd-gD8" secondAttribute="trailing" constant="20" id="I9g-MT-xNa"/>
-                            <constraint firstItem="OE3-Sd-gD8" firstAttribute="top" secondItem="oPI-7l-zGJ" secondAttribute="bottom" constant="728" id="ipn-Ke-qBY"/>
-                            <constraint firstItem="OE3-Sd-gD8" firstAttribute="leading" secondItem="Nme-Ww-L51" secondAttribute="leading" constant="20" id="t8v-5Q-n3M"/>
+                            <constraint firstItem="vCt-oC-neD" firstAttribute="leading" secondItem="arc-mx-zc7" secondAttribute="leading" id="CqB-LA-kyy"/>
+                            <constraint firstAttribute="bottom" secondItem="P6P-9L-W6l" secondAttribute="bottom" id="QCt-Gy-0F6"/>
+                            <constraint firstItem="arc-mx-zc7" firstAttribute="centerX" secondItem="7I0-gf-YS7" secondAttribute="centerX" id="Qtv-aF-RW7"/>
+                            <constraint firstItem="5y8-7A-Bcg" firstAttribute="centerX" secondItem="7I0-gf-YS7" secondAttribute="centerX" id="V1o-U4-aoC"/>
+                            <constraint firstItem="P6P-9L-W6l" firstAttribute="top" secondItem="5y8-7A-Bcg" secondAttribute="bottom" constant="11" id="eUB-Y5-y1y"/>
+                            <constraint firstItem="P6P-9L-W6l" firstAttribute="top" secondItem="c6R-gj-KiH" secondAttribute="bottom" constant="101" id="guE-Ma-Utb"/>
+                            <constraint firstAttribute="trailing" secondItem="arc-mx-zc7" secondAttribute="trailing" id="jbF-8u-dRg"/>
+                            <constraint firstItem="arc-mx-zc7" firstAttribute="leading" secondItem="7I0-gf-YS7" secondAttribute="leading" id="ma5-uh-ufL"/>
+                            <constraint firstItem="vCt-oC-neD" firstAttribute="top" secondItem="c6R-gj-KiH" secondAttribute="bottom" id="oW3-mg-fNb"/>
+                            <constraint firstItem="P6P-9L-W6l" firstAttribute="leading" secondItem="7I0-gf-YS7" secondAttribute="leading" id="rGK-vY-Esa"/>
+                            <constraint firstItem="kcB-v9-Tjd" firstAttribute="top" secondItem="vCt-oC-neD" secondAttribute="bottom" constant="16" id="seo-xU-xn0"/>
+                            <constraint firstItem="kcB-v9-Tjd" firstAttribute="leading" secondItem="7I0-gf-YS7" secondAttribute="leading" constant="353" id="ugA-Rp-6rG"/>
+                            <constraint firstAttribute="trailing" secondItem="P6P-9L-W6l" secondAttribute="trailing" id="w5u-h0-pM5"/>
+                            <constraint firstItem="arc-mx-zc7" firstAttribute="top" secondItem="7I0-gf-YS7" secondAttribute="top" constant="-4" id="yAP-e8-QZD"/>
+                            <constraint firstItem="vCt-oC-neD" firstAttribute="trailing" secondItem="arc-mx-zc7" secondAttribute="trailing" id="zl4-Id-iTs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="P6P-9L-W6l" id="RLs-Kx-ITH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhL-Kl-6kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428.98550724637687" y="941.51785714285711"/>
+            <point key="canvasLocation" x="-1552.1739130434785" y="1534.8214285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yFa-kk-Sby">
@@ -481,7 +523,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="vwS-t0-UXu" kind="show" id="iSC-Cv-QVs"/>
+                                    <segue destination="vwS-t0-UXu" kind="showDetail" id="iSC-Cv-QVs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -525,7 +567,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="806.91964285714278"/>
+            <point key="canvasLocation" x="-1336" y="498"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MRp-o5-4Vv">
@@ -1020,7 +1062,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
         <image name="icons8-user-24.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dDB-vF-z5j"/>
+        <segue reference="BVt-C7-c6J"/>
         <segue reference="JSR-gl-56D"/>
         <segue reference="dqf-6v-HRJ"/>
     </inferredMetricsTieBreakers>

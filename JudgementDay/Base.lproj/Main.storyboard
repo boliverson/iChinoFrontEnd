@@ -402,7 +402,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6JD-1m-Zzk">
-                                <rect key="frame" x="0.0" y="104" width="414" height="613"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="662"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="5Cj-xo-Crr"/>
@@ -431,7 +431,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZj-r6-MGB">
-                                <rect key="frame" x="0.0" y="803" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4io-V8-ZCz"/>
                                     <barButtonItem title="Search" image="icons8-search-filled-24.png" id="4d1-6j-bFT"/>
@@ -451,7 +451,7 @@
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hc-Um-c6g">
-                                <rect key="frame" x="0.0" y="725" width="414" height="59"/>
+                                <rect key="frame" x="0.0" y="774" width="414" height="59"/>
                                 <color key="backgroundColor" red="0.73725490199999999" green="0.79607843140000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="Duj-6J-zKd"/>
@@ -1020,8 +1020,8 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
         <image name="icons8-user-24.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Zq-AZ-nRh"/>
-        <segue reference="sPp-ea-ukc"/>
-        <segue reference="cIt-nc-auh"/>
+        <segue reference="dDB-vF-z5j"/>
+        <segue reference="JSR-gl-56D"/>
+        <segue reference="dqf-6v-HRJ"/>
     </inferredMetricsTieBreakers>
 </document>

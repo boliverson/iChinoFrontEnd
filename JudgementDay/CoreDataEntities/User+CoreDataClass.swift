@@ -12,5 +12,12 @@ import CoreData
 
 @objc(User)
 public class User: NSManagedObject {
+    
+    func syncWithServer() -> Void /*Maybe change this to bool later*/ {
+        if self.serverKey == 0 {
+            let INU = InsertNewUser()
+            INU.createUserDictionary(user: self)
+        }
+    }
 
 }

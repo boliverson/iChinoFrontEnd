@@ -11,9 +11,9 @@ import UIKit
 
 class ScoreCardCell: UITableViewCell  {
     
-    @IBOutlet var userInput: UITextField?
-    @IBOutlet var score: UITextField?
-    @IBOutlet var outOf: UITextField?
+    @IBOutlet var userDescription: UITextField?
+   
+    @IBOutlet var maxValue: UITextField?
     
     override func awakeFromNib() {
         super.awakeFromNib()

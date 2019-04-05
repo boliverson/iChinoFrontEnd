@@ -42,8 +42,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="outOf" destination="mnQ-t9-9qh" id="bFO-Ew-uLX"/>
-                <outlet property="userInput" destination="zJ0-jz-uuh" id="apq-m1-qBn"/>
+                <outlet property="maxValue" destination="mnQ-t9-9qh" id="EKQ-xl-oh9"/>
+                <outlet property="userDescription" destination="zJ0-jz-uuh" id="Q7X-Zm-TI3"/>
             </connections>
             <point key="canvasLocation" x="152" y="41.379310344827587"/>
         </tableViewCell>

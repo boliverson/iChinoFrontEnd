@@ -10,7 +10,8 @@ import Foundation
 class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
-    var items = [String]()
+    var descriptions = [String]()
+    var maxValues = [String]()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,14 +22,18 @@ class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableV
         self.tableView.dataSource = self
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return descriptions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ScoreCardCell.self), for: indexPath) as! ScoreCardCell
         
-        cell.outOf?.text = items[indexPath.row]
+        cell.maxValue?.text = maxValues[indexPath.row]
+        cell.userDescription?.text = descriptions[indexPath.row]
+        descriptions.insert(cell.userDescription?.text ?? "", at: indexPath.row)
+        maxValues.insert(cell.maxValue?.text ?? "", at: indexPath.row)
         
+        //tableView.reloadData()
         return cell
     }
     
@@ -39,15 +44,16 @@ class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             // handle delete (by removing the data from your array and updating the tableview)
-            items.remove(at: indexPath.row)
-            
+            descriptions.remove(at: indexPath.row)
+            maxValues.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
     
     @IBAction func didSelectAddCell(_ sender: Any){
         
-        items.append("")
+        descriptions.append("")
+        maxValues.append("")
         tableView.reloadData()
     }
     

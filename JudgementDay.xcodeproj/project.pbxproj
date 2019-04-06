@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
+		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
+		85424A8E2255894F00E08BBE /* ScoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */; };
+		85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85424A9022558B6700E08BBE /* ScoreCardCell.xib */; };
+		85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424A9222558D3F00E08BBE /* ScoreCardCell.swift */; };
+		8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */; };
+		8542D1B72256FB0A00A8FBBE /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */; };
 		9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19930222544D0C00CC13AE /* InsertNewUser.swift */; };
 		9A199307225450E500CC13AE /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A199306225450E500CC13AE /* LambdaBase.swift */; };
 		9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334621222E1686003005B8 /* User+CoreDataClass.swift */; };
@@ -53,6 +59,12 @@
 		7334CBCBEE8B7ACD0370F841 /* Pods-JudgementDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompetitionAndScoreCard.storyboard; sourceTree = "<group>"; };
+		85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardViewController.swift; sourceTree = "<group>"; };
+		85424A9022558B6700E08BBE /* ScoreCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCardCell.xib; sourceTree = "<group>"; };
+		85424A9222558D3F00E08BBE /* ScoreCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardCell.swift; sourceTree = "<group>"; };
+		8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListViewController.swift; sourceTree = "<group>"; };
+		8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		9A19930222544D0C00CC13AE /* InsertNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNewUser.swift; sourceTree = "<group>"; };
 		9A199306225450E500CC13AE /* LambdaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaBase.swift; sourceTree = "<group>"; };
 		9A334621222E1686003005B8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -133,6 +145,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85424A8F225589A400E08BBE /* Score Card */ = {
+			isa = PBXGroup;
+			children = (
+				85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */,
+				85424A9022558B6700E08BBE /* ScoreCardCell.xib */,
+				85424A9222558D3F00E08BBE /* ScoreCardCell.swift */,
+			);
+			path = "Score Card";
+			sourceTree = "<group>";
+		};
 		9A19930122544CE900CC13AE /* Sync */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +214,9 @@
 				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
 				9ACF018D221E377900BB1A87 /* ViewController.swift */,
 				9ACF018F221E377900BB1A87 /* Main.storyboard */,
+				85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */,
+				8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */,
+				8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */,
 				9ACF0195221E377B00BB1A87 /* profile_img.jpg */,
 				9ACF0197221E377B00BB1A87 /* LaunchScreen.storyboard */,
 				9ACF019A221E377B00BB1A87 /* Info.plist */,
@@ -225,6 +250,7 @@
 			children = (
 				9AE1D07B222399D3005932D8 /* LogInViewController.swift */,
 				9AE1D07D222399EF005932D8 /* NewUserViewController.swift */,
+				85424A8F225589A400E08BBE /* Score Card */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -337,6 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */,
+				85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */,
 				9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */,
 				9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */,
 				9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */,
@@ -471,11 +499,15 @@
 				9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */,
 				9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */,
 				9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */,
+				8542D1B72256FB0A00A8FBBE /* EventsListViewController.swift in Sources */,
+				85424A8E2255894F00E08BBE /* ScoreCardViewController.swift in Sources */,
 				9AE1D07C222399D3005932D8 /* LogInViewController.swift in Sources */,
 				9AE1D07E222399EF005932D8 /* NewUserViewController.swift in Sources */,
 				9AF932162255C3AD0068BE3B /* Authenticate.swift in Sources */,
 				9AF23A0422224CB0001A1C39 /* Extensions.swift in Sources */,
 				9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */,
+				85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */,
+				8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */,
 				9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

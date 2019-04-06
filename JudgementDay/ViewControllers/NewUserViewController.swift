@@ -46,7 +46,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     @IBAction func checkEmailAvailability(_ sender: Any) {
         userEmail = txtEmail.text ?? ""
         let notValid = Authenticate()
-        notValid.delegate = self
+        notValid.validateEmailDelegate = self
         notValid.validateEmail(email: userEmail)
     }
     
@@ -67,5 +67,8 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    //Not handled in this class
+    func userAuthenticationResponse() {}
     
 }

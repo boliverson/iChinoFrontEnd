@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LogInViewController: UIViewController{
-    
+class LogInViewController: UIViewController, LambdaBoolResponse{
+
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
@@ -23,6 +23,12 @@ class LogInViewController: UIViewController{
     @IBAction func didSelectSignIn(_ sender: Any) {
         
        
+    }
+    
+    func showUsedEmailAlert() {}
+    
+    func userAuthenticationResponse() {
+        
     }
     
     

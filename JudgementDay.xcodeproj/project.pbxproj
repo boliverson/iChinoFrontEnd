@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
+		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
 		85424A8E2255894F00E08BBE /* ScoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */; };
 		85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85424A9022558B6700E08BBE /* ScoreCardCell.xib */; };
 		85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424A9222558D3F00E08BBE /* ScoreCardCell.swift */; };
@@ -56,6 +57,7 @@
 		7334CBCBEE8B7ACD0370F841 /* Pods-JudgementDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompetitionAndScoreCard.storyboard; sourceTree = "<group>"; };
 		85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardViewController.swift; sourceTree = "<group>"; };
 		85424A9022558B6700E08BBE /* ScoreCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCardCell.xib; sourceTree = "<group>"; };
 		85424A9222558D3F00E08BBE /* ScoreCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardCell.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
 				9ACF018D221E377900BB1A87 /* ViewController.swift */,
 				9ACF018F221E377900BB1A87 /* Main.storyboard */,
+				85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */,
 				8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */,
 				8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */,
 				9ACF0195221E377B00BB1A87 /* profile_img.jpg */,
@@ -354,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */,
 				85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */,
 				9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */,
 				9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */,

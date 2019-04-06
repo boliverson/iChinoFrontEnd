@@ -34,9 +34,14 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //for that event load competitions that are associated and then segue
-        //
         //self.dataSource.competitions = getCompetitionsForEvent(event: events[indexPath.row])
      //   performSegue(withIdentifier: "CompetitionListViewController", sender: self)
+        
+        let storyboard = UIStoryboard(name: "CompetitionAndScoreCard", bundle: nil)
+        
+        let controller = storyboard.instantiateViewController(withIdentifier: "CompetitionListViewController") as! CompetitionListViewController
+        self.present(controller, animated: true, completion: nil)
+       // self.navigationController?.pushViewController(controller, animated: true)
         
     }
 

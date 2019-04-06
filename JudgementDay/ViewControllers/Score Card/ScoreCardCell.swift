@@ -17,6 +17,12 @@ class ScoreCardCell: UITableViewCell  {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        userDescription?.layer.borderWidth = 3.0
+        userDescription?.layer.borderColor = UIColor.init(red: (188.0/255.0), green: (203.0/255.0), blue: (222.0/255.0), alpha: 1.0).cgColor
+        
+        maxValue?.layer.borderWidth = 3.0
+        maxValue?.layer.borderColor = UIColor.init(red: (204.0/255.0), green:(212.0/255.0), blue: (34.0/255.0), alpha: 1.0).cgColor
+        
     }
     
     

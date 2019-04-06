@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    //TODO: broken adding and saving stuff
     
     var descriptions = [String]()
     var maxValues = [String]()
@@ -51,7 +51,7 @@ class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     @IBAction func didSelectAddCell(_ sender: Any){
-        
+        //broken
         descriptions.append("")
         maxValues.append("")
         tableView.reloadData()

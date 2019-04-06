@@ -113,6 +113,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <connections>
+                                                    <action selector="checkEmailAvailability:" destination="GmL-D5-3Og" eventType="editingDidEnd" id="xBA-4c-JiB"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RD-yE-gyz">
                                                 <rect key="frame" x="8" y="294" width="62" height="16"/>
@@ -395,6 +398,7 @@
                                     <outlet property="delegate" destination="o2x-lV-urF" id="27l-GB-R6N"/>
                                 </connections>
                             </tableView>
+
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

@@ -9,8 +9,7 @@
 import UIKit
 import AWSLambda
 
-class NewUserViewController: UIViewController, UITextFieldDelegate {
-    
+class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
 
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
@@ -41,8 +40,14 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         
         user.syncWithServer()
         
+        print("\(user)")
         
-        
+    }
+    @IBAction func checkEmailAvailability(_ sender: Any) {
+        userEmail = txtEmail.text ?? ""
+        let notValid = Authenticate()
+        notValid.delegate = self
+        notValid.validateEmail(email: userEmail)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,6 +57,15 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
+    }
+    
+    func showUsedEmailAlert() {
+        let alert = UIAlertController(title: "Oh No...", message: "Looks like that email is already in use. Please enter a new email.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
+            self.txtEmail.text = ""
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

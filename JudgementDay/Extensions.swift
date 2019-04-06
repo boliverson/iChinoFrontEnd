@@ -97,6 +97,17 @@ extension UIView {
 
 extension String {
     
+    var boolValue: Bool? {
+        switch self.lowercased() {
+        case "true", "t", "yes", "y", "1":
+            return true
+        case "false", "f", "no", "n", "0":
+            return false
+        default:
+            return nil
+        }
+    }
+    
     func sha256() -> String{
         if let stringData = self.data(using: String.Encoding.utf8) {
             return hexStringFromData(input: digest(input: stringData as NSData))

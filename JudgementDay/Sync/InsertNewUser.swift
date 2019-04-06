@@ -16,6 +16,6 @@ class InsertNewUser: LambdaBase {
                                                 "email" : user.email ?? "No Email",
                                                 "pass" : user.password ?? "No Password"]
         
-        
+        self.upload(functionName: "createUser", jsonRequest: userDictionary, objectId: user.objectID)
     }
 }

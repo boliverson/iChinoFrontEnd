@@ -13,7 +13,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
     var blurEffectView: UIVisualEffectView!
     var activityIndicator: UIActivityIndicatorView!
     
@@ -69,7 +69,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.center = blurEffectView.center
         activityIndicator.alpha = 0.0
         blurEffectView.alpha = 0.0

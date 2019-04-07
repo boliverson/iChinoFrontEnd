@@ -29,6 +29,8 @@
 		9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334621222E1686003005B8 /* User+CoreDataClass.swift */; };
 		9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334622222E1686003005B8 /* User+CoreDataProperties.swift */; };
 		9AB638442259313C00400810 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB638432259313C00400810 /* LoginUser.swift */; };
+		9AB63847225AA19900400810 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB63846225AA19900400810 /* fa-regular-400.ttf */; };
+		9AB63849225AA1AA00400810 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB63848225AA1AA00400810 /* fa-solid-900.ttf */; };
 		9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018B221E377900BB1A87 /* AppDelegate.swift */; };
 		9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018D221E377900BB1A87 /* ViewController.swift */; };
 		9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF018F221E377900BB1A87 /* Main.storyboard */; };
@@ -92,6 +94,8 @@
 		9A334622222E1686003005B8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A7077FD2239D40400D7E836 /* JudgementDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JudgementDay-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AB638432259313C00400810 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		9AB63846225AA19900400810 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
+		9AB63848225AA1AA00400810 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		9ACF0188221E377900BB1A87 /* JudgementDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JudgementDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACF018B221E377900BB1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ACF018D221E377900BB1A87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +242,15 @@
 			path = AppManagement;
 			sourceTree = "<group>";
 		};
+		9AB63845225AA15000400810 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9AB63846225AA19900400810 /* fa-regular-400.ttf */,
+				9AB63848225AA1AA00400810 /* fa-solid-900.ttf */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		9ACF017F221E377900BB1A87 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +276,7 @@
 		9ACF018A221E377900BB1A87 /* JudgementDay */ = {
 			isa = PBXGroup;
 			children = (
+				9AB63845225AA15000400810 /* SupportingFiles */,
 				9A19930122544CE900CC13AE /* Sync */,
 				9A334625222E233E003005B8 /* AppManagement */,
 				9A33461A222E105D003005B8 /* CoreDataEntities */,
@@ -429,7 +443,9 @@
 				8526FC8D225990A000614132 /* TeamMemberCell.xib in Resources */,
 				8526FC7B225970E200614132 /* WatchList.storyboard in Resources */,
 				9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */,
+				9AB63849225AA1AA00400810 /* fa-solid-900.ttf in Resources */,
 				9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */,
+				9AB63847225AA19900400810 /* fa-regular-400.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

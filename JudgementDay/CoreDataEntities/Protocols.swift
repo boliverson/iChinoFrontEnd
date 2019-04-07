@@ -15,4 +15,5 @@ protocol Uploadable: NSObject{
 
 protocol LambdaBoolResponse {
     func showUsedEmailAlert() -> Void
+    func userAuthenticationResponse(response: Bool) -> Void
 }

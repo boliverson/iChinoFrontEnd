@@ -28,6 +28,7 @@
 		9A199307225450E500CC13AE /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A199306225450E500CC13AE /* LambdaBase.swift */; };
 		9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334621222E1686003005B8 /* User+CoreDataClass.swift */; };
 		9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334622222E1686003005B8 /* User+CoreDataProperties.swift */; };
+		9AB638442259313C00400810 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB638432259313C00400810 /* LoginUser.swift */; };
 		9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018B221E377900BB1A87 /* AppDelegate.swift */; };
 		9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018D221E377900BB1A87 /* ViewController.swift */; };
 		9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF018F221E377900BB1A87 /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 		9A334621222E1686003005B8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A334622222E1686003005B8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A7077FD2239D40400D7E836 /* JudgementDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JudgementDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		9AB638432259313C00400810 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		9ACF0188221E377900BB1A87 /* JudgementDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JudgementDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACF018B221E377900BB1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ACF018D221E377900BB1A87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				9A19930222544D0C00CC13AE /* InsertNewUser.swift */,
 				9A199306225450E500CC13AE /* LambdaBase.swift */,
 				9AF932152255C3AD0068BE3B /* Authenticate.swift */,
+				9AB638432259313C00400810 /* LoginUser.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				8526FC782259708B00614132 /* WatchListViewController.swift in Sources */,
 				8526FC8322597A9C00614132 /* CreateTeamViewController.swift in Sources */,
 				9AF932162255C3AD0068BE3B /* Authenticate.swift in Sources */,
+				9AB638442259313C00400810 /* LoginUser.swift in Sources */,
 				9AF23A0422224CB0001A1C39 /* Extensions.swift in Sources */,
 				9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */,
 				85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */,

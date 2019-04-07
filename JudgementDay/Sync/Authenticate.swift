@@ -10,6 +10,6 @@ class Authenticate: LambdaBase {
     
     func validateEmail(email: String) -> Void {
         let userEmail: [String: String] = ["email" : email]
-        self.serverValidation(functionName: "checkIfEmailInUse", jsonRequest: userEmail, type: 0)
+        self.serverValidation(functionName: "checkIfEmailInUse", jsonRequest: userEmail)
     }
 }

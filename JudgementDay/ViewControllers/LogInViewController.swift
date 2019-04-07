@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController, LambdaBoolResponse{
+class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse{
     
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -20,9 +20,19 @@ class LogInViewController: UIViewController, LambdaBoolResponse{
         }
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func didSelectSignIn(_ sender: Any) {
-        if (txtEmail.text != nil || txtEmail.text != "") && (txtPassword.text != nil || txtPassword.text != "") {
+        if (txtEmail.text != nil && txtEmail.text != "" && txtPassword.text != nil && txtPassword.text != "") {
             let LU = LoginUser()
+            LU.loginDelegate = self
             LU.loginRequest(email: txtEmail.text!, password: (txtPassword.text?.sha256())!)
         } else {
             let alert = UIAlertController(title: "Alomst There...", message: "Please enter your email and password to sign in.", preferredStyle: .alert)

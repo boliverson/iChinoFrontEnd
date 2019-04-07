@@ -59,6 +59,11 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         textField.resignFirstResponder()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func showUsedEmailAlert() {
         let alert = UIAlertController(title: "Oh No...", message: "Looks like that email is already in use. Please enter a new email.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in

@@ -38,7 +38,6 @@
 		9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018B221E377900BB1A87 /* AppDelegate.swift */; };
 		9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF018F221E377900BB1A87 /* Main.storyboard */; };
 		9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF0192221E377900BB1A87 /* JudgementDay.xcdatamodeld */; };
-		9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF0195221E377B00BB1A87 /* profile_img.jpg */; };
 		9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF0197221E377B00BB1A87 /* LaunchScreen.storyboard */; };
 		9ACF01A4221E377B00BB1A87 /* JudgementDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF01A3221E377B00BB1A87 /* JudgementDayTests.swift */; };
 		9ACF01AF221E377B00BB1A87 /* JudgementDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF01AE221E377B00BB1A87 /* JudgementDayUITests.swift */; };
@@ -109,7 +108,6 @@
 		9ACF018B221E377900BB1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ACF0190221E377900BB1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ACF0193221E377900BB1A87 /* JudgementDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JudgementDay.xcdatamodel; sourceTree = "<group>"; };
-		9ACF0195221E377B00BB1A87 /* profile_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile_img.jpg; path = ../../profile_img.jpg; sourceTree = "<group>"; };
 		9ACF0198221E377B00BB1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ACF019A221E377B00BB1A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ACF019F221E377B00BB1A87 /* JudgementDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JudgementDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,7 +290,6 @@
 =======
 				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
 				9ACF018D221E377900BB1A87 /* ViewController.swift */,
-				9ACF0195221E377B00BB1A87 /* profile_img.jpg */,
 				85A33A6A225A572000E3E7EA /* seats.jpg */,
 >>>>>>> master
 				9ACF0197221E377B00BB1A87 /* LaunchScreen.storyboard */,
@@ -461,8 +458,11 @@
 				8526FC8522598C0400614132 /* RegisteredParticipantsCell.xib in Resources */,
 				8526FC8D225990A000614132 /* TeamMemberCell.xib in Resources */,
 				8526FC7B225970E200614132 /* WatchList.storyboard in Resources */,
+<<<<<<< HEAD
+=======
 >>>>>>> master
 				9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */,
+>>>>>>> e4d0dde63a7c7359802d41fbb3f82b2b781b4ca9
 				9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

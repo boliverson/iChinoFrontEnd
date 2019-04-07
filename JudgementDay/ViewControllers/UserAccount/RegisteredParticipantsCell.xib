@@ -55,7 +55,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnAdd" destination="XRF-or-5Cm" id="nWh-xY-i0w"/>
-                <outlet property="participantName" destination="YPh-nZ-Kxk" id="PSe-BH-bPE"/>
                 <outlet property="registeredParticipant" destination="YPh-nZ-Kxk" id="YuF-eC-mgP"/>
             </connections>
             <point key="canvasLocation" x="95.652173913043484" y="-53.571428571428569"/>

@@ -13,7 +13,7 @@
         <!--User Account View Controller-->
         <scene sceneID="Pw3-Hv-H5L">
             <objects>
-                <viewController id="IBB-Gv-mrD" customClass="UserAccountViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserAccountViewController" id="IBB-Gv-mrD" customClass="UserAccountViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ol0-ZW-k5X"/>
                         <viewControllerLayoutGuide type="bottom" id="B2J-Ec-Rsv"/>
@@ -161,7 +161,6 @@
                         <outlet property="bottomToolbar" destination="gOb-gL-sJJ" id="Tqb-6P-K9c"/>
                         <outlet property="btnCreateComp" destination="jur-F3-oQH" id="4XS-3E-h1e"/>
                         <outlet property="btnCreateTeam" destination="L6P-AD-Lx6" id="ixR-eY-xXa"/>
-                        <outlet property="createTeam" destination="L6P-AD-Lx6" id="tXG-9y-NVK"/>
                         <outlet property="profileImg" destination="8xh-Si-J5K" id="uws-qJ-Ihy"/>
                     </connections>
                 </viewController>

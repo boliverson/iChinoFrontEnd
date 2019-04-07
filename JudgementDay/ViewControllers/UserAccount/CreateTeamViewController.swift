@@ -19,9 +19,10 @@ class CreateTeamViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Could not load NIB in bundle: 'NSBundle' with name
         tableViewTeam.register(UINib(nibName: String(describing: TeamMemberCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TeamMemberCell.self))
         tableViewRegisteredParticipants.register(UINib(nibName: String(describing: RegisteredParticipantCell.self), bundle: nil), forCellReuseIdentifier: String(describing: RegisteredParticipantCell.self))
+        
         self.tableViewRegisteredParticipants.delegate = self
         self.tableViewRegisteredParticipants.dataSource = self
         self.tableViewTeam.delegate = self

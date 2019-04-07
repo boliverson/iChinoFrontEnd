@@ -54,10 +54,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="btnAdd" destination="3kv-W3-SlK" id="ddY-4k-avx"/>
                 <outlet property="btnRemove" destination="3kv-W3-SlK" id="AP8-bo-r7T"/>
-                <outlet property="participantName" destination="DMi-2d-MVk" id="Mrw-Rz-Hqz"/>
-                <outlet property="registeredParticipant" destination="DMi-2d-MVk" id="DgG-DM-pNM"/>
                 <outlet property="teamMemberName" destination="DMi-2d-MVk" id="P20-2s-7Va"/>
             </connections>
             <point key="canvasLocation" x="95.652173913043484" y="-53.571428571428569"/>

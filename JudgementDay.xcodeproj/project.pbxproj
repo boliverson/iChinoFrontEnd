@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
+<<<<<<< HEAD
+		72C41ADB225598A400238474 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C41ADA225598A400238474 /* ProfileViewController.swift */; };
+		72C41ADD2255B95500238474 /* MyCompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C41ADC2255B95500238474 /* MyCompetitionsViewController.swift */; };
+		72C41ADF2255BA0300238474 /* SearchCompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C41ADE2255BA0300238474 /* SearchCompetitionsViewController.swift */; };
+=======
 		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
 		8526FC762259705300614132 /* UserAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC752259705300614132 /* UserAccount.storyboard */; };
 		8526FC782259708B00614132 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC772259708B00614132 /* WatchListViewController.swift */; };
@@ -26,10 +31,10 @@
 		85A33A6B225A572100E3E7EA /* seats.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A33A6A225A572000E3E7EA /* seats.jpg */; };
 		9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19930222544D0C00CC13AE /* InsertNewUser.swift */; };
 		9A199307225450E500CC13AE /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A199306225450E500CC13AE /* LambdaBase.swift */; };
+>>>>>>> master
 		9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334621222E1686003005B8 /* User+CoreDataClass.swift */; };
 		9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334622222E1686003005B8 /* User+CoreDataProperties.swift */; };
 		9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018B221E377900BB1A87 /* AppDelegate.swift */; };
-		9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018D221E377900BB1A87 /* ViewController.swift */; };
 		9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF018F221E377900BB1A87 /* Main.storyboard */; };
 		9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF0192221E377900BB1A87 /* JudgementDay.xcdatamodeld */; };
 		9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF0197221E377B00BB1A87 /* LaunchScreen.storyboard */; };
@@ -65,6 +70,14 @@
 		32A432DDCDA97ECBF6AF3B12 /* Pods_JudgementDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JudgementDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0B2FEC7022335343A7C57B /* Pods-JudgementDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.release.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.release.xcconfig"; sourceTree = "<group>"; };
 		5A0C0AF3E50285D3EEE3BDCB /* Pods_JudgementDayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JudgementDayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C41AD5225583D900238474 /* icons8-home-page-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-home-page-24.png"; path = "../../../../../Downloads/icons8-home-page-24.png"; sourceTree = "<group>"; };
+		72C41AD6225583D900238474 /* icons8-user-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-user-24.png"; path = "../../../../../Downloads/icons8-user-24.png"; sourceTree = "<group>"; };
+		72C41AD7225583D900238474 /* icons8-customer-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-customer-24.png"; path = "../../../../../Downloads/icons8-customer-24.png"; sourceTree = "<group>"; };
+		72C41AD8225583D900238474 /* icons8-bookmark-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-bookmark-24.png"; path = "../../../../../Downloads/icons8-bookmark-24.png"; sourceTree = "<group>"; };
+		72C41AD9225583D900238474 /* profile_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile_img.jpg; path = ../../../../profile_img.jpg; sourceTree = "<group>"; };
+		72C41ADA225598A400238474 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		72C41ADC2255B95500238474 /* MyCompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompetitionsViewController.swift; sourceTree = "<group>"; };
+		72C41ADE2255BA0300238474 /* SearchCompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompetitionsViewController.swift; sourceTree = "<group>"; };
 		7334CBCBEE8B7ACD0370F841 /* Pods-JudgementDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,7 +104,6 @@
 		9A7077FD2239D40400D7E836 /* JudgementDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JudgementDay-Bridging-Header.h"; sourceTree = "<group>"; };
 		9ACF0188221E377900BB1A87 /* JudgementDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JudgementDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACF018B221E377900BB1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9ACF018D221E377900BB1A87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9ACF0190221E377900BB1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ACF0193221E377900BB1A87 /* JudgementDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JudgementDay.xcdatamodel; sourceTree = "<group>"; };
 		9ACF0198221E377B00BB1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -262,9 +274,21 @@
 				9A334625222E233E003005B8 /* AppManagement */,
 				9A33461A222E105D003005B8 /* CoreDataEntities */,
 				9AE1D07A222399A2005932D8 /* ViewControllers */,
+<<<<<<< HEAD
+				9AF23A05222398FE001A1C39 /* Synchronization */,
+				72C41AD8225583D900238474 /* icons8-bookmark-24.png */,
+				72C41AD7225583D900238474 /* icons8-customer-24.png */,
+				72C41AD5225583D900238474 /* icons8-home-page-24.png */,
+				72C41AD6225583D900238474 /* icons8-user-24.png */,
+				72C41AD9225583D900238474 /* profile_img.jpg */,
+				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
+				9ACF018F221E377900BB1A87 /* Main.storyboard */,
+				9ACF0195221E377B00BB1A87 /* profile_img.jpg */,
+=======
 				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
 				9ACF018D221E377900BB1A87 /* ViewController.swift */,
 				85A33A6A225A572000E3E7EA /* seats.jpg */,
+>>>>>>> master
 				9ACF0197221E377B00BB1A87 /* LaunchScreen.storyboard */,
 				9ACF019A221E377B00BB1A87 /* Info.plist */,
 				9ACF0192221E377900BB1A87 /* JudgementDay.xcdatamodeld */,
@@ -300,8 +324,14 @@
 				9AE1D07B222399D3005932D8 /* LogInViewController.swift */,
 				9ACF018F221E377900BB1A87 /* Main.storyboard */,
 				9AE1D07D222399EF005932D8 /* NewUserViewController.swift */,
+<<<<<<< HEAD
+				72C41ADA225598A400238474 /* ProfileViewController.swift */,
+				72C41ADC2255B95500238474 /* MyCompetitionsViewController.swift */,
+				72C41ADE2255BA0300238474 /* SearchCompetitionsViewController.swift */,
+=======
 				8526FC7F225977D500614132 /* UserAccount */,
 				85424A8F225589A400E08BBE /* Score Card */,
+>>>>>>> master
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -414,6 +444,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */,
+=======
 				85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */,
 				85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */,
 				8526FC762259705300614132 /* UserAccount.storyboard in Resources */,
@@ -422,6 +455,11 @@
 				8526FC8522598C0400614132 /* RegisteredParticipantsCell.xib in Resources */,
 				8526FC8D225990A000614132 /* TeamMemberCell.xib in Resources */,
 				8526FC7B225970E200614132 /* WatchList.storyboard in Resources */,
+<<<<<<< HEAD
+=======
+>>>>>>> master
+				9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */,
+>>>>>>> e4d0dde63a7c7359802d41fbb3f82b2b781b4ca9
 				9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,8 +586,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+=======
 				9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */,
 				9A199307225450E500CC13AE /* LambdaBase.swift in Sources */,
+>>>>>>> master
 				9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */,
 				9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */,
 				8526FC8B2259905D00614132 /* TeamMemberCell.swift in Sources */,
@@ -563,9 +604,15 @@
 				8526FC8322597A9C00614132 /* CreateTeamViewController.swift in Sources */,
 				9AF932162255C3AD0068BE3B /* Authenticate.swift in Sources */,
 				9AF23A0422224CB0001A1C39 /* Extensions.swift in Sources */,
+<<<<<<< HEAD
+				72C41ADD2255B95500238474 /* MyCompetitionsViewController.swift in Sources */,
+				72C41ADB225598A400238474 /* ProfileViewController.swift in Sources */,
+				72C41ADF2255BA0300238474 /* SearchCompetitionsViewController.swift in Sources */,
+=======
 				9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */,
 				85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */,
 				8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */,
+>>>>>>> master
 				9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */,
 				8526FC81225977F300614132 /* UserAccountViewController.swift in Sources */,
 				8526FC8922598F1E00614132 /* RegisteredParticipantCell.swift in Sources */,

@@ -8,9 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
+<<<<<<< HEAD
 		72C41ADB225598A400238474 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C41ADA225598A400238474 /* ProfileViewController.swift */; };
 		72C41ADD2255B95500238474 /* MyCompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C41ADC2255B95500238474 /* MyCompetitionsViewController.swift */; };
 		72C41ADF2255BA0300238474 /* SearchCompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C41ADE2255BA0300238474 /* SearchCompetitionsViewController.swift */; };
+=======
+		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
+		8526FC762259705300614132 /* UserAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC752259705300614132 /* UserAccount.storyboard */; };
+		8526FC782259708B00614132 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC772259708B00614132 /* WatchListViewController.swift */; };
+		8526FC7B225970E200614132 /* WatchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC7A225970E200614132 /* WatchList.storyboard */; };
+		8526FC81225977F300614132 /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC80225977F300614132 /* UserAccountViewController.swift */; };
+		8526FC8322597A9C00614132 /* CreateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC8222597A9C00614132 /* CreateTeamViewController.swift */; };
+		8526FC8522598C0400614132 /* RegisteredParticipantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC8422598C0400614132 /* RegisteredParticipantsCell.xib */; };
+		8526FC8922598F1E00614132 /* RegisteredParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC8822598F1E00614132 /* RegisteredParticipantCell.swift */; };
+		8526FC8B2259905D00614132 /* TeamMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC8A2259905D00614132 /* TeamMemberCell.swift */; };
+		8526FC8D225990A000614132 /* TeamMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC8C225990A000614132 /* TeamMemberCell.xib */; };
+		85424A8E2255894F00E08BBE /* ScoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */; };
+		85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85424A9022558B6700E08BBE /* ScoreCardCell.xib */; };
+		85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85424A9222558D3F00E08BBE /* ScoreCardCell.swift */; };
+		8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */; };
+		8542D1B72256FB0A00A8FBBE /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */; };
+		85A33A6B225A572100E3E7EA /* seats.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A33A6A225A572000E3E7EA /* seats.jpg */; };
+		9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19930222544D0C00CC13AE /* InsertNewUser.swift */; };
+		9A199307225450E500CC13AE /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A199306225450E500CC13AE /* LambdaBase.swift */; };
+>>>>>>> master
 		9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334621222E1686003005B8 /* User+CoreDataClass.swift */; };
 		9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334622222E1686003005B8 /* User+CoreDataProperties.swift */; };
 		9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018B221E377900BB1A87 /* AppDelegate.swift */; };
@@ -23,6 +44,8 @@
 		9AE1D07C222399D3005932D8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1D07B222399D3005932D8 /* LogInViewController.swift */; };
 		9AE1D07E222399EF005932D8 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1D07D222399EF005932D8 /* NewUserViewController.swift */; };
 		9AF23A0422224CB0001A1C39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF23A0322224CB0001A1C39 /* Extensions.swift */; };
+		9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF9321322558CDC0068BE3B /* Protocols.swift */; };
+		9AF932162255C3AD0068BE3B /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF932152255C3AD0068BE3B /* Authenticate.swift */; };
 		DDF45B419F6BF3F62DA291AE /* Pods_JudgementDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A432DDCDA97ECBF6AF3B12 /* Pods_JudgementDay.framework */; };
 		E2B81C1F4580B06E79B6AAAE /* Pods_JudgementDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C0AF3E50285D3EEE3BDCB /* Pods_JudgementDayTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +82,24 @@
 		7334CBCBEE8B7ACD0370F841 /* Pods-JudgementDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompetitionAndScoreCard.storyboard; sourceTree = "<group>"; };
+		8526FC752259705300614132 /* UserAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAccount.storyboard; sourceTree = "<group>"; };
+		8526FC772259708B00614132 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
+		8526FC7A225970E200614132 /* WatchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchList.storyboard; sourceTree = "<group>"; };
+		8526FC80225977F300614132 /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		8526FC8222597A9C00614132 /* CreateTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamViewController.swift; sourceTree = "<group>"; };
+		8526FC8422598C0400614132 /* RegisteredParticipantsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisteredParticipantsCell.xib; sourceTree = "<group>"; };
+		8526FC8822598F1E00614132 /* RegisteredParticipantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredParticipantCell.swift; sourceTree = "<group>"; };
+		8526FC8A2259905D00614132 /* TeamMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberCell.swift; sourceTree = "<group>"; };
+		8526FC8C225990A000614132 /* TeamMemberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamMemberCell.xib; sourceTree = "<group>"; };
+		85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardViewController.swift; sourceTree = "<group>"; };
+		85424A9022558B6700E08BBE /* ScoreCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCardCell.xib; sourceTree = "<group>"; };
+		85424A9222558D3F00E08BBE /* ScoreCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCardCell.swift; sourceTree = "<group>"; };
+		8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListViewController.swift; sourceTree = "<group>"; };
+		8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
+		85A33A6A225A572000E3E7EA /* seats.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seats.jpg; sourceTree = "<group>"; };
+		9A19930222544D0C00CC13AE /* InsertNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNewUser.swift; sourceTree = "<group>"; };
+		9A199306225450E500CC13AE /* LambdaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaBase.swift; sourceTree = "<group>"; };
 		9A334621222E1686003005B8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A334622222E1686003005B8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A7077FD2239D40400D7E836 /* JudgementDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JudgementDay-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -78,6 +119,8 @@
 		9AE1D07B222399D3005932D8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9AE1D07D222399EF005932D8 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		9AF23A0322224CB0001A1C39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9AF9321322558CDC0068BE3B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9AF932152255C3AD0068BE3B /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
 		B635D67A398D3E5B7A9FA8E3 /* Pods-JudgementDayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayUITests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayUITests/Pods-JudgementDayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C25CB758B72CFB722068D1C8 /* Pods-JudgementDayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayUITests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayUITests/Pods-JudgementDayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JudgementDayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,11 +177,65 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8526FC79225970C700614132 /* WatchList */ = {
+			isa = PBXGroup;
+			children = (
+				8526FC772259708B00614132 /* WatchListViewController.swift */,
+				8526FC7A225970E200614132 /* WatchList.storyboard */,
+			);
+			path = WatchList;
+			sourceTree = "<group>";
+		};
+		8526FC7E2259778000614132 /* CompAndEvents */ = {
+			isa = PBXGroup;
+			children = (
+				85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */,
+				8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */,
+				8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */,
+			);
+			path = CompAndEvents;
+			sourceTree = "<group>";
+		};
+		8526FC7F225977D500614132 /* UserAccount */ = {
+			isa = PBXGroup;
+			children = (
+				8526FC752259705300614132 /* UserAccount.storyboard */,
+				8526FC8222597A9C00614132 /* CreateTeamViewController.swift */,
+				8526FC8A2259905D00614132 /* TeamMemberCell.swift */,
+				8526FC8C225990A000614132 /* TeamMemberCell.xib */,
+				8526FC8422598C0400614132 /* RegisteredParticipantsCell.xib */,
+				8526FC8822598F1E00614132 /* RegisteredParticipantCell.swift */,
+				8526FC80225977F300614132 /* UserAccountViewController.swift */,
+			);
+			path = UserAccount;
+			sourceTree = "<group>";
+		};
+		85424A8F225589A400E08BBE /* Score Card */ = {
+			isa = PBXGroup;
+			children = (
+				85424A8D2255894F00E08BBE /* ScoreCardViewController.swift */,
+				85424A9022558B6700E08BBE /* ScoreCardCell.xib */,
+				85424A9222558D3F00E08BBE /* ScoreCardCell.swift */,
+			);
+			path = "Score Card";
+			sourceTree = "<group>";
+		};
+		9A19930122544CE900CC13AE /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				9A19930222544D0C00CC13AE /* InsertNewUser.swift */,
+				9A199306225450E500CC13AE /* LambdaBase.swift */,
+				9AF932152255C3AD0068BE3B /* Authenticate.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
 		9A33461A222E105D003005B8 /* CoreDataEntities */ = {
 			isa = PBXGroup;
 			children = (
 				9A334621222E1686003005B8 /* User+CoreDataClass.swift */,
 				9A334622222E1686003005B8 /* User+CoreDataProperties.swift */,
+				9AF9321322558CDC0068BE3B /* Protocols.swift */,
 			);
 			path = CoreDataEntities;
 			sourceTree = "<group>";
@@ -175,9 +272,11 @@
 		9ACF018A221E377900BB1A87 /* JudgementDay */ = {
 			isa = PBXGroup;
 			children = (
+				9A19930122544CE900CC13AE /* Sync */,
 				9A334625222E233E003005B8 /* AppManagement */,
 				9A33461A222E105D003005B8 /* CoreDataEntities */,
 				9AE1D07A222399A2005932D8 /* ViewControllers */,
+<<<<<<< HEAD
 				9AF23A05222398FE001A1C39 /* Synchronization */,
 				72C41AD8225583D900238474 /* icons8-bookmark-24.png */,
 				72C41AD7225583D900238474 /* icons8-customer-24.png */,
@@ -187,6 +286,12 @@
 				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
 				9ACF018F221E377900BB1A87 /* Main.storyboard */,
 				9ACF0195221E377B00BB1A87 /* profile_img.jpg */,
+=======
+				9ACF018B221E377900BB1A87 /* AppDelegate.swift */,
+				9ACF018D221E377900BB1A87 /* ViewController.swift */,
+				9ACF0195221E377B00BB1A87 /* profile_img.jpg */,
+				85A33A6A225A572000E3E7EA /* seats.jpg */,
+>>>>>>> master
 				9ACF0197221E377B00BB1A87 /* LaunchScreen.storyboard */,
 				9ACF019A221E377B00BB1A87 /* Info.plist */,
 				9ACF0192221E377900BB1A87 /* JudgementDay.xcdatamodeld */,
@@ -217,20 +322,21 @@
 		9AE1D07A222399A2005932D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8526FC7E2259778000614132 /* CompAndEvents */,
+				8526FC79225970C700614132 /* WatchList */,
 				9AE1D07B222399D3005932D8 /* LogInViewController.swift */,
+				9ACF018F221E377900BB1A87 /* Main.storyboard */,
 				9AE1D07D222399EF005932D8 /* NewUserViewController.swift */,
+<<<<<<< HEAD
 				72C41ADA225598A400238474 /* ProfileViewController.swift */,
 				72C41ADC2255B95500238474 /* MyCompetitionsViewController.swift */,
 				72C41ADE2255BA0300238474 /* SearchCompetitionsViewController.swift */,
+=======
+				8526FC7F225977D500614132 /* UserAccount */,
+				85424A8F225589A400E08BBE /* Score Card */,
+>>>>>>> master
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		9AF23A05222398FE001A1C39 /* Synchronization */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Synchronization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +447,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */,
+=======
+				85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */,
+				85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */,
+				8526FC762259705300614132 /* UserAccount.storyboard in Resources */,
+				9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */,
+				85A33A6B225A572100E3E7EA /* seats.jpg in Resources */,
+				8526FC8522598C0400614132 /* RegisteredParticipantsCell.xib in Resources */,
+				8526FC8D225990A000614132 /* TeamMemberCell.xib in Resources */,
+				8526FC7B225970E200614132 /* WatchList.storyboard in Resources */,
+>>>>>>> master
 				9ACF0196221E377B00BB1A87 /* profile_img.jpg in Resources */,
 				9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */,
 			);
@@ -469,16 +586,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+=======
+				9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */,
+				9A199307225450E500CC13AE /* LambdaBase.swift in Sources */,
+>>>>>>> master
 				9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */,
+				9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */,
+				8526FC8B2259905D00614132 /* TeamMemberCell.swift in Sources */,
 				9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */,
 				9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */,
+				8542D1B72256FB0A00A8FBBE /* EventsListViewController.swift in Sources */,
+				85424A8E2255894F00E08BBE /* ScoreCardViewController.swift in Sources */,
 				9AE1D07C222399D3005932D8 /* LogInViewController.swift in Sources */,
 				9AE1D07E222399EF005932D8 /* NewUserViewController.swift in Sources */,
+				8526FC782259708B00614132 /* WatchListViewController.swift in Sources */,
+				8526FC8322597A9C00614132 /* CreateTeamViewController.swift in Sources */,
+				9AF932162255C3AD0068BE3B /* Authenticate.swift in Sources */,
 				9AF23A0422224CB0001A1C39 /* Extensions.swift in Sources */,
+<<<<<<< HEAD
 				72C41ADD2255B95500238474 /* MyCompetitionsViewController.swift in Sources */,
 				72C41ADB225598A400238474 /* ProfileViewController.swift in Sources */,
 				72C41ADF2255BA0300238474 /* SearchCompetitionsViewController.swift in Sources */,
+=======
+				9A19930322544D0C00CC13AE /* InsertNewUser.swift in Sources */,
+				85424A9322558D3F00E08BBE /* ScoreCardCell.swift in Sources */,
+				8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */,
+>>>>>>> master
 				9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */,
+				8526FC81225977F300614132 /* UserAccountViewController.swift in Sources */,
+				8526FC8922598F1E00614132 /* RegisteredParticipantCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

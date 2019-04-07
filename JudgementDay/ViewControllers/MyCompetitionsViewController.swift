@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+class MyCompetitionsViewController: UIViewController {
+    
+    @IBOutlet var bottomToolbar: UIToolbar!
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        print("Testing")
+        
+    }
+    
+    
+}

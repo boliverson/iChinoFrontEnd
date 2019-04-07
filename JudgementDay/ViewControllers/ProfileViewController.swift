@@ -6,4 +6,21 @@
 //  Copyright © 2019 Weber State. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ProfileViewController: UIViewController {
+    
+    @IBOutlet var bottomToolbar: UIToolbar!
+    @IBOutlet var profileImg: UIImageView!
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        print("Testing")
+
+    }
+    
+    
+}
+
+

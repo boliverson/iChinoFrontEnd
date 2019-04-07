@@ -21,8 +21,11 @@ class LogInViewController: UIViewController{
     }
     
     @IBAction func didSelectSignIn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "UerAccountView", bundle: nil)
         
-       
+        let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
+        self.present(controller, animated: true, completion: nil)
+       //UserAccountViewController
     }
     
     

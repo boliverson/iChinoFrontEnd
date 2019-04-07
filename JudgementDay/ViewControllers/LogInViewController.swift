@@ -13,6 +13,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+    var blurEffectView: UIVisualEffectView!
+    var activityIndicator: UIActivityIndicatorView!
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CreateAccount" {
             let newAccountVC = segue.destination as! NewUserViewController
@@ -31,6 +35,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     
     @IBAction func didSelectSignIn(_ sender: Any) {
         if (txtEmail.text != nil && txtEmail.text != "" && txtPassword.text != nil && txtPassword.text != "") {
+            startActivityIndicator()
             let LU = LoginUser()
             LU.loginDelegate = self
             LU.loginRequest(email: txtEmail.text!, password: (txtPassword.text?.sha256())!)
@@ -44,6 +49,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     func showUsedEmailAlert() {} //Implemented in another class
     
     func userAuthenticationResponse(response: Bool) {
+        stopActivityIndicator()
         if response{
             let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
@@ -58,6 +64,35 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
         }
     }
     
+    func startActivityIndicator() -> Void {
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator.center = blurEffectView.center
+        activityIndicator.alpha = 0.0
+        blurEffectView.alpha = 0.0
+        view.addSubview(blurEffectView)
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+        UIView.animate(withDuration: 0.3) {
+            self.blurEffectView.alpha = 1.0
+            self.activityIndicator.alpha = 1.0
+        }
+    }
+    
+    func stopActivityIndicator() -> Void{
+        UIView.animate(withDuration: 0.25, animations: {
+            self.blurEffectView.alpha = 0.0
+            self.activityIndicator.alpha = 0.0
+        }, completion: { finished in
+            self.activityIndicator.stopAnimating()
+            self.blurEffectView.removeFromSuperview()
+            self.activityIndicator.removeFromSuperview()
+        })
+    }
     
     
     

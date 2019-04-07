@@ -11,7 +11,8 @@ import AWSLambda
 class LambdaBase: NSObject {
     
     var object: NSManagedObject! = nil
-    var delegate: LambdaBoolResponse?
+    var validateEmailDelegate: LambdaBoolResponse?
+    var loginDelegate: LambdaBoolResponse?
     
     func upload(functionName: String, jsonRequest: [String:String], objectId: NSManagedObjectID) -> Void {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -40,18 +41,27 @@ class LambdaBase: NSObject {
     }
     
     
-    func serverValidation(functionName: String, jsonRequest: [String:String]) -> Void {
+    func serverValidation(functionName: String, jsonRequest: [String:String], type: Int) -> Void {
         var lambdaResponse = false
         
         let lambda = AWSLambdaInvoker.default()
         lambda.invokeFunction(functionName, jsonObject: jsonRequest).continueWith(block: { (task) in
             if (task.result != nil){
                 let json = task.result as! Dictionary<String, Any>
-                let result = json["inUse"] ?? 0
+                let result = json["response"] ?? 0
                 let respResult = String(describing: result)
                 lambdaResponse = respResult.boolValue ?? false
-                if lambdaResponse{
-                    self.delegate?.showUsedEmailAlert()
+                switch type{
+                case 0:
+                    if lambdaResponse{
+                        self.validateEmailDelegate?.showUsedEmailAlert()
+                    }
+                    break
+                case 1:
+                    self.loginDelegate?.userAuthenticationResponse(response: lambdaResponse)
+                    break
+                default:
+                    self.validateEmailDelegate?.showUsedEmailAlert()
                 }
             }
             return nil

@@ -9,8 +9,7 @@
 import UIKit
 import AWSLambda
 
-class NewUserViewController: UIViewController, UITextFieldDelegate {
-    
+class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
 
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
@@ -39,29 +38,16 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
         user.email = txtEmail.text
         user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
         
-        let userDictionary : [String:String] = ["firstName" : user.firstName ?? "iChino",
-                                                "lastName" : user.lastName ?? "3750Class",
-                                                "preferredName" : "Ben",
-                                                "phone" : user.phone ?? "No Phone",
-                                                "email" : user.email ?? "No Email",
-                                                "pass" : user.password ?? "No Password"]
+        user.syncWithServer()
         
-        do {
-            let lambda = AWSLambdaInvoker.default()
-            
-            lambda.invokeFunction("createUser", jsonObject: userDictionary).continueWith(block: { (task) in
-                
-                if (task.result != nil){
-                    print("\(task.result ?? "Received a null response" as AnyObject)")
-                }
-                return nil
-            })
-            try user.managedObjectContext?.save()
-            
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        print("\(user)")
         
+    }
+    @IBAction func checkEmailAvailability(_ sender: Any) {
+        userEmail = txtEmail.text ?? ""
+        let notValid = Authenticate()
+        notValid.delegate = self
+        notValid.validateEmail(email: userEmail)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -71,6 +57,15 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
+    }
+    
+    func showUsedEmailAlert() {
+        let alert = UIAlertController(title: "Oh No...", message: "Looks like that email is already in use. Please enter a new email.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
+            self.txtEmail.text = ""
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

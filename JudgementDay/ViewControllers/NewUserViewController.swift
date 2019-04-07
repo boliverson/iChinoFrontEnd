@@ -68,7 +68,6 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         self.present(alert, animated: true, completion: nil)
     }
     
-    //Not handled in this class
-    func userAuthenticationResponse() {}
+    func userAuthenticationResponse(response: Bool) {} //Handled in another class
     
 }

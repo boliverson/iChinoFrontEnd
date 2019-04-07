@@ -48,7 +48,7 @@ class LambdaBase: NSObject {
         lambda.invokeFunction(functionName, jsonObject: jsonRequest).continueWith(block: { (task) in
             if (task.result != nil){
                 let json = task.result as! Dictionary<String, Any>
-                let result = json["inUse"] ?? 0
+                let result = json["response"] ?? 0
                 let respResult = String(describing: result)
                 lambdaResponse = respResult.boolValue ?? false
                 switch type{

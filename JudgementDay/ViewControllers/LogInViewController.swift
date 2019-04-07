@@ -9,7 +9,7 @@
 import UIKit
 
 class LogInViewController: UIViewController, LambdaBoolResponse{
-
+    
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
@@ -21,14 +21,29 @@ class LogInViewController: UIViewController, LambdaBoolResponse{
     }
     
     @IBAction func didSelectSignIn(_ sender: Any) {
-        
-       
+        if (txtEmail.text != nil || txtEmail.text != "") && (txtPassword.text != nil || txtPassword.text != "") {
+            let LU = LoginUser()
+            LU.loginRequest(email: txtEmail.text!, password: (txtPassword.text?.sha256())!)
+        } else {
+            let alert = UIAlertController(title: "Alomst There...", message: "Please enter your email and password to sign in.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
-    func showUsedEmailAlert() {}
+    func showUsedEmailAlert() {} //Implemented in another class
     
-    func userAuthenticationResponse() {
-        
+    func userAuthenticationResponse(response: Bool) {
+        if response{
+            
+        }else{
+            let alert = UIAlertController(title: "Oh No...", message: "Your email or password was not found. Please try again or create a new account.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
+                self.txtPassword.text = ""
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     

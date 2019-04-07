@@ -35,7 +35,9 @@ class LogInViewController: UIViewController, LambdaBoolResponse{
     
     func userAuthenticationResponse(response: Bool) {
         if response{
-            
+            let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
+            self.present(controller, animated: true, completion: nil)
         }else{
             let alert = UIAlertController(title: "Oh No...", message: "Your email or password was not found. Please try again or create a new account.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in

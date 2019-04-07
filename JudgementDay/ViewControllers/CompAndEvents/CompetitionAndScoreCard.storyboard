@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,11 +23,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VB-Tx-jJ1" userLabel="details Background">
-                                <rect key="frame" x="0.0" y="-4" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="-4" width="375" height="24"/>
                                 <color key="backgroundColor" red="0.85509079690000001" green="0.40435916189999999" blue="0.1743086874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="cIQ-Xe-Saj"/>
-                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-ay-BR0">
                                 <rect key="frame" x="0.0" y="121" width="375" height="546"/>
@@ -93,7 +90,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5v-tF-6X9">
-                                <rect key="frame" x="353" y="80" width="30" height="30"/>
+                                <rect key="frame" x="337.5" y="80" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.64113599060000004" green="0.71371442080000003" blue="0.73802024129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ixP-wb-QTR"/>
@@ -115,10 +112,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="iuX-NI-7Q9" firstAttribute="top" secondItem="1VB-Tx-jJ1" secondAttribute="bottom" id="4Ku-OC-xug"/>
                             <constraint firstItem="1VB-Tx-jJ1" firstAttribute="centerX" secondItem="MV6-gu-PBg" secondAttribute="centerX" id="4mD-rz-WtF"/>
                             <constraint firstItem="1VB-Tx-jJ1" firstAttribute="top" secondItem="MV6-gu-PBg" secondAttribute="top" constant="-4" id="C1u-Cm-Uko"/>
                             <constraint firstAttribute="trailing" secondItem="1VB-Tx-jJ1" secondAttribute="trailing" id="MoX-tr-jtG"/>
                             <constraint firstItem="B5v-tF-6X9" firstAttribute="top" secondItem="iuX-NI-7Q9" secondAttribute="bottom" constant="16" id="Olt-os-at9"/>
+                            <constraint firstItem="B5v-tF-6X9" firstAttribute="leading" secondItem="0Ds-dQ-T7v" secondAttribute="trailing" constant="15" id="R3x-ow-192"/>
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="trailing" secondItem="1VB-Tx-jJ1" secondAttribute="trailing" id="RcO-mp-ry1"/>
                             <constraint firstItem="CC5-ay-BR0" firstAttribute="top" secondItem="EqB-Xy-WO4" secondAttribute="bottom" constant="101" id="SO1-8X-v7Z"/>
                             <constraint firstItem="CC5-ay-BR0" firstAttribute="top" secondItem="0Ds-dQ-T7v" secondAttribute="bottom" constant="11" id="UZD-5x-Tdh"/>
@@ -126,7 +125,6 @@
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="top" secondItem="EqB-Xy-WO4" secondAttribute="bottom" id="Yvb-9u-vEu"/>
                             <constraint firstItem="1VB-Tx-jJ1" firstAttribute="leading" secondItem="MV6-gu-PBg" secondAttribute="leading" id="gpt-yX-QIy"/>
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="leading" secondItem="1VB-Tx-jJ1" secondAttribute="leading" id="lcT-nv-q9H"/>
-                            <constraint firstItem="B5v-tF-6X9" firstAttribute="leading" secondItem="MV6-gu-PBg" secondAttribute="leading" constant="353" id="m4p-0c-n3K"/>
                             <constraint firstAttribute="trailing" secondItem="CC5-ay-BR0" secondAttribute="trailing" id="s6R-8d-9xs"/>
                             <constraint firstItem="CC5-ay-BR0" firstAttribute="leading" secondItem="MV6-gu-PBg" secondAttribute="leading" id="swY-iv-Hvj"/>
                             <constraint firstAttribute="bottom" secondItem="CC5-ay-BR0" secondAttribute="bottom" id="vY7-Hb-uEj"/>
@@ -139,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia2-Wz-wrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1504" y="1904"/>
+            <point key="canvasLocation" x="-1504.8" y="1903.8980509745129"/>
         </scene>
         <!--Competition List View Controller-->
         <scene sceneID="qRc-lO-AnY">

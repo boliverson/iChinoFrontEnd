@@ -18,7 +18,11 @@ class CreateUserCell: UITableViewCell, UITextFieldDelegate {
         super.awakeFromNib()
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         txtField.text = textField.text
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

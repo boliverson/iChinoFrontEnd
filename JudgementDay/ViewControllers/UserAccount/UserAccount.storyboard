@@ -88,27 +88,16 @@
                                             <segue destination="eTf-e7-vo2" kind="showDetail" id="eDd-Xo-KjA"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-Si-J5K">
-                                        <rect key="frame" x="63.5" y="-27" width="199" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="199" id="6wz-ve-zNb"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.86666666670000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8xh-Si-J5K" secondAttribute="trailing" constant="63.5" id="5z7-GJ-Ntq"/>
                                     <constraint firstItem="L6P-AD-Lx6" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="225" id="AB1-wO-mjt"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="314" id="BB5-xj-ooF"/>
-                                    <constraint firstItem="8xh-Si-J5K" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="-27" id="FTH-Ks-gcT"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="LHY-84-v6N"/>
-                                    <constraint firstItem="8xh-Si-J5K" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="N9t-3x-YQZ"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="29" id="Tgx-10-R0y"/>
-                                    <constraint firstItem="L6P-AD-Lx6" firstAttribute="top" secondItem="8xh-Si-J5K" secondAttribute="bottom" constant="52" id="VZj-fc-G8N"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="top" secondItem="L6P-AD-Lx6" secondAttribute="bottom" constant="34" id="a62-py-zAp"/>
                                     <constraint firstItem="L6P-AD-Lx6" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="29" id="aD7-7n-Rqc"/>
                                     <constraint firstItem="L6P-AD-Lx6" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="bU1-9e-h9D"/>
-                                    <constraint firstItem="8xh-Si-J5K" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="63.5" id="gwY-XW-xL7"/>
                                     <constraint firstAttribute="trailing" secondItem="jur-F3-oQH" secondAttribute="trailing" constant="29" id="lp9-o3-Q9j"/>
                                     <constraint firstAttribute="trailing" secondItem="L6P-AD-Lx6" secondAttribute="trailing" constant="29" id="soH-sE-pSZ"/>
                                 </constraints>
@@ -130,27 +119,16 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Tqz-4y-9Rp"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL7-1d-nEq">
-                                <rect key="frame" x="70" y="66" width="274" height="31"/>
-                                <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="25"/>
-                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XWm-xK-L0O" firstAttribute="top" secondItem="rL7-1d-nEq" secondAttribute="bottom" constant="62" id="2gH-Ce-QhO"/>
                             <constraint firstAttribute="trailing" secondItem="XWm-xK-L0O" secondAttribute="trailing" constant="44" id="4Bg-J7-e5J"/>
                             <constraint firstItem="gOb-gL-sJJ" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="Ay6-0N-RiN"/>
-                            <constraint firstItem="rL7-1d-nEq" firstAttribute="centerX" secondItem="3Pp-aJ-NLt" secondAttribute="centerX" id="EfF-Z2-j8t"/>
-                            <constraint firstItem="rL7-1d-nEq" firstAttribute="leading" secondItem="3Pp-aJ-NLt" secondAttribute="leadingMargin" constant="50" id="JaJ-bf-U0c"/>
-                            <constraint firstItem="rL7-1d-nEq" firstAttribute="top" secondItem="ol0-ZW-k5X" secondAttribute="bottom" constant="25" id="fF1-2R-CSK"/>
                             <constraint firstItem="XWm-xK-L0O" firstAttribute="top" secondItem="ol0-ZW-k5X" secondAttribute="bottom" constant="115" id="hHf-ox-BUq"/>
                             <constraint firstItem="XWm-xK-L0O" firstAttribute="leading" secondItem="3Pp-aJ-NLt" secondAttribute="leading" constant="44" id="isM-WY-CIz"/>
                             <constraint firstItem="B2J-Ec-Rsv" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="bottom" constant="-44" id="izd-oS-dUD"/>
                             <constraint firstAttribute="bottom" secondItem="gOb-gL-sJJ" secondAttribute="bottom" id="rzv-ju-YGP"/>
                             <constraint firstItem="gOb-gL-sJJ" firstAttribute="leading" secondItem="3Pp-aJ-NLt" secondAttribute="leading" id="wqH-qZ-avW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rL7-1d-nEq" secondAttribute="trailing" constant="50" id="xMS-Ob-z1c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7JQ-Ow-Yil"/>
                     </view>
@@ -161,7 +139,6 @@
                         <outlet property="bottomToolbar" destination="gOb-gL-sJJ" id="Tqb-6P-K9c"/>
                         <outlet property="btnCreateComp" destination="jur-F3-oQH" id="4XS-3E-h1e"/>
                         <outlet property="btnCreateTeam" destination="L6P-AD-Lx6" id="ixR-eY-xXa"/>
-                        <outlet property="profileImg" destination="8xh-Si-J5K" id="uws-qJ-Ihy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UF-I3-VM4" userLabel="First Responder" sceneMemberID="firstResponder"/>

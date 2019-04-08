@@ -21,7 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YK7-fA-xjk">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-bS-FA4" userLabel="blueBar">
+                                <rect key="frame" x="0.0" y="0.0" width="175" height="896"/>
+                                <color key="backgroundColor" red="0.80232888460159302" green="0.89017897844314575" blue="0.92259722948074341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="YaB-zE-tV1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YK7-fA-xjk" userLabel="clear">
                                 <rect key="frame" x="0.0" y="0.0" width="177" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-g1-d7e">
@@ -175,12 +182,13 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.76078431372549016" green="0.8666666666666667" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="9vQ-FQ-4yt" firstAttribute="top" secondItem="b5E-g1-d7e" secondAttribute="bottom" constant="24" id="C9k-S5-7WD"/>
+                                    <constraint firstItem="9vQ-FQ-4yt" firstAttribute="top" secondItem="b5E-g1-d7e" secondAttribute="bottom" constant="24" identifier="loginContainerHeight" id="C9k-S5-7WD"/>
                                     <constraint firstItem="9vQ-FQ-4yt" firstAttribute="centerX" secondItem="YK7-fA-xjk" secondAttribute="centerX" constant="118.5" id="NTS-Cq-P7G"/>
                                     <constraint firstItem="b5E-g1-d7e" firstAttribute="leading" secondItem="YK7-fA-xjk" secondAttribute="leading" constant="53" id="OgY-P9-ofN"/>
                                     <constraint firstAttribute="trailing" secondItem="9vQ-FQ-4yt" secondAttribute="trailing" constant="-195" id="PNg-iX-kiQ"/>
+                                    <constraint firstAttribute="width" constant="177" id="Yd7-Lx-0PU"/>
                                     <constraint firstItem="9vQ-FQ-4yt" firstAttribute="leading" secondItem="YK7-fA-xjk" secondAttribute="leading" constant="42" id="zoL-q5-DbB"/>
                                 </constraints>
                             </view>
@@ -259,10 +267,22 @@
                             <constraint firstItem="TDk-tb-mE1" firstAttribute="top" secondItem="cuN-Nh-7fw" secondAttribute="bottom" constant="78" id="VQf-4g-aLV"/>
                             <constraint firstItem="cuN-Nh-7fw" firstAttribute="top" secondItem="roJ-7m-zSi" secondAttribute="bottom" constant="16" id="cfk-hN-xji"/>
                             <constraint firstAttribute="bottom" secondItem="YK7-fA-xjk" secondAttribute="bottom" id="dxy-TB-lqg"/>
-                            <constraint firstItem="b5E-g1-d7e" firstAttribute="top" secondItem="vXG-an-KEB" secondAttribute="bottom" constant="43" id="gBq-5e-mgV"/>
+                            <constraint firstItem="TDk-tb-mE1" firstAttribute="top" secondItem="C7B-bS-FA4" secondAttribute="bottom" constant="-34" id="f7a-qP-LZL"/>
+                            <constraint firstItem="b5E-g1-d7e" firstAttribute="top" secondItem="vXG-an-KEB" secondAttribute="bottom" constant="43" identifier="accountHeight" id="gBq-5e-mgV"/>
+                            <constraint firstItem="C7B-bS-FA4" firstAttribute="leading" secondItem="KOY-I3-aRB" secondAttribute="leading" id="iR4-zp-RH0"/>
                             <constraint firstItem="YK7-fA-xjk" firstAttribute="leading" secondItem="KOY-I3-aRB" secondAttribute="leading" id="krB-Dc-Qdk"/>
+                            <constraint firstItem="C7B-bS-FA4" firstAttribute="top" secondItem="vXG-an-KEB" secondAttribute="bottom" constant="-44" id="phO-sS-qOH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountHeight" destination="gBq-5e-mgV" id="WSa-j4-gre"/>
+                        <outlet property="loginContainerHeight" destination="C9k-S5-7WD" id="zaW-4S-fgF"/>
+                        <outlet property="txtEmail" destination="Edv-jf-Lcu" id="3W1-xc-SbA"/>
+                        <outlet property="txtFirstName" destination="uQ3-0P-Rhn" id="N1q-lB-1fr"/>
+                        <outlet property="txtLastName" destination="7FO-bq-m53" id="48f-LY-LbY"/>
+                        <outlet property="txtPassword" destination="U9k-V2-Ao4" id="fRz-C1-dKD"/>
+                        <outlet property="txtPhone" destination="OVQ-IC-gsu" id="Zn3-Y8-USi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KI3-2R-2eB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

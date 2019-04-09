@@ -25,8 +25,8 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWm-xK-L0O">
                                 <rect key="frame" x="44" y="159" width="326" height="653.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jur-F3-oQH">
-                                        <rect key="frame" x="29" y="314" width="268" height="55"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jur-F3-oQH">
+                                        <rect key="frame" x="29" y="92" width="268" height="55"/>
                                         <color key="backgroundColor" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="6wS-RH-OtF"/>
@@ -56,50 +56,13 @@
                                             <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="1qA-Pc-M7E"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6P-AD-Lx6">
-                                        <rect key="frame" x="29" y="225" width="268" height="55"/>
-                                        <color key="backgroundColor" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="TM1-Ta-c4n"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
-                                        <state key="normal" title="Create Team">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                <size key="value" width="3" height="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didSelectCreateTeam:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="C9C-Bt-F3j"/>
-                                            <segue destination="eTf-e7-vo2" kind="showDetail" id="eDd-Xo-KjA"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.86666666670000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="L6P-AD-Lx6" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="225" id="AB1-wO-mjt"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="314" id="BB5-xj-ooF"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="LHY-84-v6N"/>
                                     <constraint firstItem="jur-F3-oQH" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="29" id="Tgx-10-R0y"/>
-                                    <constraint firstItem="jur-F3-oQH" firstAttribute="top" secondItem="L6P-AD-Lx6" secondAttribute="bottom" constant="34" id="a62-py-zAp"/>
-                                    <constraint firstItem="L6P-AD-Lx6" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="29" id="aD7-7n-Rqc"/>
-                                    <constraint firstItem="L6P-AD-Lx6" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="bU1-9e-h9D"/>
                                     <constraint firstAttribute="trailing" secondItem="jur-F3-oQH" secondAttribute="trailing" constant="29" id="lp9-o3-Q9j"/>
-                                    <constraint firstAttribute="trailing" secondItem="L6P-AD-Lx6" secondAttribute="trailing" constant="29" id="soH-sE-pSZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -119,6 +82,54 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Tqz-4y-9Rp"/>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOU-Mw-CiK">
+                                <rect key="frame" x="32" y="94" width="356" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-Gu-Qgj">
+                                        <rect key="frame" x="8" y="8" width="215" height="64.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64.5" id="Yut-tY-UrI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="46"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEN-Kd-p8W">
+                                        <rect key="frame" x="40" y="57" width="295" height="49"/>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="52"/>
+                                        <color key="textColor" red="0.7486948967" green="0.77306300400000005" blue="0.1265260279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7486948967" green="0.77306300400000005" blue="0.1265260279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1jy-Gu-Qgj" firstAttribute="leading" secondItem="fOU-Mw-CiK" secondAttribute="leadingMargin" id="1d9-U6-bu2"/>
+                                    <constraint firstItem="1jy-Gu-Qgj" firstAttribute="top" secondItem="fOU-Mw-CiK" secondAttribute="top" constant="8" id="2kw-qg-lnt"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1jy-Gu-Qgj" secondAttribute="trailing" constant="20" symbolic="YES" id="2tp-Yc-ZEl"/>
+                                    <constraint firstAttribute="bottom" secondItem="1jy-Gu-Qgj" secondAttribute="bottom" constant="-16" id="CGa-Mv-dUC"/>
+                                    <constraint firstAttribute="bottom" secondItem="OEN-Kd-p8W" secondAttribute="bottom" constant="-49.5" id="OPr-1V-wCX"/>
+                                    <constraint firstAttribute="trailing" secondItem="OEN-Kd-p8W" secondAttribute="trailing" constant="21" id="Xl3-6c-XS0"/>
+                                    <constraint firstItem="OEN-Kd-p8W" firstAttribute="top" secondItem="fOU-Mw-CiK" secondAttribute="top" constant="57" id="aTT-4z-wyP"/>
+                                    <constraint firstItem="OEN-Kd-p8W" firstAttribute="leading" secondItem="fOU-Mw-CiK" secondAttribute="leading" constant="40" id="jlB-q4-iaL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.7486948967" green="0.77306300400000005" blue="0.1265260279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -129,6 +140,8 @@
                             <constraint firstItem="B2J-Ec-Rsv" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="bottom" constant="-44" id="izd-oS-dUD"/>
                             <constraint firstAttribute="bottom" secondItem="gOb-gL-sJJ" secondAttribute="bottom" id="rzv-ju-YGP"/>
                             <constraint firstItem="gOb-gL-sJJ" firstAttribute="leading" secondItem="3Pp-aJ-NLt" secondAttribute="leading" id="wqH-qZ-avW"/>
+                            <constraint firstItem="1jy-Gu-Qgj" firstAttribute="leading" secondItem="7JQ-Ow-Yil" secondAttribute="leading" constant="40" id="yES-l5-0NB"/>
+                            <constraint firstItem="7JQ-Ow-Yil" firstAttribute="trailing" secondItem="fOU-Mw-CiK" secondAttribute="trailing" constant="26" id="zeA-fg-Ll6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7JQ-Ow-Yil"/>
                     </view>
@@ -138,7 +151,6 @@
                     <connections>
                         <outlet property="bottomToolbar" destination="gOb-gL-sJJ" id="Tqb-6P-K9c"/>
                         <outlet property="btnCreateComp" destination="jur-F3-oQH" id="4XS-3E-h1e"/>
-                        <outlet property="btnCreateTeam" destination="L6P-AD-Lx6" id="ixR-eY-xXa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UF-I3-VM4" userLabel="First Responder" sceneMemberID="firstResponder"/>

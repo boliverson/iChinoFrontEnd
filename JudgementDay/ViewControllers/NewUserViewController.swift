@@ -9,28 +9,25 @@
 import UIKit
 import AWSLambda
 
-class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse{
+class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse, UITableViewDelegate, UITableViewDataSource{
 
-    
-    @IBOutlet weak var txtFirstName: UITextField!
-    @IBOutlet weak var txtLastName: UITextField!
-    @IBOutlet weak var txtPhone: UITextField!
-    @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var loginContainerHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var tableView: UITableView!
+    //    @IBOutlet weak var txtFirstName: UITextField!
+//    @IBOutlet weak var txtLastName: UITextField!
+//    @IBOutlet weak var txtPhone: UITextField!
+//    @IBOutlet weak var txtEmail: UITextField!
+//    @IBOutlet weak var txtPassword: UITextField!
+    var createLabels = ["Email", "First Name", "Last Name", "Phone", "Password"]
+    var txtFldResponses = [String]()
     var userEmail: String = ""
     
     override func viewDidLoad() {
-        txtEmail.text = userEmail
+       // txtEmail.text = userEmail
 //        scrollView.contentSize = CGSize(width: 269.0, height: 100.0)
-        self.txtPhone.delegate = self
-        self.txtEmail.delegate = self
-        self.txtFirstName.delegate = self
-        self.txtLastName.delegate = self
-        self.txtPassword.delegate = self
-        self.accountHeight.constant = 53
-        self.loginContainerHeight.constant = 24
+        
+        tableView.register(UINib(nibName: String(describing: CreateUserCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CreateUserCell.self))
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     @IBAction func didSelectCancel(_ sender: Any) {
@@ -40,11 +37,11 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     @IBAction func didSelectCreate(_ sender: Any) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
-        user.firstName = txtFirstName.text
-        user.lastName = txtLastName.text
-        user.phone = txtPhone.text
-        user.email = txtEmail.text
-        user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
+//        user.firstName = txtFirstName.text
+//        user.lastName = txtLastName.text
+//        user.phone = txtPhone.text
+//        user.email = txtEmail.text
+//        user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
         
         user.syncWithServer()
         
@@ -52,28 +49,17 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         
     }
     @IBAction func checkEmailAvailability(_ sender: Any) {
-        userEmail = txtEmail.text ?? ""
+//        userEmail = txtEmail.text ?? ""
         let notValid = Authenticate()
         notValid.delegate = self
         notValid.validateEmail(email: userEmail)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.accountHeight.constant = 24.0
-        self.loginContainerHeight.constant = 53.0
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
         self.view.endEditing(true)
-     
+       // self.scrollView.endEditing(true)
     }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.accountHeight.constant = 10.0
-        self.loginContainerHeight.constant = 10.0
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
     }
@@ -81,14 +67,28 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     func showUsedEmailAlert() {
         let alert = UIAlertController(title: "Oh No...", message: "Looks like that email is already in use. Please enter a new email.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
-            self.txtEmail.text = ""
+           // self.txtEmail.text = ""
         }))
         
         self.present(alert, animated: true, completion: nil)
     }
     
     
-    @IBOutlet weak var accountHeight: NSLayoutConstraint!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return createLabels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CreateUserCell.self), for: indexPath) as! CreateUserCell
+        
+        cell.lbl.text = createLabels[indexPath.row]
+        //cell.textLabel?.text = txtFldResponses[indexPath.row] 
+
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
     
 }

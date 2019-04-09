@@ -9,28 +9,20 @@
 import UIKit
 import AWSLambda
 
-class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse{
+class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
 
-    
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtPhone: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var loginContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var userEmail: String = ""
     
     override func viewDidLoad() {
         txtEmail.text = userEmail
 //        scrollView.contentSize = CGSize(width: 269.0, height: 100.0)
-        self.txtPhone.delegate = self
-        self.txtEmail.delegate = self
-        self.txtFirstName.delegate = self
-        self.txtLastName.delegate = self
-        self.txtPassword.delegate = self
-        self.accountHeight.constant = 53
-        self.loginContainerHeight.constant = 24
     }
     
     @IBAction func didSelectCancel(_ sender: Any) {
@@ -54,28 +46,22 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     @IBAction func checkEmailAvailability(_ sender: Any) {
         userEmail = txtEmail.text ?? ""
         let notValid = Authenticate()
-        notValid.delegate = self
+        notValid.validateEmailDelegate = self
         notValid.validateEmail(email: userEmail)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.accountHeight.constant = 24.0
-        self.loginContainerHeight.constant = 53.0
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
         self.view.endEditing(true)
-     
+        self.scrollView.endEditing(true)
     }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.accountHeight.constant = 10.0
-        self.loginContainerHeight.constant = 10.0
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func showUsedEmailAlert() {
@@ -87,8 +73,6 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         self.present(alert, animated: true, completion: nil)
     }
     
-    
-    @IBOutlet weak var accountHeight: NSLayoutConstraint!
-    
+    func userAuthenticationResponse(response: Bool) {} //Handled in another class
     
 }

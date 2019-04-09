@@ -26,9 +26,23 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-g1-d7e">
                                         <rect key="frame" x="25" y="74" width="389" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="zMw-wi-Ac3">
+                                                <rect key="frame" x="54" y="31" width="313" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="8g9-1w-LPh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="44"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.7486948967" green="0.77306300400000005" blue="0.1265260279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="63" id="OnJ-hC-ztl"/>
+                                            <constraint firstAttribute="trailing" secondItem="zMw-wi-Ac3" secondAttribute="trailing" constant="22" id="cGa-jA-tw6"/>
+                                            <constraint firstItem="zMw-wi-Ac3" firstAttribute="leading" secondItem="b5E-g1-d7e" secondAttribute="leading" constant="54" id="lO0-qE-tcZ"/>
+                                            <constraint firstItem="zMw-wi-Ac3" firstAttribute="top" secondItem="b5E-g1-d7e" secondAttribute="top" constant="31" id="wTQ-kR-eGl"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -117,12 +131,6 @@
                                     <action selector="didSelectCancel:" destination="GmL-D5-3Og" eventType="touchUpInside" id="Q2N-55-C6d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Account" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMw-wi-Ac3">
-                                <rect key="frame" x="8" y="91" width="391" height="62"/>
-                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="44"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-Xv-aQk">
                                 <rect key="frame" x="48" y="161" width="319" height="404"/>
                                 <subviews>
@@ -130,7 +138,10 @@
                                         <rect key="frame" x="31" y="38" width="263" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="checkEmailAvailability:" destination="GmL-D5-3Og" eventType="editingDidEnd" id="9AS-hb-Lwc"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-Nc-aKg">
                                         <rect key="frame" x="33" y="13" width="45" height="21"/>
@@ -166,25 +177,25 @@
                                         <rect key="frame" x="31" y="104" width="263" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="InI-Xa-f3L">
                                         <rect key="frame" x="31" y="170" width="263" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiL-Yz-V25">
                                         <rect key="frame" x="32" y="236" width="263" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" smartDashesType="yes"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0K-Yf-Os5">
                                         <rect key="frame" x="33" y="302" width="263" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,8 +232,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="b5E-g1-d7e" secondAttribute="trailing" id="2Mb-6O-6Hf"/>
-                            <constraint firstItem="gR3-Xv-aQk" firstAttribute="top" secondItem="zMw-wi-Ac3" secondAttribute="bottom" constant="8" id="2T6-Yh-EYm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zMw-wi-Ac3" secondAttribute="trailing" constant="-5" id="5hK-MQ-GRg"/>
                             <constraint firstItem="b5E-g1-d7e" firstAttribute="top" secondItem="vXG-an-KEB" secondAttribute="bottom" constant="30" id="7Ud-da-QxM"/>
                             <constraint firstItem="YK7-fA-xjk" firstAttribute="top" secondItem="KOY-I3-aRB" secondAttribute="top" id="GqE-Lv-arQ"/>
                             <constraint firstItem="gR3-Xv-aQk" firstAttribute="leading" secondItem="KOY-I3-aRB" secondAttribute="leading" constant="48" id="Jku-hx-eId"/>
@@ -230,16 +239,18 @@
                             <constraint firstItem="roJ-7m-zSi" firstAttribute="leading" secondItem="YK7-fA-xjk" secondAttribute="trailing" constant="-117" id="KF9-pK-50i"/>
                             <constraint firstItem="roJ-7m-zSi" firstAttribute="top" relation="lessThanOrEqual" secondItem="gR3-Xv-aQk" secondAttribute="bottom" constant="108" id="ONq-3z-zML"/>
                             <constraint firstItem="TDk-tb-mE1" firstAttribute="top" secondItem="cuN-Nh-7fw" secondAttribute="bottom" constant="65" id="VQf-4g-aLV"/>
-                            <constraint firstItem="zMw-wi-Ac3" firstAttribute="top" secondItem="vXG-an-KEB" secondAttribute="bottom" constant="47" id="c7m-qB-F5r"/>
                             <constraint firstItem="cuN-Nh-7fw" firstAttribute="top" secondItem="roJ-7m-zSi" secondAttribute="bottom" constant="16" id="cfk-hN-xji"/>
                             <constraint firstAttribute="bottom" secondItem="YK7-fA-xjk" secondAttribute="bottom" id="dxy-TB-lqg"/>
-                            <constraint firstItem="zMw-wi-Ac3" firstAttribute="leading" secondItem="KOY-I3-aRB" secondAttribute="leadingMargin" constant="-12" id="enb-TF-5U8"/>
                             <constraint firstAttribute="trailing" secondItem="gR3-Xv-aQk" secondAttribute="trailing" constant="47" id="jgA-w9-oXt"/>
                             <constraint firstItem="YK7-fA-xjk" firstAttribute="leading" secondItem="KOY-I3-aRB" secondAttribute="leading" id="krB-Dc-Qdk"/>
+                            <constraint firstItem="gR3-Xv-aQk" firstAttribute="top" secondItem="b5E-g1-d7e" secondAttribute="bottom" constant="24" id="ncN-xd-uZj"/>
                             <constraint firstItem="b5E-g1-d7e" firstAttribute="leading" secondItem="KOY-I3-aRB" secondAttribute="leading" constant="25" id="rO8-rA-MWe"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearViewTop" destination="ncN-xd-uZj" id="rdb-Y6-WUF"/>
+                        <outlet property="newAccountTop" destination="7Ud-da-QxM" id="WCz-JB-bd3"/>
+                        <outlet property="newAccountView" destination="b5E-g1-d7e" id="Sbt-rl-S89"/>
                         <outlet property="txtEmail" destination="l9E-JI-2mb" id="12U-4B-M2E"/>
                         <outlet property="txtFirstName" destination="q2p-8P-70M" id="9J2-yg-ZWr"/>
                         <outlet property="txtLastName" destination="InI-Xa-f3L" id="ckP-MR-gzc"/>

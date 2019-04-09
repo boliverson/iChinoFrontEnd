@@ -16,13 +16,13 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     @IBOutlet weak var txtPhone: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var scrollView: UIScrollView!
+
     
     var userEmail: String = ""
     
     override func viewDidLoad() {
         txtEmail.text = userEmail
-//        scrollView.contentSize = CGSize(width: 269.0, height: 100.0)
+
     }
     
     @IBAction func didSelectCancel(_ sender: Any) {
@@ -52,7 +52,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        self.scrollView.endEditing(true)
+      
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

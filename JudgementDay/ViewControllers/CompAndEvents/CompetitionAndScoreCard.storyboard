@@ -58,7 +58,9 @@
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuX-NI-7Q9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" red="0.87790381910000004" green="0.34952458739999998" blue="0.08403698355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.8784313725490196" green="0.34901960784313724" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,10 +161,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xzU-qb-kas">
-                                <rect key="frame" x="0.0" y="212" width="375" height="359"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="351"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="359" id="gxX-mh-DPS"/>
+                                    <constraint firstAttribute="height" constant="351" id="gxX-mh-DPS"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="cell" textLabel="0xx-R8-Of7" style="IBUITableViewCellStyleDefault" id="6P1-i5-IXA">
@@ -350,7 +352,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                             <constraint firstItem="MDU-vg-ggc" firstAttribute="leading" secondItem="ASt-Ag-8ZB" secondAttribute="leading" id="YZ0-FQ-YfT"/>
                             <constraint firstItem="ASt-Ag-8ZB" firstAttribute="leading" secondItem="Xi1-L0-ciF" secondAttribute="leading" id="aT6-gh-b2k"/>
                             <constraint firstItem="MDU-vg-ggc" firstAttribute="top" secondItem="Xi1-L0-ciF" secondAttribute="top" id="bp0-f7-77A"/>
-                            <constraint firstItem="xzU-qb-kas" firstAttribute="top" secondItem="ASt-Ag-8ZB" secondAttribute="bottom" id="cg1-sQ-oz7"/>
+                            <constraint firstItem="xzU-qb-kas" firstAttribute="top" secondItem="ASt-Ag-8ZB" secondAttribute="bottom" constant="8" id="cg1-sQ-oz7"/>
                             <constraint firstItem="i96-FA-Gm8" firstAttribute="top" secondItem="xzU-qb-kas" secondAttribute="bottom" constant="8" symbolic="YES" id="gA2-7J-NES"/>
                             <constraint firstItem="ovc-Ym-ktW" firstAttribute="top" secondItem="LXw-Yy-npq" secondAttribute="bottom" constant="185" id="kLT-lR-UB0"/>
                             <constraint firstItem="i96-FA-Gm8" firstAttribute="top" secondItem="xzU-qb-kas" secondAttribute="bottom" constant="8" id="nc1-md-FER"/>

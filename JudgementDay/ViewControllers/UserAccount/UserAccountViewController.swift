@@ -17,6 +17,8 @@ class UserAccountViewController: UIViewController {
     @IBOutlet weak var UserFirstNameTxt: UILabel!
     @IBOutlet weak var UserLastNameTxt: UILabel!
     
+    var currentUser: User?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

@@ -9,20 +9,29 @@
 import UIKit
 import AWSLambda
 
-class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
+class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {    
 
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
+    
     @IBOutlet weak var txtPhone: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var scrollView: UIScrollView!
+
+    @IBOutlet weak var clearViewTop: NSLayoutConstraint!
+    @IBOutlet weak var newAccountTop: NSLayoutConstraint!
+    @IBOutlet weak var newAccountView: UIView!
     
     var userEmail: String = ""
     
     override func viewDidLoad() {
         txtEmail.text = userEmail
-//        scrollView.contentSize = CGSize(width: 269.0, height: 100.0)
+        self.txtLastName.delegate = self
+        self.txtPassword.delegate = self
+        self.txtEmail.delegate = self
+        self.txtFirstName.delegate = self
+        self.txtPhone.delegate = self
+        
     }
     
     @IBAction func didSelectCancel(_ sender: Any) {
@@ -30,18 +39,23 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     }
     
     @IBAction func didSelectCreate(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
-        user.firstName = txtFirstName.text
-        user.lastName = txtLastName.text
-        user.phone = txtPhone.text
-        user.email = txtEmail.text
-        user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
-        
-        user.syncWithServer()
-        
-        print("\(user)")
-        
+        DispatchQueue.global(qos: .background).async {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
+            user.firstName = self.txtFirstName.text
+            user.lastName = self.txtLastName.text
+            user.phone = self.txtPhone.text
+            user.email = self.txtEmail.text
+            user.password = self.txtPassword.text != nil ? (self.txtPassword.text?.sha256())! : "No Password"
+            
+            do {
+                try context.save()
+            } catch{
+                print("Unexpected error: \(error).")
+            }
+            
+            user.syncWithServer()
+        }
     }
     @IBAction func checkEmailAvailability(_ sender: Any) {
         userEmail = txtEmail.text ?? ""
@@ -52,15 +66,41 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        self.scrollView.endEditing(true)
+      
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if(textField == txtPassword || textField == txtPhone){
+            self.clearViewTop?.constant = -50.0
+            self.newAccountTop?.constant = 0.0
+            self.newAccountView.isHidden = true
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.resignFirstResponder()
+        if(textField == txtPassword || textField == txtPhone){
+            self.clearViewTop?.constant = 8.0
+            self.newAccountView.isHidden = false
+            self.newAccountTop?.constant = 30.0
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if(textField == txtPassword || textField == txtPhone){
+            self.clearViewTop?.constant = 8.0
+            self.newAccountView.isHidden = false
+            self.newAccountTop?.constant = 30.0
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
         return true
     }
     
@@ -69,10 +109,12 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
             self.txtEmail.text = ""
         }))
-        
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+             self.present(alert, animated: true, completion: nil)
+        }
+       
     }
     
-    func userAuthenticationResponse(response: Bool) {} //Handled in another class
+    func userAuthenticationResponse(response: Bool, userId: Int64) {} //Handled in another class
     
 }

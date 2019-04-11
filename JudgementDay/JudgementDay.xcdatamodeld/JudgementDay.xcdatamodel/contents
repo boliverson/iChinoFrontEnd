@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Competition" representedClassName="Competition" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverKey" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
     <entity name="ScoreCard" representedClassName="ScoreCard" syncable="YES" codeGenerationType="class">
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="scoreCardItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScoreCardItem" inverseName="scoreCard" inverseEntity="ScoreCardItem" syncable="YES"/>
@@ -23,8 +37,10 @@
         <relationship name="scoreCardItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScoreCard" inverseName="user" inverseEntity="ScoreCard" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="ScoreCardItem" positionX="-63" positionY="45" width="128" height="105"/>
         <element name="ScoreCard" positionX="-54" positionY="54" width="128" height="90"/>
+        <element name="ScoreCardItem" positionX="-63" positionY="45" width="128" height="105"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Competition" positionX="-54" positionY="54" width="128" height="120"/>
+        <element name="Event" positionX="-36" positionY="72" width="128" height="120"/>
     </elements>
 </model>

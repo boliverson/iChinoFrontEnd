@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
 		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
+		8508E918225EBA27005AF5C3 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8508E917225EBA27005AF5C3 /* Event.storyboard */; };
+		8508E91A225EC335005AF5C3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508E919225EC335005AF5C3 /* CreateEventViewController.swift */; };
 		8526FC762259705300614132 /* UserAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC752259705300614132 /* UserAccount.storyboard */; };
 		8526FC782259708B00614132 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526FC772259708B00614132 /* WatchListViewController.swift */; };
 		8526FC7B225970E200614132 /* WatchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8526FC7A225970E200614132 /* WatchList.storyboard */; };
@@ -28,9 +30,11 @@
 		9A199307225450E500CC13AE /* LambdaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A199306225450E500CC13AE /* LambdaBase.swift */; };
 		9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334621222E1686003005B8 /* User+CoreDataClass.swift */; };
 		9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A334622222E1686003005B8 /* User+CoreDataProperties.swift */; };
+		9A356975225EBB5700F0B36E /* DownloadUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A356974225EBB5700F0B36E /* DownloadUser.swift */; };
 		9AB638442259313C00400810 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB638432259313C00400810 /* LoginUser.swift */; };
 		9AB63847225AA19900400810 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB63846225AA19900400810 /* fa-regular-400.ttf */; };
 		9AB63849225AA1AA00400810 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB63848225AA1AA00400810 /* fa-solid-900.ttf */; };
+		9AB6384B225C4E6700400810 /* EntityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB6384A225C4E6700400810 /* EntityInteractor.swift */; };
 		9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018B221E377900BB1A87 /* AppDelegate.swift */; };
 		9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF018D221E377900BB1A87 /* ViewController.swift */; };
 		9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF018F221E377900BB1A87 /* Main.storyboard */; };
@@ -73,6 +77,8 @@
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
 		85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompetitionAndScoreCard.storyboard; sourceTree = "<group>"; };
+		8508E917225EBA27005AF5C3 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		8508E919225EC335005AF5C3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		8526FC752259705300614132 /* UserAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAccount.storyboard; sourceTree = "<group>"; };
 		8526FC772259708B00614132 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		8526FC7A225970E200614132 /* WatchList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WatchList.storyboard; sourceTree = "<group>"; };
@@ -92,10 +98,12 @@
 		9A199306225450E500CC13AE /* LambdaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LambdaBase.swift; sourceTree = "<group>"; };
 		9A334621222E1686003005B8 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A334622222E1686003005B8 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A356974225EBB5700F0B36E /* DownloadUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadUser.swift; sourceTree = "<group>"; };
 		9A7077FD2239D40400D7E836 /* JudgementDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JudgementDay-Bridging-Header.h"; sourceTree = "<group>"; };
 		9AB638432259313C00400810 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		9AB63846225AA19900400810 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		9AB63848225AA1AA00400810 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
+		9AB6384A225C4E6700400810 /* EntityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityInteractor.swift; sourceTree = "<group>"; };
 		9ACF0188221E377900BB1A87 /* JudgementDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JudgementDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACF018B221E377900BB1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ACF018D221E377900BB1A87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */,
+				8508E917225EBA27005AF5C3 /* Event.storyboard */,
+				8508E919225EC335005AF5C3 /* CreateEventViewController.swift */,
 				8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */,
 				8542D1B62256FB0A00A8FBBE /* EventsListViewController.swift */,
 			);
@@ -221,6 +231,7 @@
 				9A199306225450E500CC13AE /* LambdaBase.swift */,
 				9AF932152255C3AD0068BE3B /* Authenticate.swift */,
 				9AB638432259313C00400810 /* LoginUser.swift */,
+				9A356974225EBB5700F0B36E /* DownloadUser.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 		9A334625222E233E003005B8 /* AppManagement */ = {
 			isa = PBXGroup;
 			children = (
+				9AB6384A225C4E6700400810 /* EntityInteractor.swift */,
 			);
 			path = AppManagement;
 			sourceTree = "<group>";
@@ -446,6 +458,7 @@
 				9AB63849225AA1AA00400810 /* fa-solid-900.ttf in Resources */,
 				9ACF0191221E377900BB1A87 /* Main.storyboard in Resources */,
 				9AB63847225AA19900400810 /* fa-regular-400.ttf in Resources */,
+				8508E918225EBA27005AF5C3 /* Event.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +588,9 @@
 				9A199307225450E500CC13AE /* LambdaBase.swift in Sources */,
 				9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */,
 				9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */,
+				9A356975225EBB5700F0B36E /* DownloadUser.swift in Sources */,
 				8526FC8B2259905D00614132 /* TeamMemberCell.swift in Sources */,
+				9AB6384B225C4E6700400810 /* EntityInteractor.swift in Sources */,
 				9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */,
 				9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */,
 				8542D1B72256FB0A00A8FBBE /* EventsListViewController.swift in Sources */,
@@ -592,6 +607,7 @@
 				8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */,
 				9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */,
 				8526FC81225977F300614132 /* UserAccountViewController.swift in Sources */,
+				8508E91A225EC335005AF5C3 /* CreateEventViewController.swift in Sources */,
 				8526FC8922598F1E00614132 /* RegisteredParticipantCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

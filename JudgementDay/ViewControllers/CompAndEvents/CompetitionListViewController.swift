@@ -9,6 +9,10 @@ import UIKit
 import Foundation
 class CompetitionListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var startDateTime: UILabel!
+    @IBOutlet weak var endDateTime: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var competitions = [ "A", "B"]
     

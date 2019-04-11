@@ -45,5 +45,6 @@ class DownloadUser: LambdaBase {
         } catch{
             print("Unexpected error: \(error).")
         }
+        NotificationCenter.default.post(name: .userDownloadedNotification, object: nil)
     }
 }

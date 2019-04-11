@@ -13,9 +13,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    var currentUserId: Int64 = 0
+    
+    
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
     var blurEffectView: UIVisualEffectView!
     var activityIndicator: UIActivityIndicatorView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(userDownloaded), name: .userDownloadedNotification, object: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CreateAccount" {
@@ -54,10 +62,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     
     func userAuthenticationResponse(response: Bool, userId: Int64) {
         
-        let completionBlock: (Bool) -> Void = { moveOn in
+        currentUserId = userId
+        let user = User.getUserWithId(userId: userId)
+        if user == nil{
+            let DU = DownloadUser()
+            DU.downloadUser(userId: userId)
+        } else {
             DispatchQueue.main.async {
                 self.stopActivityIndicator()
-                if moveOn{
+                if response{
                     let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
                     let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
                     controller.currentUser = User.getUserWithId(userId: userId)
@@ -72,14 +85,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
                 }
             }
         }
-        
-        DispatchQueue.global(qos: .background).sync {
-            let user = User.getUserWithId(userId: userId)
-            if user == nil{
-                let DU = DownloadUser()
-                DU.downloadUser(userId: userId)
-            }
-            completionBlock(response)
+    }
+    
+    @objc func userDownloaded() -> Void {
+        DispatchQueue.main.async {
+            self.stopActivityIndicator()
+            let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
+            controller.currentUser = User.getUserWithId(userId: self.currentUserId)
+            self.present(controller, animated: true, completion: nil)
         }
     }
     

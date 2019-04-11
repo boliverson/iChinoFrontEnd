@@ -22,17 +22,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWm-xK-L0O">
-                                <rect key="frame" x="44" y="159" width="326" height="653.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWm-xK-L0O">
+                                <rect key="frame" x="44" y="159" width="326" height="654"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jur-F3-oQH">
-                                        <rect key="frame" x="29" y="92" width="268" height="55"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MYENAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-O5-8DM">
+                                        <rect key="frame" x="141" y="147.5" width="83" height="20.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHB-nx-eB3">
+                                        <rect key="frame" x="43" y="407" width="241" height="55"/>
                                         <color key="backgroundColor" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="6wS-RH-OtF"/>
+                                            <constraint firstAttribute="height" constant="55" id="dnl-HB-SLl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
-                                        <state key="normal" title="Create Competition">
+                                        <state key="normal" title="Create Event">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="3" height="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="lcA-cL-sas"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-cl-yY6">
+                                        <rect key="frame" x="19" y="142" width="110" height="25"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfL-ir-ETP">
+                                        <rect key="frame" x="19" y="191" width="107" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LESTMNE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eka-kS-TEe">
+                                        <rect key="frame" x="147" y="191" width="77" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX1-B3-epb">
+                                        <rect key="frame" x="19" y="95" width="62" height="25"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jur-F3-oQH">
+                                        <rect key="frame" x="43" y="489" width="241" height="55"/>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="7fK-pY-duR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                        <state key="normal" title="Your Competitions">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -54,15 +117,27 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="1qA-Pc-M7E"/>
+                                            <segue destination="eTf-e7-vo2" kind="show" id="1FN-mI-9jj"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SOME TESXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-DF-9k4">
+                                        <rect key="frame" x="89" y="97" width="104" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.86666666670000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="jur-F3-oQH" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="314" id="BB5-xj-ooF"/>
-                                    <constraint firstItem="jur-F3-oQH" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="LHY-84-v6N"/>
-                                    <constraint firstItem="jur-F3-oQH" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="29" id="Tgx-10-R0y"/>
-                                    <constraint firstAttribute="trailing" secondItem="jur-F3-oQH" secondAttribute="trailing" constant="29" id="lp9-o3-Q9j"/>
+                                    <constraint firstItem="cX1-B3-epb" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="19" id="6BT-LV-tly"/>
+                                    <constraint firstItem="PvM-cl-yY6" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="19" id="BKX-yO-BqD"/>
+                                    <constraint firstItem="tfL-ir-ETP" firstAttribute="leading" secondItem="XWm-xK-L0O" secondAttribute="leading" constant="19" id="FTx-kb-vbD"/>
+                                    <constraint firstAttribute="bottom" secondItem="jur-F3-oQH" secondAttribute="bottom" constant="110" id="Fqp-nm-Eag"/>
+                                    <constraint firstItem="jur-F3-oQH" firstAttribute="top" secondItem="pHB-nx-eB3" secondAttribute="bottom" constant="27" id="fEw-Ac-quf"/>
+                                    <constraint firstItem="tfL-ir-ETP" firstAttribute="top" secondItem="PvM-cl-yY6" secondAttribute="bottom" constant="24" id="gTb-D1-lGb"/>
+                                    <constraint firstItem="PvM-cl-yY6" firstAttribute="top" secondItem="cX1-B3-epb" secondAttribute="bottom" constant="22" id="t59-x7-Qjm"/>
+                                    <constraint firstItem="cX1-B3-epb" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="top" constant="95" id="zbK-6h-S4x"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -82,8 +157,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Tqz-4y-9Rp"/>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOU-Mw-CiK">
-                                <rect key="frame" x="32" y="94" width="356" height="57"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOU-Mw-CiK">
+                                <rect key="frame" x="32" y="94" width="338" height="56.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-Gu-Qgj">
                                         <rect key="frame" x="8" y="8" width="215" height="64.5"/>
@@ -94,8 +169,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEN-Kd-p8W">
-                                        <rect key="frame" x="40" y="57" width="295" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEN-Kd-p8W">
+                                        <rect key="frame" x="40" y="57" width="277" height="49"/>
                                         <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="52"/>
                                         <color key="textColor" red="0.7486948967" green="0.77306300400000005" blue="0.1265260279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -130,27 +205,66 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCW-Y3-qg5">
+                                <rect key="frame" x="87" y="479" width="241" height="55"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="leg-eT-uEq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <state key="normal" title="Create Competition">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="xM2-zg-Zis"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="XWm-xK-L0O" secondAttribute="trailing" constant="44" id="4Bg-J7-e5J"/>
+                            <constraint firstItem="pHB-nx-eB3" firstAttribute="top" secondItem="mCW-Y3-qg5" secondAttribute="bottom" constant="32" id="4ef-k4-3kL"/>
                             <constraint firstItem="gOb-gL-sJJ" firstAttribute="centerX" secondItem="XWm-xK-L0O" secondAttribute="centerX" id="Ay6-0N-RiN"/>
+                            <constraint firstItem="7JQ-Ow-Yil" firstAttribute="trailing" secondItem="fOU-Mw-CiK" secondAttribute="trailing" constant="44" id="IKO-Z5-i0j"/>
+                            <constraint firstItem="7JQ-Ow-Yil" firstAttribute="trailing" secondItem="1jy-Gu-Qgj" secondAttribute="trailing" constant="159" id="THr-a0-QCU"/>
+                            <constraint firstItem="mCW-Y3-qg5" firstAttribute="top" secondItem="tfL-ir-ETP" secondAttribute="bottom" constant="104.5" id="dvE-YH-h7X"/>
                             <constraint firstItem="XWm-xK-L0O" firstAttribute="top" secondItem="ol0-ZW-k5X" secondAttribute="bottom" constant="115" id="hHf-ox-BUq"/>
                             <constraint firstItem="XWm-xK-L0O" firstAttribute="leading" secondItem="3Pp-aJ-NLt" secondAttribute="leading" constant="44" id="isM-WY-CIz"/>
-                            <constraint firstItem="B2J-Ec-Rsv" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="bottom" constant="-44" id="izd-oS-dUD"/>
+                            <constraint firstItem="B2J-Ec-Rsv" firstAttribute="top" secondItem="XWm-xK-L0O" secondAttribute="bottom" id="izd-oS-dUD"/>
+                            <constraint firstItem="fOU-Mw-CiK" firstAttribute="top" secondItem="7JQ-Ow-Yil" secondAttribute="top" constant="50" id="nKd-zN-cye"/>
                             <constraint firstAttribute="bottom" secondItem="gOb-gL-sJJ" secondAttribute="bottom" id="rzv-ju-YGP"/>
+                            <constraint firstItem="XWm-xK-L0O" firstAttribute="top" secondItem="7JQ-Ow-Yil" secondAttribute="top" constant="115" id="vaN-IZ-4ih"/>
                             <constraint firstItem="gOb-gL-sJJ" firstAttribute="leading" secondItem="3Pp-aJ-NLt" secondAttribute="leading" id="wqH-qZ-avW"/>
                             <constraint firstItem="1jy-Gu-Qgj" firstAttribute="leading" secondItem="7JQ-Ow-Yil" secondAttribute="leading" constant="40" id="yES-l5-0NB"/>
-                            <constraint firstItem="7JQ-Ow-Yil" firstAttribute="trailing" secondItem="fOU-Mw-CiK" secondAttribute="trailing" constant="26" id="zeA-fg-Ll6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7JQ-Ow-Yil"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="YeS-cS-d4J" propertyAccessControl="localizable"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bottomToolbar" destination="gOb-gL-sJJ" id="Tqb-6P-K9c"/>
+                        <outlet property="UserEmailTxt" destination="eNx-DF-9k4" id="IrR-VL-zkE"/>
+                        <outlet property="UserFirstNameTxt" destination="ya3-O5-8DM" id="Lms-LT-7cS"/>
+                        <outlet property="UserLastNameTxt" destination="Eka-kS-TEe" id="lat-KF-Jrx"/>
                         <outlet property="btnCreateComp" destination="jur-F3-oQH" id="4XS-3E-h1e"/>
+                        <outlet property="btnCreateEvent" destination="XWm-xK-L0O" id="8he-tJ-L7H"/>
+                        <outlet property="btnUsersComp" destination="jur-F3-oQH" id="Qdk-Gu-1Gr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UF-I3-VM4" userLabel="First Responder" sceneMemberID="firstResponder"/>

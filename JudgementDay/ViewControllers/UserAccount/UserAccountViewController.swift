@@ -9,28 +9,23 @@
 import Foundation
 import UIKit
 class UserAccountViewController: UIViewController {
-    @IBOutlet var bottomToolbar: UIToolbar!
-    @IBOutlet var profileImg: UIImageView!
-    @IBOutlet weak var btnCreateTeam: UIButton!
     @IBOutlet weak var btnCreateComp: UIButton!
+    @IBOutlet weak var btnUsersComp: UIButton!
+    @IBOutlet weak var btnCreateEvent: UIView!
+    
+    @IBOutlet weak var UserEmailTxt: UILabel!
+    @IBOutlet weak var UserFirstNameTxt: UILabel!
+    @IBOutlet weak var UserLastNameTxt: UILabel!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Testing")
-        
-        profileImg.layer.cornerRadius = profileImg.frame.size.width / 2
-        profileImg.clipsToBounds = true
+
     }
 
-    @IBAction func didSelectCreateTeam(_ sender: Any) {
-        
-    }
-    @IBAction func didSelectCreateCompetition(_ sender: Any) {
-   
-    
-    }
+
     
     
 }

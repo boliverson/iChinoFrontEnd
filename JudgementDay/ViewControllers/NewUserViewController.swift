@@ -9,7 +9,7 @@
 import UIKit
 import AWSLambda
 
-class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {
+class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolResponse {    
 
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
@@ -30,18 +30,23 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     }
     
     @IBAction func didSelectCreate(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
-        user.firstName = txtFirstName.text
-        user.lastName = txtLastName.text
-        user.phone = txtPhone.text
-        user.email = txtEmail.text
-        user.password = txtPassword.text != nil ? (txtPassword.text?.sha256())! : "No Password"
-        
-        user.syncWithServer()
-        
-        print("\(user)")
-        
+        DispatchQueue.global(qos: .background).async {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
+            user.firstName = self.txtFirstName.text
+            user.lastName = self.txtLastName.text
+            user.phone = self.txtPhone.text
+            user.email = self.txtEmail.text
+            user.password = self.txtPassword.text != nil ? (self.txtPassword.text?.sha256())! : "No Password"
+            
+            do {
+                try context.save()
+            } catch{
+                print("Unexpected error: \(error).")
+            }
+            
+            user.syncWithServer()
+        }
     }
     @IBAction func checkEmailAvailability(_ sender: Any) {
         userEmail = txtEmail.text ?? ""
@@ -73,6 +78,6 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
         self.present(alert, animated: true, completion: nil)
     }
     
-    func userAuthenticationResponse(response: Bool) {} //Handled in another class
+    func userAuthenticationResponse(response: Bool, userId: Int64) {} //Handled in another class
     
 }

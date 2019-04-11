@@ -110,7 +110,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
             self.activityIndicator.removeFromSuperview()
         })
     }
-    
+    //*here delete later when you hook up with rachels view: only for testing
+    @IBAction func goToCreateEvent(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Event", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateEventViewController") as! CreateEventViewController
+        self.present(controller, animated: true, completion: nil)
+        
+    }
     
     
 }

@@ -7,8 +7,12 @@
 //
 //
 
-import Foundation
+import UIKit
 import CoreData
+
+struct CurrentUser {
+    static var user: User?
+}
 
 @objc(User)
 public class User: NSManagedObject {
@@ -17,6 +21,16 @@ public class User: NSManagedObject {
         if self.serverKey == 0 {
             let INU = InsertNewUser()
             INU.createUserDictionary(user: self)
+        }
+    }
+    
+    class func getUserWithId(userId: Int64) -> User? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let user:User? = EntityInteractor.getEntityWithId(entityName: "User", entityId: userId, context: context) as? User
+        if user != nil{
+            return user
+        } else{
+            return nil
         }
     }
 

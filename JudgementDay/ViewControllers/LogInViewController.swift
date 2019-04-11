@@ -36,9 +36,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     @IBAction func didSelectSignIn(_ sender: Any) {
         if (txtEmail.text != nil && txtEmail.text != "" && txtPassword.text != nil && txtPassword.text != "") {
             startActivityIndicator()
-            let LU = LoginUser()
-            LU.loginDelegate = self
-            LU.loginRequest(email: txtEmail.text!, password: (txtPassword.text?.sha256())!)
+            let email = txtEmail.text!
+            guard let password = txtPassword.text?.sha256() else { return }
+            DispatchQueue.global(qos: .background).async {
+                let LU = LoginUser()
+                LU.loginDelegate = self
+                LU.loginRequest(email: email, password: password)
+            }
         } else {
             let alert = UIAlertController(title: "Alomst There...", message: "Please enter your email and password to sign in.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
@@ -48,19 +52,32 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     
     func showUsedEmailAlert() {} //Implemented in another class
     
-    func userAuthenticationResponse(response: Bool) {
-        stopActivityIndicator()
+    func userAuthenticationResponse(response: Bool, userId: Int64) {
+        
         if response{
-            let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
-            self.present(controller, animated: true, completion: nil)
-        }else{
-            let alert = UIAlertController(title: "Oh No...", message: "Your email or password was not found. Please try again or create a new account.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
-                self.txtPassword.text = ""
-            }))
+            let user = User.getUserWithId(userId: userId)
+            if user == nil{
+                let DU = DownloadUser()
+                DU.downloadUser(userId: userId)
+            }
+            DispatchQueue.main.async {
+                self.stopActivityIndicator()
+                let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
+                controller.currentUser = user
+                self.present(controller, animated: true, completion: nil)
+            }
             
-            self.present(alert, animated: true, completion: nil)
+        }else{
+            DispatchQueue.main.async{
+                self.stopActivityIndicator()
+                let alert = UIAlertController(title: "Oh No...", message: "Your email or password was not found. Please try again or create a new account.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
+                    self.txtPassword.text = ""
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

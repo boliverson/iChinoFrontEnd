@@ -136,4 +136,8 @@ extension String {
     
 }
 
+extension Notification.Name {
+    static let userDownloadedNotification = Notification.Name("UserDownloadedNotification")
+}
+
 

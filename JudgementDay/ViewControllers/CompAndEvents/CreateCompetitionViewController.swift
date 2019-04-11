@@ -1,5 +1,5 @@
 //
-//  CreateEventViewController.swift
+//  CreateCompetitionViewController.swift
 //  JudgementDay
 //
 //  Created by Mackenzie Hampel on 4/10/19.
@@ -9,22 +9,19 @@
 import Foundation
 import UIKit
 
-class CreateEventViewController: UIViewController {
-
+class CreateCompetitionViewController: UIViewController {
+    
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtLocation: UITextField!
     @IBOutlet weak var txtStartDate: UITextField!
     @IBOutlet weak var txtEndDate: UITextField!
-    @IBOutlet weak var btnCreate: UIButton!
-    @IBOutlet weak var btnCancel: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
+    
     @IBAction func didSelectCreate(_ sender: Any) {
         
     }

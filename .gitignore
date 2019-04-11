@@ -18,6 +18,8 @@ DerivedData/
 xcuserdata/
 *.DS_Store
 .DS_Store
+.xcbkptlist
+*.xcbkptlist
 
 ## Other
 *.moved-aside

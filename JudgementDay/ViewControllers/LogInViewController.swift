@@ -54,30 +54,32 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     
     func userAuthenticationResponse(response: Bool, userId: Int64) {
         
-        if response{
+        let completionBlock: (Bool) -> Void = { moveOn in
+            DispatchQueue.main.async {
+                self.stopActivityIndicator()
+                if moveOn{
+                    let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
+                    controller.currentUser = User.getUserWithId(userId: userId)
+                    self.present(controller, animated: true, completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "Oh No...", message: "Your email or password was not found. Please try again or create a new account.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
+                        self.txtPassword.text = ""
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+        
+        DispatchQueue.global(qos: .background).sync {
             let user = User.getUserWithId(userId: userId)
             if user == nil{
                 let DU = DownloadUser()
                 DU.downloadUser(userId: userId)
             }
-            DispatchQueue.main.async {
-                self.stopActivityIndicator()
-                let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
-                controller.currentUser = user
-                self.present(controller, animated: true, completion: nil)
-            }
-            
-        }else{
-            DispatchQueue.main.async{
-                self.stopActivityIndicator()
-                let alert = UIAlertController(title: "Oh No...", message: "Your email or password was not found. Please try again or create a new account.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
-                    self.txtPassword.text = ""
-                }))
-                
-                self.present(alert, animated: true, completion: nil)
-            }
+            completionBlock(response)
         }
     }
     

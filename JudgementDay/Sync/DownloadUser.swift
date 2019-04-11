@@ -34,7 +34,7 @@ class DownloadUser: LambdaBase {
         if user == nil {
             user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
         }
-        
+        user?.serverKey = serverKey
         user?.firstName = item["firstName"] as? String
         user?.lastName = item["lastName"] as? String
         user?.phone = item["phone"] as? String

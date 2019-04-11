@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
+		8500C783225EEA84004597BC /* CreateCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500C782225EEA84004597BC /* CreateCompetitionViewController.swift */; };
 		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
 		8508E918225EBA27005AF5C3 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8508E917225EBA27005AF5C3 /* Event.storyboard */; };
 		8508E91A225EC335005AF5C3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508E919225EC335005AF5C3 /* CreateEventViewController.swift */; };
@@ -76,6 +77,7 @@
 		7334CBCBEE8B7ACD0370F841 /* Pods-JudgementDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
+		8500C782225EEA84004597BC /* CreateCompetitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompetitionViewController.swift; sourceTree = "<group>"; };
 		85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompetitionAndScoreCard.storyboard; sourceTree = "<group>"; };
 		8508E917225EBA27005AF5C3 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8508E919225EC335005AF5C3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */,
+				8500C782225EEA84004597BC /* CreateCompetitionViewController.swift */,
 				8508E917225EBA27005AF5C3 /* Event.storyboard */,
 				8508E919225EC335005AF5C3 /* CreateEventViewController.swift */,
 				8542D1B42256E8E300A8FBBE /* CompetitionListViewController.swift */,
@@ -586,6 +589,7 @@
 			files = (
 				9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */,
 				9A199307225450E500CC13AE /* LambdaBase.swift in Sources */,
+				8500C783225EEA84004597BC /* CreateCompetitionViewController.swift in Sources */,
 				9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */,
 				9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */,
 				9A356975225EBB5700F0B36E /* DownloadUser.swift in Sources */,

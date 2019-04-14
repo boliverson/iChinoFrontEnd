@@ -20,11 +20,13 @@ class UserAccountViewController: UIViewController {
     var currentUser: User?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("Testing")
-
+        
+        if currentUser != nil {
+            UserEmailTxt.text = currentUser?.email
+            UserFirstNameTxt.text = currentUser?.firstName
+            UserLastNameTxt.text = currentUser?.lastName
+        }
     }
 
 

@@ -39,23 +39,31 @@ class NewUserViewController: UIViewController, UITextFieldDelegate, LambdaBoolRe
     }
     
     @IBAction func didSelectCreate(_ sender: Any) {
-        DispatchQueue.global(qos: .background).async {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
-            user.firstName = self.txtFirstName.text
-            user.lastName = self.txtLastName.text
-            user.phone = self.txtPhone.text
-            user.email = self.txtEmail.text
-            user.password = self.txtPassword.text != nil ? (self.txtPassword.text?.sha256())! : "No Password"
-            
-            do {
-                try context.save()
-            } catch{
-                print("Unexpected error: \(error).")
+        if txtEmail.text != "" && txtFirstName.text != "" && txtPassword.text != ""{
+            DispatchQueue.global(qos: .background).async {
+                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let user = User.init(entity: NSEntityDescription.entity(forEntityName: "User", in: context)!, insertInto: context)
+                user.firstName = self.txtFirstName.text
+                user.lastName = self.txtLastName.text
+                user.phone = self.txtPhone.text
+                user.email = self.txtEmail.text
+                user.password = self.txtPassword.text != nil ? (self.txtPassword.text?.sha256())! : "No Password"
+                
+                do {
+                    try context.save()
+                } catch{
+                    print("Unexpected error: \(error).")
+                }
+                
+                user.syncWithServer()
             }
+        } else {
+            let alert = UIAlertController(title: "Almost There", message: "Please enter an email, first name, and password to create an account.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             
-            user.syncWithServer()
+            self.present(alert, animated: true, completion: nil)
         }
+        
     }
     @IBAction func checkEmailAvailability(_ sender: Any) {
         userEmail = txtEmail.text ?? ""

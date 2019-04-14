@@ -265,7 +265,7 @@
         <!--Events List View Controller-->
         <scene sceneID="xGG-7i-chH">
             <objects>
-                <viewController id="o2x-lV-urF" customClass="EventsListViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsList" id="o2x-lV-urF" customClass="EventsListViewController" customModule="JudgementDay" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RLo-UC-vwG"/>
                         <viewControllerLayoutGuide type="bottom" id="Jyq-Cm-cio"/>

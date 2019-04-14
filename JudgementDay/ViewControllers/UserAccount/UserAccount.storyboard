@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--EventsList-->
+        <scene sceneID="a0C-zX-qhG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="EventsList" id="gNm-P1-c51" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6E-89-uzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="-48"/>
+        </scene>
         <!--User Account View Controller-->
         <scene sceneID="Pw3-Hv-H5L">
             <objects>
@@ -60,6 +68,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="lcA-cL-sas"/>
+                                            <segue destination="gNm-P1-c51" kind="show" id="y8c-7Q-iQF"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-cl-yY6">

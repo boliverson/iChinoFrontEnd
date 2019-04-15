@@ -7,11 +7,11 @@
 //
 
 class InsertNewEvent: LambdaBase {
-    func createEventDictionary(event: JudgingEvent){
+    func createEventDictionary(event: Event){
         let eventDictionary : [String:String] = ["name" : event.name ?? "iChino",
                                                 "location" : event.location ?? "3750Class",
-                                                "startTime" : "Ben",
-                                                "endTime" : "No Phone"]
+                                                "startTime" : String(describing: event.startDate).dbFormatDateString(),
+                                                "endTime" : String(describing: event.startDate).dbFormatDateString()]
         
         self.upload(functionName: "createEvent", jsonRequest: eventDictionary, objectId: event.objectID)
     }

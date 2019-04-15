@@ -140,7 +140,7 @@ extension String {
         
         let dateString = dateFormatter.date(from: self)
         
-        return dateString;
+        return String(describing: dateString);
     }
     
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Competition" representedClassName="Competition" syncable="YES" codeGenerationType="class">
+    <entity name="Competition" representedClassName="Competition" syncable="YES">
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,7 +9,7 @@
         <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="competitions" inverseEntity="Event" syncable="YES"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="competitions" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+    <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,12 +17,12 @@
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="competitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Competition" inverseName="event" inverseEntity="Competition" syncable="YES"/>
     </entity>
-    <entity name="ScoreCard" representedClassName="ScoreCard" syncable="YES" codeGenerationType="class">
+    <entity name="ScoreCard" representedClassName="ScoreCard" syncable="YES">
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="scoreCardItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScoreCardItem" inverseName="scoreCard" inverseEntity="ScoreCardItem" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="scoreCardItem" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="ScoreCardItem" representedClassName="ScoreCardItem" syncable="YES" codeGenerationType="class">
+    <entity name="ScoreCardItem" representedClassName="ScoreCardItem" syncable="YES">
         <attribute name="maxScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userDescription" optional="YES" attributeType="String" syncable="YES"/>

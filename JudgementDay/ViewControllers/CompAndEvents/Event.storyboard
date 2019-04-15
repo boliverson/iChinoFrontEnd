@@ -92,8 +92,8 @@
                                 <rect key="frame" x="-16" y="68" width="340.33333333333331" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Event" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="7tV-ko-b8L">
-                                        <rect key="frame" x="56.333333333333314" y="5" width="269" height="55"/>
-                                        <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="41"/>
+                                        <rect key="frame" x="97.000000000000014" y="5" width="203.33333333333337" height="55"/>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="31"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -107,7 +107,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IcR-IE-4S7"/>
                                     <constraint firstItem="7tV-ko-b8L" firstAttribute="top" secondItem="4wk-Zt-jgw" secondAttribute="top" constant="5" id="LdW-Wt-Yvd"/>
-                                    <constraint firstAttribute="trailing" secondItem="7tV-ko-b8L" secondAttribute="trailing" constant="15" id="QwI-Sk-xn5"/>
+                                    <constraint firstAttribute="trailing" secondItem="7tV-ko-b8L" secondAttribute="trailing" constant="40" id="QwI-Sk-xn5"/>
                                     <constraint firstAttribute="bottom" secondItem="7tV-ko-b8L" secondAttribute="bottom" id="Snl-Na-09H"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

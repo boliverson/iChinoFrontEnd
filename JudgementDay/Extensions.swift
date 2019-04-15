@@ -134,6 +134,15 @@ extension String {
         return hexString
     }
     
+    func dbFormatDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateString = dateFormatter.date(from: self)
+        
+        return dateString;
+    }
+    
 }
 
 extension Notification.Name {

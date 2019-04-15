@@ -6,6 +6,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverKey" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="competitions" inverseEntity="Event" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="competitions" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -13,6 +15,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverKey" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="competitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Competition" inverseName="event" inverseEntity="Competition" syncable="YES"/>
     </entity>
     <entity name="ScoreCard" representedClassName="ScoreCard" syncable="YES" codeGenerationType="class">
         <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,13 +37,14 @@
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="preferredName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverKey" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="competitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Competition" inverseName="users" inverseEntity="Competition" syncable="YES"/>
         <relationship name="scoreCardItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScoreCard" inverseName="user" inverseEntity="ScoreCard" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Competition" positionX="-54" positionY="54" width="128" height="150"/>
+        <element name="Event" positionX="-36" positionY="72" width="128" height="135"/>
         <element name="ScoreCard" positionX="-54" positionY="54" width="128" height="90"/>
         <element name="ScoreCardItem" positionX="-63" positionY="45" width="128" height="105"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="Competition" positionX="-54" positionY="54" width="128" height="120"/>
-        <element name="Event" positionX="-36" positionY="72" width="128" height="120"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="195"/>
     </elements>
 </model>

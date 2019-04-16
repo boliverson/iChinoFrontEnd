@@ -145,7 +145,7 @@ extension String {
     
     func toDate()-> Date?{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-ddTHH:mm:ssZ" //"1994-10-28T08:55:00Z"
         let date = dateFormatter.date(from: self)
         
         return date

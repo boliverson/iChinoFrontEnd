@@ -2,7 +2,7 @@
 //  Event+CoreDataProperties.swift
 //  JudgementDay
 //
-//  Created by Ben Oliverson on 4/14/19.
+//  Created by Ben Oliverson on 4/15/19.
 //  Copyright © 2019 Weber State. All rights reserved.
 //
 //
@@ -11,13 +11,14 @@ import Foundation
 import CoreData
 
 
-extension Event: Uploadable {
+extension Event {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Event> {
         return NSFetchRequest<Event>(entityName: "Event")
     }
 
     @NSManaged public var endDate: NSDate?
+    @NSManaged public var isActive: Bool
     @NSManaged public var location: String?
     @NSManaged public var name: String?
     @NSManaged public var serverKey: Int64

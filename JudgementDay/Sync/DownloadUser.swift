@@ -12,8 +12,8 @@ import CoreData
 class DownloadUser: LambdaBase {
     
     func downloadUser(userId: Int64) -> Void {
-        let userId: [String: String] = ["ID" : String(describing: userId)]
-        self.downloadEntity(functionName: "getUser", jsonRequest: userId)
+        let userRequest: [String: String] = ["ID" : String(describing: userId)]
+        self.downloadEntity(functionName: "getUser", jsonRequest: userRequest)
     }
     
 /*

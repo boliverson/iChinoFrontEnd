@@ -45,6 +45,7 @@
 		9A64890F2263F4BA00483633 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64890B2263F4BA00483633 /* Event+CoreDataProperties.swift */; };
 		9A6489102263F4BA00483633 /* Competition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64890C2263F4BA00483633 /* Competition+CoreDataClass.swift */; };
 		9A6489112263F4BA00483633 /* Competition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64890D2263F4BA00483633 /* Competition+CoreDataProperties.swift */; };
+		9A889F7A226585590008E8B4 /* DownloadEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A889F79226585590008E8B4 /* DownloadEvent.swift */; };
 		9AB638442259313C00400810 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB638432259313C00400810 /* LoginUser.swift */; };
 		9AB63847225AA19900400810 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB63846225AA19900400810 /* fa-regular-400.ttf */; };
 		9AB63849225AA1AA00400810 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB63848225AA1AA00400810 /* fa-solid-900.ttf */; };
@@ -128,6 +129,7 @@
 		9A64890C2263F4BA00483633 /* Competition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Competition+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9A64890D2263F4BA00483633 /* Competition+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Competition+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9A7077FD2239D40400D7E836 /* JudgementDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JudgementDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A889F79226585590008E8B4 /* DownloadEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadEvent.swift; sourceTree = "<group>"; };
 		9AB638432259313C00400810 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		9AB63846225AA19900400810 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
 		9AB63848225AA1AA00400810 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				9AF932152255C3AD0068BE3B /* Authenticate.swift */,
 				9AB638432259313C00400810 /* LoginUser.swift */,
 				9A356974225EBB5700F0B36E /* DownloadUser.swift */,
+				9A889F79226585590008E8B4 /* DownloadEvent.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				9A64890E2263F4BA00483633 /* Event+CoreDataClass.swift in Sources */,
 				8542D1B52256E8E300A8FBBE /* CompetitionListViewController.swift in Sources */,
 				9A334623222E1686003005B8 /* User+CoreDataClass.swift in Sources */,
+				9A889F7A226585590008E8B4 /* DownloadEvent.swift in Sources */,
 				8526FC81225977F300614132 /* UserAccountViewController.swift in Sources */,
 				8508E91A225EC335005AF5C3 /* CreateEventViewController.swift in Sources */,
 				8526FC8922598F1E00614132 /* RegisteredParticipantCell.swift in Sources */,

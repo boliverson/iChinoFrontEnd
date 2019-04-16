@@ -190,7 +190,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="lcA-cL-sas"/>
                                             <segue destination="q3e-pc-qxF" kind="show" id="kKf-aA-APh"/>
                                         </connections>
                                     </button>
@@ -240,7 +239,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="1qA-Pc-M7E"/>
                                             <segue destination="PgK-c3-fg5" kind="show" id="Zlc-lE-5zx"/>
                                         </connections>
                                     </button>
@@ -373,7 +371,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didSelectCreateCompetition:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="xM2-zg-Zis"/>
                                     <segue destination="gNm-P1-c51" kind="show" id="NzF-eM-4tS"/>
                                 </connections>
                             </button>

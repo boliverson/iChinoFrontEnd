@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="-4" width="375" height="48"/>
                                 <color key="backgroundColor" red="0.85509079690000001" green="0.40435916189999999" blue="0.1743086874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-ay-BR0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-ay-BR0">
                                 <rect key="frame" x="0.0" y="145" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0jG-Ag-e6L" id="NwA-On-OPx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -66,7 +66,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Score Card" id="WiZ-ZI-43m">
+                                    <navigationItem id="WiZ-ZI-43m">
                                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="DQH-45-k4p">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
@@ -83,16 +83,24 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Score Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-dQ-T7v">
-                                <rect key="frame" x="52.666666666666657" y="106" width="270" height="28"/>
+                                <rect key="frame" x="22.666666666666657" y="106" width="270" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="ddh-9d-PgW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
-                                <color key="textColor" red="0.64113599060000004" green="0.71371442080000003" blue="0.73802024129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.85118633508682251" green="0.40043503046035767" blue="0.17469227313995361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.63669604059999996" green="0.68620449299999997" blue="0.75114768740000004" alpha="0.3868257705479452" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5v-tF-6X9">
-                                <rect key="frame" x="337.66666666666669" y="104" width="30" height="30"/>
+                                <rect key="frame" x="322.66666666666669" y="103" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.64113599060000004" green="0.71371442080000003" blue="0.73802024129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ixP-wb-QTR"/>
@@ -106,6 +114,18 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didSelectAddCell:" destination="heJ-2s-tAz" eventType="touchUpInside" id="0ii-2Q-XSz"/>
@@ -117,16 +137,16 @@
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="top" secondItem="1VB-Tx-jJ1" secondAttribute="bottom" id="4Ku-OC-xug"/>
                             <constraint firstItem="1VB-Tx-jJ1" firstAttribute="centerX" secondItem="MV6-gu-PBg" secondAttribute="centerX" id="4mD-rz-WtF"/>
                             <constraint firstItem="1VB-Tx-jJ1" firstAttribute="top" secondItem="MV6-gu-PBg" secondAttribute="top" constant="-4" id="C1u-Cm-Uko"/>
+                            <constraint firstItem="0Ds-dQ-T7v" firstAttribute="leading" secondItem="KaA-l8-sfz" secondAttribute="leading" constant="22.5" id="JC0-kv-7Df"/>
                             <constraint firstAttribute="trailing" secondItem="1VB-Tx-jJ1" secondAttribute="trailing" id="MoX-tr-jtG"/>
-                            <constraint firstItem="B5v-tF-6X9" firstAttribute="top" secondItem="iuX-NI-7Q9" secondAttribute="bottom" constant="16" id="Olt-os-at9"/>
-                            <constraint firstItem="B5v-tF-6X9" firstAttribute="leading" secondItem="0Ds-dQ-T7v" secondAttribute="trailing" constant="15" id="R3x-ow-192"/>
+                            <constraint firstItem="B5v-tF-6X9" firstAttribute="top" secondItem="iuX-NI-7Q9" secondAttribute="bottom" constant="15" id="Olt-os-at9"/>
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="trailing" secondItem="1VB-Tx-jJ1" secondAttribute="trailing" id="RcO-mp-ry1"/>
                             <constraint firstItem="CC5-ay-BR0" firstAttribute="top" secondItem="EqB-Xy-WO4" secondAttribute="bottom" constant="101" id="SO1-8X-v7Z"/>
                             <constraint firstItem="CC5-ay-BR0" firstAttribute="top" secondItem="0Ds-dQ-T7v" secondAttribute="bottom" constant="11" id="UZD-5x-Tdh"/>
-                            <constraint firstItem="0Ds-dQ-T7v" firstAttribute="centerX" secondItem="MV6-gu-PBg" secondAttribute="centerX" id="UjO-xG-cZo"/>
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="top" secondItem="EqB-Xy-WO4" secondAttribute="bottom" id="Yvb-9u-vEu"/>
                             <constraint firstItem="1VB-Tx-jJ1" firstAttribute="leading" secondItem="MV6-gu-PBg" secondAttribute="leading" id="gpt-yX-QIy"/>
                             <constraint firstItem="iuX-NI-7Q9" firstAttribute="leading" secondItem="1VB-Tx-jJ1" secondAttribute="leading" id="lcT-nv-q9H"/>
+                            <constraint firstItem="KaA-l8-sfz" firstAttribute="trailing" secondItem="B5v-tF-6X9" secondAttribute="trailing" constant="22.5" id="oqh-SK-gfc"/>
                             <constraint firstAttribute="trailing" secondItem="CC5-ay-BR0" secondAttribute="trailing" id="s6R-8d-9xs"/>
                             <constraint firstItem="CC5-ay-BR0" firstAttribute="leading" secondItem="MV6-gu-PBg" secondAttribute="leading" id="swY-iv-Hvj"/>
                             <constraint firstAttribute="bottom" secondItem="CC5-ay-BR0" secondAttribute="bottom" id="vY7-Hb-uEj"/>
@@ -139,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia2-Wz-wrs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-752" y="1840"/>
+            <point key="canvasLocation" x="-752.79999999999995" y="1839.9014778325125"/>
         </scene>
         <!--Competition List View Controller-->
         <scene sceneID="qRc-lO-AnY">
@@ -383,7 +403,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-GG-O5b" userLabel="Location">
                                         <rect key="frame" x="25" y="104" width="189" height="30"/>
@@ -392,7 +412,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nql-Jk-Qdz">
                                         <rect key="frame" x="223.00000000000003" y="47" width="54.999999999999972" height="24"/>
@@ -489,7 +509,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpb-02-DcO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpb-02-DcO">
                                 <rect key="frame" x="63.333333333333329" y="168" width="123.99999999999999" height="33"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

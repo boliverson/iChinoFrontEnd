@@ -34,12 +34,14 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CompetitionCell.self), for: indexPath) as! CompetitionCell
-        
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         //TODO: user selects row and then maybe an alert view popsup and say would you like to register as a competitior a judge or nevermind
         let alertController = UIAlertController(title: title, message: "How would you like to register for this competition?", preferredStyle:UIAlertController.Style.alert)
         

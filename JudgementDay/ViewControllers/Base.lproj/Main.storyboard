@@ -265,7 +265,7 @@
         <!--Events List View Controller-->
         <scene sceneID="xGG-7i-chH">
             <objects>
-                <viewController id="o2x-lV-urF" customClass="EventsListViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsList" id="o2x-lV-urF" customClass="EventsListViewController" customModule="JudgementDay" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RLo-UC-vwG"/>
                         <viewControllerLayoutGuide type="bottom" id="Jyq-Cm-cio"/>
@@ -358,9 +358,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ybQ-xN-qyz" secondAttribute="bottom" id="D3W-1h-Iv2"/>
+                            <constraint firstItem="ybQ-xN-qyz" firstAttribute="top" secondItem="RLo-UC-vwG" secondAttribute="bottom" constant="100" id="N6i-vH-m6r"/>
                             <constraint firstItem="ybQ-xN-qyz" firstAttribute="leading" secondItem="iRm-1N-rXp" secondAttribute="leading" id="XvA-r9-tGw"/>
                             <constraint firstAttribute="trailing" secondItem="ybQ-xN-qyz" secondAttribute="trailing" id="lPB-uF-0zL"/>
-                            <constraint firstItem="ybQ-xN-qyz" firstAttribute="top" secondItem="RLo-UC-vwG" secondAttribute="bottom" constant="100" id="zFF-Y5-kkb"/>
                         </constraints>
                     </view>
                     <connections>

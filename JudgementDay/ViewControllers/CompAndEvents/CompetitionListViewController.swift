@@ -20,10 +20,13 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
        // competitions = [ "A", "B"]
         
-        
+        tableView.register(UINib(nibName: String(describing: CompetitionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CompetitionCell.self))
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     @IBAction func didSelectBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,13 +34,14 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = competitions[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CompetitionCell.self), for: indexPath) as! CompetitionCell
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         //TODO: user selects row and then maybe an alert view popsup and say would you like to register as a competitior a judge or nevermind
         let alertController = UIAlertController(title: title, message: "How would you like to register for this competition?", preferredStyle:UIAlertController.Style.alert)
         

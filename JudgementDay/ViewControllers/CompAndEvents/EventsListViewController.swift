@@ -15,6 +15,9 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: String(describing: EventCell.self), bundle: nil), forCellReuseIdentifier: String(describing: EventCell.self))
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
  
     @IBAction func didSelectBack(_ sender: Any) {
@@ -26,9 +29,9 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = events[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
+        
+          let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EventCell.self), for: indexPath) as! EventCell
+        cell.selectionStyle = .none
         return cell
     }
     

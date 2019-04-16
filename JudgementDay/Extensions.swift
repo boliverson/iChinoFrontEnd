@@ -134,6 +134,54 @@ extension String {
         return hexString
     }
     
+    func dbFormatDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        let dateString = dateFormatter.date(from: self)
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        return dateFormatter.string(from: dateString!)
+    }
+    
+    func toDate()-> Date?{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFormatter.date(from: self)
+        
+        return date
+    }
+    
+}
+
+extension UIViewController{
+    
+    func startActivityIndicator(blur: UIVisualEffectView, ai: UIActivityIndicatorView) -> Void {
+        blur.frame = view.bounds
+        blur.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        ai.center = blur.center
+        ai.alpha = 0.0
+        blur.alpha = 0.0
+        view.addSubview(blur)
+        view.addSubview(ai)
+        
+        ai.startAnimating()
+        UIView.animate(withDuration: 0.3) {
+            blur.alpha = 1.0
+            ai.alpha = 1.0
+        }
+    }
+    
+    func stopActivityIndicator(blur: UIVisualEffectView, ai: UIActivityIndicatorView) -> Void{
+        UIView.animate(withDuration: 0.25, animations: {
+            blur.alpha = 0.0
+            ai.alpha = 0.0
+        }, completion: { finished in
+            ai.stopAnimating()
+            blur.removeFromSuperview()
+            ai.removeFromSuperview()
+        })
+    }
 }
 
 extension Notification.Name {

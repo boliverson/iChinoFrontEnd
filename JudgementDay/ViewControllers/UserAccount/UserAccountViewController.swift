@@ -16,6 +16,7 @@ class UserAccountViewController: UIViewController {
     @IBOutlet weak var UserEmailTxt: UILabel!
     @IBOutlet weak var UserFirstNameTxt: UILabel!
     @IBOutlet weak var UserLastNameTxt: UILabel!
+    @IBOutlet weak var NameHeader: UIView!
     
     var currentUser: User?
     

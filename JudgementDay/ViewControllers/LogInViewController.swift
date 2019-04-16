@@ -14,11 +14,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     @IBOutlet weak var txtPassword: UITextField!
     
     var currentUserId: Int64 = 0
-    
-    
+
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
     var blurEffectView: UIVisualEffectView!
-    var activityIndicator: UIActivityIndicatorView!
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +42,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     
     @IBAction func didSelectSignIn(_ sender: Any) {
         if (txtEmail.text != nil && txtEmail.text != "" && txtPassword.text != nil && txtPassword.text != "") {
-            startActivityIndicator()
+            blurEffectView = UIVisualEffectView(effect: blurEffect)
+            startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
             let email = txtEmail.text!
             guard let password = txtPassword.text?.sha256() else { return }
             DispatchQueue.global(qos: .background).async {
@@ -69,7 +69,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
             DU.downloadUser(userId: userId)
         } else {
             DispatchQueue.main.async {
-                self.stopActivityIndicator()
+                self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
                 if response{
                     let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
                     let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
@@ -89,7 +89,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
     
     @objc func userDownloaded() -> Void {
         DispatchQueue.main.async {
-            self.stopActivityIndicator()
+            self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
             let storyboard = UIStoryboard(name: "UserAccount", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "UserAccountViewController") as! UserAccountViewController
             controller.currentUser = User.getUserWithId(userId: self.currentUserId)
@@ -97,35 +97,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
         }
     }
     
-    func startActivityIndicator() -> Void {
-        blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        activityIndicator = UIActivityIndicatorView(style: .gray)
-        activityIndicator.center = blurEffectView.center
-        activityIndicator.alpha = 0.0
-        blurEffectView.alpha = 0.0
-        view.addSubview(blurEffectView)
-        view.addSubview(activityIndicator)
-        
-        activityIndicator.startAnimating()
-        UIView.animate(withDuration: 0.3) {
-            self.blurEffectView.alpha = 1.0
-            self.activityIndicator.alpha = 1.0
-        }
-    }
     
-    func stopActivityIndicator() -> Void{
-        UIView.animate(withDuration: 0.25, animations: {
-            self.blurEffectView.alpha = 0.0
-            self.activityIndicator.alpha = 0.0
-        }, completion: { finished in
-            self.activityIndicator.stopAnimating()
-            self.blurEffectView.removeFromSuperview()
-            self.activityIndicator.removeFromSuperview()
-        })
-    }
     //*here delete later when you hook up with rachels view: only for testing
     @IBAction func goToCreateEvent(_ sender: Any) {
         let storyboard = UIStoryboard(name: "User", bundle: nil)

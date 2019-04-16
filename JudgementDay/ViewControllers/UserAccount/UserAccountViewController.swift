@@ -16,6 +16,7 @@ class UserAccountViewController: UIViewController {
     @IBOutlet weak var UserEmailTxt: UILabel!
     @IBOutlet weak var UserFirstNameTxt: UILabel!
     @IBOutlet weak var UserLastNameTxt: UILabel!
+    @IBOutlet weak var lblNameHeader: UILabel!
     
     var currentUser: User?
     
@@ -26,6 +27,8 @@ class UserAccountViewController: UIViewController {
             UserEmailTxt.text = currentUser?.email
             UserFirstNameTxt.text = currentUser?.firstName
             UserLastNameTxt.text = currentUser?.lastName
+            lblNameHeader.text =
+                currentUser?.firstName
         }
     }
 

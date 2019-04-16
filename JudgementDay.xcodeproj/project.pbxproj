@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373CDBA068625F79430F54C4 /* Pods_JudgementDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */; };
+		72E9E44B2265859900782431 /* YourCompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E9E44A2265859900782431 /* YourCompetitionsViewController.swift */; };
 		8500C783225EEA84004597BC /* CreateCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500C782225EEA84004597BC /* CreateCompetitionViewController.swift */; };
 		8500C7852263FBA0004597BC /* CompetitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8500C7842263FBA0004597BC /* CompetitionCell.xib */; };
 		8500C7872263FBBE004597BC /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8500C7862263FBBE004597BC /* EventCell.xib */; };
@@ -88,6 +89,7 @@
 		32A432DDCDA97ECBF6AF3B12 /* Pods_JudgementDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JudgementDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0B2FEC7022335343A7C57B /* Pods-JudgementDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.release.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.release.xcconfig"; sourceTree = "<group>"; };
 		5A0C0AF3E50285D3EEE3BDCB /* Pods_JudgementDayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JudgementDayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72E9E44A2265859900782431 /* YourCompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCompetitionsViewController.swift; sourceTree = "<group>"; };
 		7334CBCBEE8B7ACD0370F841 /* Pods-JudgementDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		733733B8C549B88617170F7D /* Pods-JudgementDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDay.debug.xcconfig"; path = "Target Support Files/Pods-JudgementDay/Pods-JudgementDay.debug.xcconfig"; sourceTree = "<group>"; };
 		7F50741E4357BB0C63004D5C /* Pods-JudgementDayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JudgementDayTests.release.xcconfig"; path = "Target Support Files/Pods-JudgementDayTests/Pods-JudgementDayTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				8526FC8422598C0400614132 /* RegisteredParticipantsCell.xib */,
 				8526FC8822598F1E00614132 /* RegisteredParticipantCell.swift */,
 				8526FC80225977F300614132 /* UserAccountViewController.swift */,
+				72E9E44A2265859900782431 /* YourCompetitionsViewController.swift */,
 			);
 			path = UserAccount;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				9ACF018E221E377900BB1A87 /* ViewController.swift in Sources */,
 				9A199307225450E500CC13AE /* LambdaBase.swift in Sources */,
 				8500C783225EEA84004597BC /* CreateCompetitionViewController.swift in Sources */,
+				72E9E44B2265859900782431 /* YourCompetitionsViewController.swift in Sources */,
 				9A6489112263F4BA00483633 /* Competition+CoreDataProperties.swift in Sources */,
 				9A64890F2263F4BA00483633 /* Event+CoreDataProperties.swift in Sources */,
 				9ACF0194221E377900BB1A87 /* JudgementDay.xcdatamodeld in Sources */,

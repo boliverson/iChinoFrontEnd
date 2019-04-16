@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 
-extension Competition {
+extension Competition: Uploadable {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Competition> {
         return NSFetchRequest<Competition>(entityName: "Competition")

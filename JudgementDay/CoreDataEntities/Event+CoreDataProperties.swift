@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 
-extension Event {
+extension Event: Uploadable {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Event> {
         return NSFetchRequest<Event>(entityName: "Event")

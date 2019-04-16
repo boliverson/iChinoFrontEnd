@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afu-oQ-g1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="433"/>
+            <point key="canvasLocation" x="-1529" y="681"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MRp-o5-4Vv">
@@ -622,12 +622,12 @@
                                     <outlet property="delegate" destination="NTJ-am-Teg" id="2Jz-Yj-n42"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaC-qD-8Jd">
-                                <rect key="frame" x="289" y="94" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozh-aa-Sbs">
+                                <rect key="frame" x="272" y="89" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="goToCreateEvent:" destination="NTJ-am-Teg" eventType="touchUpInside" id="ZI3-Jn-bym"/>
+                                    <action selector="goToCreateEvent:" destination="NTJ-am-Teg" eventType="touchUpInside" id="kiO-e8-oQV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -664,7 +664,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POw-53-5AI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="433"/>
+            <point key="canvasLocation" x="-468" y="413"/>
         </scene>
     </scenes>
     <resources>

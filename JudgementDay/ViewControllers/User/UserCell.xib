@@ -17,6 +17,64 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k5p-2G-LEh" id="dpf-bX-CAJ">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gO7-P6-gSa">
+                        <rect key="frame" x="11" y="11" width="392" height="46.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRq-65-m8C">
+                                <rect key="frame" x="34" y="17" width="91" height="12.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkU-eA-iTu">
+                                <rect key="frame" x="286" y="17" width="50" height="12.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp8-i7-eMy">
+                                <rect key="frame" x="344" y="18" width="32" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91458243131637573" green="0.54547280073165894" blue="0.35574644804000854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gp8-i7-eMy" secondAttribute="bottom" constant="15" id="7eK-Eh-m9b"/>
+                            <constraint firstItem="BkU-eA-iTu" firstAttribute="baseline" secondItem="FRq-65-m8C" secondAttribute="baseline" id="Db4-oW-Nt4"/>
+                            <constraint firstItem="FRq-65-m8C" firstAttribute="leading" secondItem="gO7-P6-gSa" secondAttribute="leading" constant="34" id="Du3-Og-chP"/>
+                            <constraint firstItem="BkU-eA-iTu" firstAttribute="top" secondItem="gO7-P6-gSa" secondAttribute="top" constant="17" id="MUS-Ia-Ojc"/>
+                            <constraint firstAttribute="trailing" secondItem="gp8-i7-eMy" secondAttribute="trailing" constant="16" id="MVX-6e-tKM"/>
+                            <constraint firstItem="BkU-eA-iTu" firstAttribute="firstBaseline" secondItem="FRq-65-m8C" secondAttribute="firstBaseline" id="PQo-Ok-6Sc"/>
+                            <constraint firstItem="BkU-eA-iTu" firstAttribute="centerY" secondItem="gO7-P6-gSa" secondAttribute="centerY" id="Wop-X8-vTU"/>
+                            <constraint firstItem="gp8-i7-eMy" firstAttribute="top" secondItem="gO7-P6-gSa" secondAttribute="top" constant="18" id="doa-aP-oRt"/>
+                            <constraint firstItem="gp8-i7-eMy" firstAttribute="leading" secondItem="BkU-eA-iTu" secondAttribute="trailing" constant="8" id="eIZ-CS-7Y3"/>
+                            <constraint firstAttribute="trailing" secondItem="BkU-eA-iTu" secondAttribute="trailing" constant="56" id="i00-GF-U4u"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="3" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gO7-P6-gSa" firstAttribute="leading" secondItem="dpf-bX-CAJ" secondAttribute="leading" constant="11" id="AQw-b8-QgH"/>
+                    <constraint firstItem="gO7-P6-gSa" firstAttribute="top" secondItem="dpf-bX-CAJ" secondAttribute="top" constant="11" id="ddj-Og-P2U"/>
+                    <constraint firstAttribute="trailing" secondItem="gO7-P6-gSa" secondAttribute="trailing" constant="11" id="od2-LH-mOh"/>
+                    <constraint firstAttribute="bottom" secondItem="gO7-P6-gSa" secondAttribute="bottom" constant="11" id="ujW-G6-YrB"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="71.014492753623188" y="57.924107142857139"/>
         </tableViewCell>

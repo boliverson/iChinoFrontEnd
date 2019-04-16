@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNI-hj-QLG">
-                        <rect key="frame" x="17" y="11" width="342" height="139.5"/>
+                        <rect key="frame" x="11" y="11" width="354" height="139.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaQ-F2-Zf2">
                                 <rect key="frame" x="22" y="11" width="142" height="33"/>
@@ -67,10 +67,8 @@
                             <constraint firstItem="EYS-vL-vFU" firstAttribute="top" secondItem="EaQ-F2-Zf2" secondAttribute="bottom" constant="1.0000000000001492" id="8mK-Iw-Mwo"/>
                             <constraint firstItem="x1v-d0-B7w" firstAttribute="top" secondItem="kRC-qb-LJC" secondAttribute="bottom" constant="7" id="Hbk-sx-J3W"/>
                             <constraint firstItem="EYS-vL-vFU" firstAttribute="leading" secondItem="tNI-hj-QLG" secondAttribute="leading" constant="71" id="YK1-I4-9PQ"/>
-                            <constraint firstAttribute="width" constant="342" id="cgn-SM-ejI"/>
                             <constraint firstItem="kRC-qb-LJC" firstAttribute="top" secondItem="EYS-vL-vFU" secondAttribute="bottom" constant="5.9999999999998579" id="dct-d8-STB"/>
                             <constraint firstItem="x1v-d0-B7w" firstAttribute="leading" secondItem="tNI-hj-QLG" secondAttribute="leading" constant="71" id="fUL-fx-Q6t"/>
-                            <constraint firstAttribute="height" constant="139.5" id="itd-Cc-gBE"/>
                             <constraint firstItem="kRC-qb-LJC" firstAttribute="leading" secondItem="tNI-hj-QLG" secondAttribute="leading" constant="71" id="ofq-9v-6Zp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -93,10 +91,10 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="tNI-hj-QLG" firstAttribute="leading" secondItem="sGI-BE-Y7I" secondAttribute="leading" constant="11" id="2iN-H6-ENq"/>
                     <constraint firstAttribute="bottom" secondItem="tNI-hj-QLG" secondAttribute="bottom" constant="11" id="5ec-Ng-FTR"/>
-                    <constraint firstItem="tNI-hj-QLG" firstAttribute="centerY" secondItem="sGI-BE-Y7I" secondAttribute="centerY" id="dh6-pv-6fq"/>
                     <constraint firstItem="tNI-hj-QLG" firstAttribute="top" secondItem="sGI-BE-Y7I" secondAttribute="top" constant="11" id="eqG-IJ-JZT"/>
-                    <constraint firstItem="tNI-hj-QLG" firstAttribute="centerX" secondItem="sGI-BE-Y7I" secondAttribute="centerX" id="ggO-s5-RPx"/>
+                    <constraint firstAttribute="trailing" secondItem="tNI-hj-QLG" secondAttribute="trailing" constant="11" id="zXw-Iu-U9F"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="-56.521739130434788" y="56.919642857142854"/>

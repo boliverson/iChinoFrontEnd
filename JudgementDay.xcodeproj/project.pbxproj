@@ -13,6 +13,10 @@
 		8500C7872263FBBE004597BC /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8500C7862263FBBE004597BC /* EventCell.xib */; };
 		8500C7892263FC6B004597BC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500C7882263FC6B004597BC /* EventCell.swift */; };
 		8500C78B2264072C004597BC /* CompetitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500C78A2264072C004597BC /* CompetitionCell.swift */; };
+		8500C78D22655CA6004597BC /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8500C78C22655CA6004597BC /* User.storyboard */; };
+		8500C79022655E88004597BC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500C78F22655E88004597BC /* UserListViewController.swift */; };
+		8500C79222655EE8004597BC /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8500C79122655EE8004597BC /* UserCell.xib */; };
+		8500C79422655F20004597BC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8500C79322655F20004597BC /* UserCell.swift */; };
 		85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */; };
 		8508E918225EBA27005AF5C3 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8508E917225EBA27005AF5C3 /* Event.storyboard */; };
 		8508E91A225EC335005AF5C3 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508E919225EC335005AF5C3 /* CreateEventViewController.swift */; };
@@ -86,6 +90,10 @@
 		8500C7862263FBBE004597BC /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		8500C7882263FC6B004597BC /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		8500C78A2264072C004597BC /* CompetitionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionCell.swift; sourceTree = "<group>"; };
+		8500C78C22655CA6004597BC /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		8500C78F22655E88004597BC /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		8500C79122655EE8004597BC /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		8500C79322655F20004597BC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		85027A6622583A0B009038B6 /* CompetitionAndScoreCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompetitionAndScoreCard.storyboard; sourceTree = "<group>"; };
 		8508E917225EBA27005AF5C3 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8508E919225EC335005AF5C3 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +195,17 @@
 				C7A88AC3AE7A6295EA2CB4EA /* Pods_JudgementDayUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8500C78E22655CB8004597BC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8500C78C22655CA6004597BC /* User.storyboard */,
+				8500C79122655EE8004597BC /* UserCell.xib */,
+				8500C79322655F20004597BC /* UserCell.swift */,
+				8500C78F22655E88004597BC /* UserListViewController.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		8526FC79225970C700614132 /* WatchList */ = {
@@ -342,6 +361,7 @@
 		9AE1D07A222399A2005932D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8500C78E22655CB8004597BC /* User */,
 				8526FC7E2259778000614132 /* CompAndEvents */,
 				8526FC79225970C700614132 /* WatchList */,
 				9AE1D07B222399D3005932D8 /* LogInViewController.swift */,
@@ -464,8 +484,10 @@
 				85027A6722583A0B009038B6 /* CompetitionAndScoreCard.storyboard in Resources */,
 				85424A9122558B6700E08BBE /* ScoreCardCell.xib in Resources */,
 				8526FC762259705300614132 /* UserAccount.storyboard in Resources */,
+				8500C79222655EE8004597BC /* UserCell.xib in Resources */,
 				9ACF0199221E377B00BB1A87 /* LaunchScreen.storyboard in Resources */,
 				85A33A6B225A572100E3E7EA /* seats.jpg in Resources */,
+				8500C78D22655CA6004597BC /* User.storyboard in Resources */,
 				8526FC8522598C0400614132 /* RegisteredParticipantsCell.xib in Resources */,
 				8526FC8D225990A000614132 /* TeamMemberCell.xib in Resources */,
 				8500C7852263FBA0004597BC /* CompetitionCell.xib in Resources */,
@@ -609,6 +631,8 @@
 				9A356975225EBB5700F0B36E /* DownloadUser.swift in Sources */,
 				8526FC8B2259905D00614132 /* TeamMemberCell.swift in Sources */,
 				8500C78B2264072C004597BC /* CompetitionCell.swift in Sources */,
+				8500C79422655F20004597BC /* UserCell.swift in Sources */,
+				8500C79022655E88004597BC /* UserListViewController.swift in Sources */,
 				9AB6384B225C4E6700400810 /* EntityInteractor.swift in Sources */,
 				9A334624222E1686003005B8 /* User+CoreDataProperties.swift in Sources */,
 				9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */,

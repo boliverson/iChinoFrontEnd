@@ -7,33 +7,41 @@
 //
 import UIKit
 import Foundation
-class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+struct ScoreItem {
+    var userDescription: String
+    var maxValue: String
+}
+
+class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DataTransfer {
+
     //TODO: broken adding and saving stuff
-    
-    var descriptions = [String]()
-    var maxValues = [String]()
+    var dataArray = ["A", "B", "C"]
+    var scoreItems = [ScoreItem]()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(UINib(nibName: String(describing: ScoreCardCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ScoreCardCell.self))
+        if scoreItems.count == 0 {
+            scoreItems.append(ScoreItem(userDescription: "", maxValue: ""))
+        }
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return descriptions.count
+        return scoreItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.allowsSelection = false
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ScoreCardCell.self), for: indexPath) as! ScoreCardCell
         
-        cell.maxValue?.text = maxValues[indexPath.row]
-        cell.userDescription?.text = descriptions[indexPath.row]
-        descriptions.insert(cell.userDescription?.text ?? "", at: indexPath.row)
-        maxValues.insert(cell.maxValue?.text ?? "", at: indexPath.row)
-        
-        //tableView.reloadData()
+        cell.maxValue?.text = scoreItems[indexPath.row].maxValue
+        cell.userDescription?.text = scoreItems[indexPath.row].userDescription
+      //  scoreItems.append(ScoreItem.init(userDescription: cell.userDescription?.text ?? "", maxValue: cell.maxValue?.text ?? ""))
+        cell.delegate = self
+
         return cell
     }
     
@@ -44,16 +52,13 @@ class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             // handle delete (by removing the data from your array and updating the tableview)
-            descriptions.remove(at: indexPath.row)
-            maxValues.remove(at: indexPath.row)
+         scoreItems.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
     
+
     @IBAction func didSelectAddCell(_ sender: Any){
-        //broken
-        descriptions.append("")
-        maxValues.append("")
         tableView.reloadData()
     }
     
@@ -65,4 +70,8 @@ class ScoreCardViewController: UIViewController, UITableViewDataSource, UITableV
         
         
     }
+    func sendDataToScoreCard(userDescription: String, maxValue: String) {
+        scoreItems.append(ScoreItem.init(userDescription: userDescription, maxValue: maxValue))
+    }
+    
 }

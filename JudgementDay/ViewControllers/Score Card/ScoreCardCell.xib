@@ -19,16 +19,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Input" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJ0-jz-uuh">
-                        <rect key="frame" x="11" y="18" width="299" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="299" id="Rcb-VT-yGT"/>
-                        </constraints>
+                        <rect key="frame" x="11" y="18" width="288" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnQ-t9-9qh">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnQ-t9-9qh">
                         <rect key="frame" x="318" y="18" width="88" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="88" id="ypD-i1-qdB"/>
+                        </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits"/>
@@ -36,7 +35,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="zJ0-jz-uuh" firstAttribute="leading" secondItem="5xO-27-src" secondAttribute="leading" constant="11" id="61d-ro-Hn2"/>
+                    <constraint firstItem="mnQ-t9-9qh" firstAttribute="leading" secondItem="zJ0-jz-uuh" secondAttribute="trailing" constant="19" id="B6z-Ci-zUw"/>
+                    <constraint firstItem="mnQ-t9-9qh" firstAttribute="top" secondItem="5xO-27-src" secondAttribute="top" constant="18" id="Bdf-lC-Kyc"/>
+                    <constraint firstAttribute="bottom" secondItem="mnQ-t9-9qh" secondAttribute="bottom" constant="17.5" id="XW6-Re-4BK"/>
                     <constraint firstAttribute="bottom" secondItem="zJ0-jz-uuh" secondAttribute="bottom" constant="17.5" id="YOB-gC-lOR"/>
+                    <constraint firstAttribute="trailing" secondItem="mnQ-t9-9qh" secondAttribute="trailing" constant="14" id="qtN-5c-P6I"/>
                     <constraint firstItem="zJ0-jz-uuh" firstAttribute="top" secondItem="5xO-27-src" secondAttribute="top" constant="18" id="yNw-0s-7DG"/>
                 </constraints>
             </tableViewCellContentView>

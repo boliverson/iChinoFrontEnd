@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Your Competitions View Controller-->
         <scene sceneID="M2Z-BT-bCa">
             <objects>
-                <viewController id="PgK-c3-fg5" sceneMemberID="viewController">
+                <viewController id="PgK-c3-fg5" customClass="YourCompetitionsViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4S1-Zo-9yS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-58-cNq">
-                                <rect key="frame" x="0.0" y="95" width="390" height="59"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Competitions" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-qg-1Qb">
                                         <rect key="frame" x="8" y="8" width="350" height="56"/>
@@ -85,7 +85,7 @@
                                 <constraints>
                                     <constraint firstItem="pDa-qg-1Qb" firstAttribute="top" secondItem="Mb2-58-cNq" secondAttribute="top" constant="8" id="8rc-ow-Hxn"/>
                                     <constraint firstAttribute="height" constant="59" id="Gr2-d7-qbl"/>
-                                    <constraint firstAttribute="trailing" secondItem="pDa-qg-1Qb" secondAttribute="trailing" constant="32" id="gNr-Qa-n9r"/>
+                                    <constraint firstAttribute="trailing" secondItem="pDa-qg-1Qb" secondAttribute="trailing" constant="56" id="gNr-Qa-n9r"/>
                                     <constraint firstItem="pDa-qg-1Qb" firstAttribute="leading" secondItem="Mb2-58-cNq" secondAttribute="leading" constant="8" id="oHz-cn-f49"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -112,11 +112,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEB-Pz-6bN">
+                                <rect key="frame" x="11" y="57" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="didSelectBackBtn:" destination="PgK-c3-fg5" eventType="touchUpInside" id="N8E-0N-KU4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mb2-58-cNq" firstAttribute="leading" secondItem="4S1-Zo-9yS" secondAttribute="leading" id="EIa-tc-A8t"/>
-                            <constraint firstItem="ItB-nE-Tsy" firstAttribute="trailing" secondItem="Mb2-58-cNq" secondAttribute="trailing" constant="24" id="PbA-WT-2ct"/>
+                            <constraint firstItem="ItB-nE-Tsy" firstAttribute="trailing" secondItem="Mb2-58-cNq" secondAttribute="trailing" id="PbA-WT-2ct"/>
                             <constraint firstItem="4s9-Bo-6nd" firstAttribute="top" secondItem="Mb2-58-cNq" secondAttribute="bottom" constant="8" symbolic="YES" id="Whb-GH-Hhg"/>
                             <constraint firstItem="Mb2-58-cNq" firstAttribute="leading" secondItem="4s9-Bo-6nd" secondAttribute="leading" id="YnE-Cl-0Bu"/>
                             <constraint firstAttribute="bottom" secondItem="4s9-Bo-6nd" secondAttribute="bottom" id="ZJQ-3d-yC3"/>
@@ -412,13 +420,13 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="NameHeader" destination="XWm-xK-L0O" id="qQf-WS-lBj"/>
                         <outlet property="UserEmailTxt" destination="eNx-DF-9k4" id="IrR-VL-zkE"/>
                         <outlet property="UserFirstNameTxt" destination="ya3-O5-8DM" id="Lms-LT-7cS"/>
                         <outlet property="UserLastNameTxt" destination="Eka-kS-TEe" id="lat-KF-Jrx"/>
                         <outlet property="btnCreateComp" destination="jur-F3-oQH" id="4XS-3E-h1e"/>
                         <outlet property="btnCreateEvent" destination="XWm-xK-L0O" id="8he-tJ-L7H"/>
                         <outlet property="btnUsersComp" destination="jur-F3-oQH" id="Qdk-Gu-1Gr"/>
+                        <outlet property="lblNameHeader" destination="OEN-Kd-p8W" id="bTg-Fr-r7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UF-I3-VM4" userLabel="First Responder" sceneMemberID="firstResponder"/>

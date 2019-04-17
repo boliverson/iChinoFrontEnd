@@ -11,6 +11,7 @@
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverKey" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -42,7 +43,7 @@
     </entity>
     <elements>
         <element name="Competition" positionX="-54" positionY="54" width="128" height="150"/>
-        <element name="Event" positionX="-36" positionY="72" width="128" height="135"/>
+        <element name="Event" positionX="-36" positionY="72" width="128" height="150"/>
         <element name="ScoreCard" positionX="-54" positionY="54" width="128" height="90"/>
         <element name="ScoreCardItem" positionX="-63" positionY="45" width="128" height="105"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="195"/>

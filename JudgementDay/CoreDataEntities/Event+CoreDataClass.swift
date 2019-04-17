@@ -20,7 +20,7 @@ public class Event: NSManagedObject {
         }
     }
     
-    class func getUserWithId(eventId: Int64) -> Event? {
+    class func getEventWithId(eventId: Int64) -> Event? {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let event:Event? = EntityInteractor.getEntityWithId(entityName: "Event", entityId: eventId, context: context) as? Event
         if event != nil{

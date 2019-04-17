@@ -19,9 +19,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNI-hj-QLG">
-                        <rect key="frame" x="11" y="11" width="354" height="139.5"/>
+                        <rect key="frame" x="15" y="11" width="346" height="139.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaQ-F2-Zf2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="EaQ-F2-Zf2">
                                 <rect key="frame" x="22" y="11" width="142" height="33"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,27 +34,36 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="3" height="2"/>
+                                        <size key="value" width="1" height="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" red="0.87843137250000003" green="0.34901960780000002" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYS-vL-vFU">
-                                <rect key="frame" x="71" y="45" width="71" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYS-vL-vFU">
+                                <rect key="frame" x="71" y="45" width="262" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="53W-XI-ojV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartDateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRC-qb-LJC">
-                                <rect key="frame" x="71" y="72" width="119" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartDateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRC-qb-LJC">
+                                <rect key="frame" x="71" y="72" width="262" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="wbq-Q0-kWs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EndDateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1v-d0-B7w">
-                                <rect key="frame" x="71" y="100" width="109" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EndDateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1v-d0-B7w">
+                                <rect key="frame" x="71" y="100" width="262" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="Aax-nV-BRU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -91,10 +100,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="tNI-hj-QLG" firstAttribute="leading" secondItem="sGI-BE-Y7I" secondAttribute="leading" constant="11" id="2iN-H6-ENq"/>
+                    <constraint firstItem="tNI-hj-QLG" firstAttribute="leading" secondItem="sGI-BE-Y7I" secondAttribute="leading" constant="15" id="2iN-H6-ENq"/>
                     <constraint firstAttribute="bottom" secondItem="tNI-hj-QLG" secondAttribute="bottom" constant="11" id="5ec-Ng-FTR"/>
                     <constraint firstItem="tNI-hj-QLG" firstAttribute="top" secondItem="sGI-BE-Y7I" secondAttribute="top" constant="11" id="eqG-IJ-JZT"/>
-                    <constraint firstAttribute="trailing" secondItem="tNI-hj-QLG" secondAttribute="trailing" constant="11" id="zXw-Iu-U9F"/>
+                    <constraint firstAttribute="trailing" secondItem="tNI-hj-QLG" secondAttribute="trailing" constant="15" id="zXw-Iu-U9F"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

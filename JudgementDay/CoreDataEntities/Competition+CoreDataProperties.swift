@@ -2,7 +2,7 @@
 //  Competition+CoreDataProperties.swift
 //  JudgementDay
 //
-//  Created by Ben Oliverson on 4/14/19.
+//  Created by Ben Oliverson on 4/16/19.
 //  Copyright © 2019 Weber State. All rights reserved.
 //
 //
@@ -20,8 +20,9 @@ extension Competition: Uploadable {
     @NSManaged public var endDate: NSDate?
     @NSManaged public var location: String?
     @NSManaged public var name: String?
-    @NSManaged public var serverKey: Int64
+    @NSManaged dynamic public var serverKey: Int64
     @NSManaged public var startDate: NSDate?
+    @NSManaged public var isActive: Bool
     @NSManaged public var event: Event?
     @NSManaged public var users: NSSet?
 

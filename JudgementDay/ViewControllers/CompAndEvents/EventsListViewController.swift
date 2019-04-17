@@ -12,6 +12,11 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     var events = [Event]()
     @IBOutlet weak var tableView: UITableView!
     var dataSource = CompetitionListViewController()
+    var selectedIndex = 0
+    
+    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+    var blurEffectView: UIVisualEffectView!
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,9 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.dataSource = self
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         events = EntityInteractor.getAllActiveEntities(entityName: "Event", context: context) as! [Event]
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showCompListVC(notification:)), name: .competitionsForEventDownloadedNotification, object: nil)
+        
     }
  
     @IBAction func didSelectBack(_ sender: Any) {
@@ -39,18 +47,29 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //for that event load competitions that are associated and then segue
-        //self.dataSource.competitions = getCompetitionsForEvent(event: events[indexPath.row])
-     //   performSegue(withIdentifier: "CompetitionListViewController", sender: self)
         
-        let storyboard = UIStoryboard(name: "CompetitionAndScoreCard", bundle: nil)
-        
-        let controller = storyboard.instantiateViewController(withIdentifier: "CompetitionListViewController") as! CompetitionListViewController
-        self.present(controller, animated: true, completion: nil)
-       // self.navigationController?.pushViewController(controller, animated: true)
-        
+        self.selectedIndex = indexPath.row
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
+        DispatchQueue.global(qos: .background).async {
+            let DC = DownloadCompetition()
+            DC.downloadCompetitionsForEvent(eventId: self.events[indexPath.row].serverKey)
+        }
     }
 
-    //TODO: return all competitions
+    @objc func showCompListVC(notification: Notification) -> Void {
+        
+        DispatchQueue.main.async {
+            self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
+            let storyboard = UIStoryboard(name: "CompetitionAndScoreCard", bundle: nil)
+            
+            let controller = storyboard.instantiateViewController(withIdentifier: "CompetitionListViewController") as! CompetitionListViewController
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            controller.event = context.object(with: self.events[self.selectedIndex].objectID) as? Event
+            
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
     
 }

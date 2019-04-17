@@ -13,8 +13,16 @@ class CompetitionCell: UITableViewCell {
     
     
     @IBOutlet weak var compName: UILabel!
+    @IBOutlet weak var competitorCount: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func setUpCell(comp: Competition) -> Void {
+        compName.text = comp.name != nil ? comp.name : ""
+        competitorCount.text = comp.users != nil ? String(describing: comp.users?.allObjects.count) : "0"
     }
     
 }

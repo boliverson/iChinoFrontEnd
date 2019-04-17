@@ -195,7 +195,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didClickCreateEvent:" destination="IBB-Gv-mrD" eventType="touchUpInside" id="EjC-xB-2WV"/>
                                             <segue destination="q3e-pc-qxF" kind="show" id="kKf-aA-APh"/>
                                         </connections>
                                     </button>

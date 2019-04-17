@@ -74,14 +74,8 @@ class CreateEventViewController: UIViewController,UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-        self.whereHeight.constant = 64.0
-        self.creatEventView.isHidden = false
-    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.whereHeight.constant = 64.0
-        self.creatEventView.isHidden = false
         textField.resignFirstResponder()
         return true
     }
@@ -116,17 +110,5 @@ class CreateEventViewController: UIViewController,UITextFieldDelegate {
             datePicker.appear(originView: textField, baseViewController: self)
         }
     }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
-     if(self.txtStartDate == textField) {
-            //self.whenHeight2.constant = 64.0
-            
-            UIView.animate(withDuration: 0.3) {
-                self.view.layoutIfNeeded()
-            }
-        }
-    }
-    
-    
     
 }

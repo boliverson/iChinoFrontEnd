@@ -39,18 +39,21 @@ class CreateCompetitionViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @IBAction func didSelectCreate(_ sender: Any) {
+    @IBAction func didSelectCreateScorecard(_ sender: Any) {
         if txtName.text != "" && txtLocation.text != "" && txtStartDate.text != "" && txtEndDate.text != ""{
             blurEffectView = UIVisualEffectView(effect: blurEffect)
             startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
             DispatchQueue.global(qos: .background).async {
                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                let tempEvent = context.object(with: self.event!.objectID) as! Event
                 let comp = Competition.init(entity: NSEntityDescription.entity(forEntityName: "Competition", in: context)!, insertInto: context)
                 comp.name = self.txtName.text
                 comp.location = self.txtLocation.text
                 comp.startDate = self.startDate as NSDate?
                 comp.endDate = self.endDate as NSDate?
                 comp.isActive = true
+                comp.event = tempEvent
+                tempEvent.addToCompetitions(comp)
                 
                 do {
                     try context.save()
@@ -61,7 +64,11 @@ class CreateCompetitionViewController: UIViewController, UITextFieldDelegate {
                 comp.syncWithServer()
                 DispatchQueue.main.async {
                     self.stopActivityIndicator(blur: self.blurEffectView, ai: self.activityIndicator)
-                    self.dismiss(animated: true, completion: nil)
+                    let storyboard = UIStoryboard(name: "CompetitionAndScoreCard", bundle: nil)
+                    
+                    let controller = storyboard.instantiateViewController(withIdentifier: "ScoreCardViewController") as! ScoreCardViewController
+                    
+                    self.present(controller, animated: true, completion: nil)
                 }
                 
             }
@@ -78,14 +85,7 @@ class CreateCompetitionViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-        self.whereHeight.constant = 64.0
-        self.creatEventView.isHidden = false
-    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.whereHeight.constant = 64.0
-        self.creatEventView.isHidden = false
         textField.resignFirstResponder()
         return true
     }

@@ -61,11 +61,11 @@ class EntityInteractor: NSObject {
         return result
     }
     
-    class func getAllCompetitionsForEvent(eventID: String, context: NSManagedObjectContext) -> [Any]{
+    class func getAllCompetitionsForEvent(event: Event, context: NSManagedObjectContext) -> [Any]{
         let request = NSFetchRequest<NSFetchRequestResult>.init()
         let entity = NSEntityDescription.entity(forEntityName: "Competition", in: context)
         request.entity = entity
-        let predicate = NSPredicate.init(format: "event.serverKey = %@", eventID)
+        let predicate = NSPredicate.init(format: "event = %@", event)
         request.predicate = predicate
         
         var result = [Any]()

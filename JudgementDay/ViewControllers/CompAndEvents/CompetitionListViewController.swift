@@ -24,7 +24,7 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.delegate = self
         self.tableView.dataSource = self
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        competitions = EntityInteractor.getAllCompetitionsForEvent(eventID: String(describing: event?.serverKey), context: context) as! [Competition]
+        competitions = EntityInteractor.getAllCompetitionsForEvent(event: event!, context: context) as! [Competition]
         
         setUpUI()
     }

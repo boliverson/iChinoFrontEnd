@@ -12,7 +12,7 @@ class InsertNewCompetition: LambdaBase {
                                                 "location" : comp.location ?? "3750Class",
                                                 "startTime" : String(describing: comp.startDate!).dbFormatDateString(),
                                                 "endTime" : String(describing: comp.endDate!).dbFormatDateString(),
-                                                "eventID" : String(describing: comp.event?.serverKey)]
+                                                "eventID" : String(describing: comp.event!.serverKey)]
         
         self.upload(functionName: "createCompetition", jsonRequest: compDictionary, objectId: comp.objectID)
     }

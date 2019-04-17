@@ -145,7 +145,8 @@ extension String {
     
     func toDate()-> Date?{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-ddTHH:mm:ssZ" //"1994-10-28T08:55:00Z"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'" //"1994-10-28T08:55:00Z"
+        dateFormatter.timeZone = TimeZone.init(abbreviation: "UTC")
         let date = dateFormatter.date(from: self)
         
         return date

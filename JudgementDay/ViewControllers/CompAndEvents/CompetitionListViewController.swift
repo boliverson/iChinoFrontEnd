@@ -42,6 +42,16 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
         
     }
     
+    @IBAction func didSelectCreateComp(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "CompetitionAndScoreCard", bundle: nil)
+        
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateCompetitionViewController") as! CreateCompetitionViewController
+        controller.event = self.event
+        
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return competitions.count
     }

@@ -64,7 +64,7 @@ class DownloadEvent: LambdaBase {
         do {
             try context.save()
         } catch{
-            print("Unexpected error: \(error).")
+            print("Unexpected error saving Event: \(error).")
         }
         
     }

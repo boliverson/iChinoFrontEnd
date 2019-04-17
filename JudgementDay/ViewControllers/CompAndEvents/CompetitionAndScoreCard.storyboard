@@ -227,7 +227,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="c3b-NM-a4d" kind="showDetail" id="fd8-0d-AaN"/>
+                                    <action selector="didSelectCreateComp:" destination="P84-OM-i16" eventType="touchUpInside" id="78C-jC-EZF"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-vg-ggc">
@@ -423,7 +423,7 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
         <!--Create Competition View Controller-->
         <scene sceneID="Pai-DB-OIj">
             <objects>
-                <viewController storyboardIdentifier="CreateEventViewController" id="c3b-NM-a4d" customClass="CreateCompetitionViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateCompetitionViewController" id="c3b-NM-a4d" customClass="CreateCompetitionViewController" customModule="JudgementDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QWE-nA-08C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -663,6 +663,9 @@ CENyZWF0ZSBDb21wZXRpdGlvbg
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="c3b-NM-a4d" id="6AE-jg-Xzz"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VSA-ld-lYI">
                                                 <rect key="frame" x="37.333333333333343" y="47" width="96" height="24"/>

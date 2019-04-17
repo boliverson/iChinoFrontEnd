@@ -82,6 +82,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="compName" destination="DSa-uc-WO1" id="B1J-oD-9B7"/>
+                <outlet property="competitorCount" destination="Sme-ui-x5z" id="ELv-E2-Wp9"/>
             </connections>
             <point key="canvasLocation" x="11.594202898550726" y="45.870535714285715"/>
         </tableViewCell>

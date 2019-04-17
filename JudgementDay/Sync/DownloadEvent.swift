@@ -47,14 +47,14 @@ class DownloadEvent: LambdaBase {
     
     func saveDownloadedData(item: [String:Any]) -> Void {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        guard let serverKey = Int64(item["ID"] as? String ?? "0") else { return }
+        let serverKey = Int64((item["ID"] as? String)!)
         
-        var event = EntityInteractor.getEntityWithId(entityName: "Event", entityId: serverKey, context: context) as? Event
+        var event = EntityInteractor.getEntityWithId(entityName: "Event", entityId: serverKey!, context: context) as? Event
         
         if event == nil {
             event = Event.init(entity: NSEntityDescription.entity(forEntityName: "Event", in: context)!, insertInto: context)
         }
-        event?.serverKey = serverKey
+        event?.serverKey = serverKey!
         event?.name = item["name"] as? String
         event?.location = item["location"] as? String
         event?.startDate = (item["startTime"] as? String)?.toDate() as NSDate?

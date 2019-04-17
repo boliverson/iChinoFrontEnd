@@ -14,15 +14,28 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var startDateTime: UILabel!
     @IBOutlet weak var endDateTime: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var competitions = [ "A", "B"]
+    var competitions = [Competition]()
+    var event: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // competitions = [ "A", "B"]
         
         tableView.register(UINib(nibName: String(describing: CompetitionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CompetitionCell.self))
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        competitions = EntityInteractor.getAllCompetitionsForEvent(eventID: String(describing: event?.serverKey), context: context) as! [Competition]
+        
+        setUpUI()
+    }
+    
+    func setUpUI() -> Void {
+        eventName.text = event?.name != nil ? event?.name : ""
+        location.text = event?.location != nil ? event?.location : ""
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "MMM d, yyyy - h:mm a"
+        startDateTime.text = event?.startDate != nil ? dateFormat.string(from: event?.startDate! as Date? ?? Date()) : ""
+        endDateTime.text = event?.endDate != nil ? dateFormat.string(from: event?.endDate! as Date? ?? Date()) : ""
     }
     @IBAction func didSelectBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -37,6 +50,7 @@ class CompetitionListViewController: UIViewController, UITableViewDelegate, UITa
     
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CompetitionCell.self), for: indexPath) as! CompetitionCell
         cell.selectionStyle = .none
+        cell.setUpCell(comp: competitions[indexPath.row])
         return cell
     }
     

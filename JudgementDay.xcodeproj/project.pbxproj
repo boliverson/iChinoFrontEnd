@@ -61,6 +61,7 @@
 		9ACF01AF221E377B00BB1A87 /* JudgementDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF01AE221E377B00BB1A87 /* JudgementDayUITests.swift */; };
 		9AE1D07C222399D3005932D8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1D07B222399D3005932D8 /* LogInViewController.swift */; };
 		9AE1D07E222399EF005932D8 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1D07D222399EF005932D8 /* NewUserViewController.swift */; };
+		9AE9D0252266C339000D4B38 /* DownloadCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9D0242266C339000D4B38 /* DownloadCompetition.swift */; };
 		9AF23A0422224CB0001A1C39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF23A0322224CB0001A1C39 /* Extensions.swift */; };
 		9AF9321422558CDC0068BE3B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF9321322558CDC0068BE3B /* Protocols.swift */; };
 		9AF932162255C3AD0068BE3B /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF932152255C3AD0068BE3B /* Authenticate.swift */; };
@@ -152,6 +153,7 @@
 		9ACF01B0221E377B00BB1A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AE1D07B222399D3005932D8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9AE1D07D222399EF005932D8 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		9AE9D0242266C339000D4B38 /* DownloadCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCompetition.swift; sourceTree = "<group>"; };
 		9AF23A0322224CB0001A1C39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9AF9321322558CDC0068BE3B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9AF932152255C3AD0068BE3B /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				9AB638432259313C00400810 /* LoginUser.swift */,
 				9A356974225EBB5700F0B36E /* DownloadUser.swift */,
 				9A889F79226585590008E8B4 /* DownloadEvent.swift */,
+				9AE9D0242266C339000D4B38 /* DownloadCompetition.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				9ACF018C221E377900BB1A87 /* AppDelegate.swift in Sources */,
 				8500C7892263FC6B004597BC /* EventCell.swift in Sources */,
 				8542D1B72256FB0A00A8FBBE /* EventsListViewController.swift in Sources */,
+				9AE9D0252266C339000D4B38 /* DownloadCompetition.swift in Sources */,
 				85424A8E2255894F00E08BBE /* ScoreCardViewController.swift in Sources */,
 				9AE1D07C222399D3005932D8 /* LogInViewController.swift in Sources */,
 				9A6489102263F4BA00483633 /* Competition+CoreDataClass.swift in Sources */,

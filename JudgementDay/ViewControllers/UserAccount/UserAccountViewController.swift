@@ -38,17 +38,12 @@ class UserAccountViewController: UIViewController {
     }
 
     @IBAction func didClickSearchEvents(_ sender: Any) {
-        //Put the request in the background and show the activity indicator
-        //Download all active events and then show EventsListViewController
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         startActivityIndicator(blur: blurEffectView, ai: activityIndicator)
         DispatchQueue.global(qos: .background).async {
             let DE = DownloadEvent()
             DE.downloadActiveEvents()
         }
-    }
-    
-    @IBAction func didClickCreateEvent(_ sender: Any) {
     }
     
     @IBAction func didClickYourCompetitions(_ sender: Any) {

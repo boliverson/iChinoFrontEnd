@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 
-extension Event {
+extension Event: Uploadable {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Event> {
         return NSFetchRequest<Event>(entityName: "Event")
@@ -21,7 +21,7 @@ extension Event {
     @NSManaged public var isActive: Bool
     @NSManaged public var location: String?
     @NSManaged public var name: String?
-    @NSManaged public var serverKey: Int64
+    @NSManaged dynamic public var serverKey: Int64
     @NSManaged public var startDate: NSDate?
     @NSManaged public var competitions: NSSet?
 

@@ -17,7 +17,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate, LambdaBoolResp
 
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
     var blurEffectView: UIVisualEffectView!
-    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()

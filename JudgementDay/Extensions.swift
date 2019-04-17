@@ -186,6 +186,7 @@ extension UIViewController{
 
 extension Notification.Name {
     static let userDownloadedNotification = Notification.Name("UserDownloadedNotification")
+    static let eventAllActiveDownloadedNotification = Notification.Name("EventAllActiveDownloadedNotification")
 }
 
 

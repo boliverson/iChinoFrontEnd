@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 class EventsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
-    var events = [ "A", "B"]
+    var events = [Event]()
     @IBOutlet weak var tableView: UITableView!
     var dataSource = CompetitionListViewController()
     
@@ -18,6 +18,8 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
         tableView.register(UINib(nibName: String(describing: EventCell.self), bundle: nil), forCellReuseIdentifier: String(describing: EventCell.self))
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        events = EntityInteractor.getAllActiveEntities(entityName: "Event", context: context) as! [Event]
     }
  
     @IBAction func didSelectBack(_ sender: Any) {
@@ -32,6 +34,7 @@ class EventsListViewController: UIViewController, UITableViewDataSource, UITable
         
           let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EventCell.self), for: indexPath) as! EventCell
         cell.selectionStyle = .none
+        cell.setUpCell(event: events[indexPath.row])
         return cell
     }
     

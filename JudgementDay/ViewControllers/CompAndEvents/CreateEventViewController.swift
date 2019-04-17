@@ -26,7 +26,7 @@ class CreateEventViewController: UIViewController,UITextFieldDelegate {
     
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
     var blurEffectView: UIVisualEffectView!
-    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
     
     var startDate: Date?
     var endDate: Date?

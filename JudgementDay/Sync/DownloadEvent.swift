@@ -16,6 +16,11 @@ class DownloadEvent: LambdaBase {
         self.downloadEntity(functionName: "getEvent", jsonRequest: eventRequest)
     }
     
+    func downloadActiveEvents() -> Void {
+        let eventRequest = [String: String]()
+        self.downloadEntity(functionName: "getAllActiveEvents", jsonRequest: eventRequest)
+    }
+    
     /*
     {
     "ID":           "12"                        (Type: String)
@@ -27,6 +32,20 @@ class DownloadEvent: LambdaBase {
     }
     */
     override func persistData(item: [String : Any]) {
+        
+        if (item["Events"] == nil){
+            saveDownloadedData(item: item)
+        } else {
+            let allEvents = item["Events"] as! [[String:Any]]
+            for event in allEvents{
+                saveDownloadedData(item: event)
+            }
+            NotificationCenter.default.post(name: .eventAllActiveDownloadedNotification, object: nil)
+        }
+        
+    }
+    
+    func saveDownloadedData(item: [String:Any]) -> Void {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         guard let serverKey = Int64(item["ID"] as? String ?? "0") else { return }
         

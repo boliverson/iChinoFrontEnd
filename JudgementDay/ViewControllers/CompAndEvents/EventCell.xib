@@ -97,6 +97,12 @@
                     <constraint firstAttribute="trailing" secondItem="tNI-hj-QLG" secondAttribute="trailing" constant="11" id="zXw-Iu-U9F"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="endDateTime" destination="x1v-d0-B7w" id="X4Z-Kf-42T"/>
+                <outlet property="eventName" destination="EaQ-F2-Zf2" id="bu0-vk-yzj"/>
+                <outlet property="location" destination="EYS-vL-vFU" id="gaI-LI-FRd"/>
+                <outlet property="startDateTime" destination="kRC-qb-LJC" id="TMz-eZ-PSO"/>
+            </connections>
             <point key="canvasLocation" x="-56.521739130434788" y="56.919642857142854"/>
         </tableViewCell>
     </objects>
